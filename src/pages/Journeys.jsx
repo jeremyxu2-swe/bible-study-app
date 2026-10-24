@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   MAP_W, MAP_H, project, LAND, ISLETS, REGIONS, PLACES, MAJOR, LETTERS, JOURNEYS, journeyById, letterFor, stopPoint, TL_FROM, TL_TO,
@@ -17,9 +17,28 @@ import { noteKey } from '../store/notes.js';
 //   Phone (C, ≤760px): the map zooms in on the chosen journey; numbered stops, with a gold ring on cities
 //     that received a letter; the stop list below. No city names on the small map.
 // The chosen journey lives in the address: ?j=j1 | j2 | j3 | j4 (no ?j = all journeys).
+// 24 Oct: the map is now zoomable (components/JourneyLiveMap.jsx: Roman world, satellite or terrain under the
+//   routes, pinch / drag / + −, tap a stop for its card, a full-screen button). The drawn map below
+//   (JourneyMap) is the fallback when offline or when the map tiles can't be reached.
 
 const PERSON_ID = Object.fromEntries(CHARACTERS.map((c) => [c.name, c.id]));
 const LETTERS_KEY = 'lamp-path-journey-letters';
+// The zoomable map (24 Oct) loads on demand; its base-map names live here so the switch renders straight away.
+const JourneyLiveMap = lazy(() => import('../components/JourneyLiveMap.jsx'));
+const BASE_KEY = 'lamp-path-journey-map';
+const BASE_LABELS = [['roman', 'Roman world'], ['satellite', 'Satellite'], ['terrain', 'Terrain']];
+function readBase() {
+  try { const v = localStorage.getItem(BASE_KEY); return BASE_LABELS.some(([id]) => id === v) ? v : 'roman'; } catch { return 'roman'; }
+}
+function useOnline() {
+  const [on, setOn] = useState(() => navigator.onLine !== false);
+  useEffect(() => {
+    const up = () => setOn(true), down = () => setOn(false);
+    window.addEventListener('online', up); window.addEventListener('offline', down);
+    return () => { window.removeEventListener('online', up); window.removeEventListener('offline', down); };
+  }, []);
+  return on;
+}
 
 function useMedia(q) {
   const [on, setOn] = useState(() => window.matchMedia(q).matches);
@@ -154,6 +173,25 @@ export default function Journeys() {
     try { localStorage.setItem(LETTERS_KEY, v ? '1' : '0'); } catch { /* storage blocked */ }
   };
   const pick = (id) => setParams(id ? { j: id } : {}, { replace: true });
+  const online = useOnline();
+  const [failed, setFailed] = useState(false);
+  const live = online && !failed;
+  const [base, setBase] = useState(readBase);
+  const chooseBase = (id) => { setBase(id); setFailed(false); try { localStorage.setItem(BASE_KEY, id); } catch { /* storage blocked */ } };
+  const [card, setCard] = useState(null);   // index of the stop tapped on the map
+  const [full, setFull] = useState(false);  // map filling the screen
+  useEffect(() => { setCard(null); }, [sel?.id]);
+  useEffect(() => {
+    if (!full) return undefined;
+    const k = (e) => { if (e.key === 'Escape') setFull(false); };
+    window.addEventListener('keydown', k);
+    document.documentElement.classList.add('jr-noscroll');
+    return () => { window.removeEventListener('keydown', k); document.documentElement.classList.remove('jr-noscroll'); };
+  }, [full]);
+  const onStop = useCallback((i) => setCard(i), []);
+  const onFail = useCallback(() => setFailed(true), []);
+  const stop = sel && card != null ? sel.stops[card] : null;
+  const stopLetter = stop ? letterFor(stop.place) : null;
 
   const tabs = [{ id: null, label: phone ? 'All' : 'All journeys', color: 'var(--muted)' }, ...JOURNEYS.map((j) => ({ id: j.id, label: phone ? j.short : j.name, color: `var(--${j.id})` }))];
   const letterRows = useMemo(() => [
@@ -181,7 +219,35 @@ export default function Journeys() {
       <div className="jr-grid">
         <div className="jr-left">
         <div className="jr-mapcard">
-          <JourneyMap sel={sel} phone={phone} lettersOn={lettersOn} />
+          {live ? (
+            <div className={'jr-live' + (full ? ' full' : '')}>
+              <Suspense fallback={<JourneyMap sel={sel} phone={phone} lettersOn={lettersOn} />}>
+                <JourneyLiveMap sel={sel} phone={phone} lettersOn={lettersOn} base={base} onStop={onStop} onFail={onFail} />
+              </Suspense>
+              <div className="jr-bases" role="group" aria-label="Map style">
+                {BASE_LABELS.map(([id, label]) => (
+                  <button key={id} type="button" aria-pressed={base === id} className={base === id ? 'on' : ''} onClick={() => chooseBase(id)}>{label}</button>
+                ))}
+              </div>
+              <button type="button" className="jr-full" onClick={() => setFull(!full)} aria-label={full ? 'Exit full screen' : 'Full-screen map'} title={full ? 'Exit full screen' : 'Full-screen map'}>
+                {full
+                  ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" /></svg>
+                  : <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" /></svg>}
+              </button>
+              {stop && (
+                <div className="jr-card" style={{ '--c': `var(--${sel.id})` }} role="dialog" aria-label={stop.name}>
+                  <button type="button" className="jr-card-x" onClick={() => setCard(null)} aria-label="Close">×</button>
+                  <div className="jr-place"><span className="jr-n" aria-hidden="true">{card + 1}</span>{stop.name} <Ref to={`/book/acts/${stop.ch}`} className="jr-sref">Acts {stop.ref}</Ref></div>
+                  <p>{stop.text}</p>
+                  {stopLetter && (stopLetter.multi
+                    ? <span className="jr-lline">Letters to these churches: {stopLetter.multi.map((x) => <LetterChip key={x.church} letter={x} />)}</span>
+                    : <span className="jr-lline">Letter to this church: <LetterChip letter={stopLetter} /></span>)}
+                </div>
+              )}
+            </div>
+          ) : (
+            <JourneyMap sel={sel} phone={phone} lettersOn={lettersOn} />
+          )}
           <div className="jr-legend">
             {!phone && JOURNEYS.map((j) => (
               <span key={j.id}><svg width="24" height="6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke={`var(--${j.id})`} strokeWidth="3" strokeLinecap="round" strokeDasharray={j.id === 'j4' ? '1 5' : j.dash ? '6 4' : undefined} /></svg>{j.id === 'j4' ? 'Voyage to Rome' : j.short}</span>
@@ -191,8 +257,17 @@ export default function Journeys() {
                 <i aria-hidden="true" />Cities that received a letter
               </button>
             )}
-            {phone && sel && <span><i className="jr-ringkey" aria-hidden="true" />Received a letter</span>}
-            <span className="jr-approx">Coastlines: Natural Earth · routes approximate</span>
+            {phone && sel && !live && <span><i className="jr-ringkey" aria-hidden="true" />Received a letter</span>}
+            {phone && live && (
+              <button type="button" className={'jr-ltoggle' + (lettersOn ? ' on' : '')} aria-pressed={lettersOn} onClick={toggleLetters}>
+                <i aria-hidden="true" />Letter tags
+              </button>
+            )}
+            <span className="jr-approx">
+              {live
+                ? (phone ? 'Pinch to zoom · tap a stop · routes approximate' : 'Drag to move · click the map, then scroll to zoom · click a stop · routes approximate')
+                : (online ? 'The detailed map couldn’t load, so this is the simple map · ' : 'Offline: simple map · ') + 'Coastlines: Natural Earth · routes approximate'}
+            </span>
           </div>
         </div>
         <section className="jr-tl" aria-label="Timeline">
