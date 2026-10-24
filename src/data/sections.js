@@ -11,11 +11,12 @@ export const SECTIONS = [
     icon: 'book',
     color: '#D9B26A',
     pages: [
-      { id: 'books', label: 'Books & Timeline', tab: 'Books', icon: 'books', to: '/', count: 66, match: ['/', '/book/', '/nation/', '/church/', '/study/'] },
+      { id: 'books', label: 'Books & Timeline', tab: 'Books', icon: 'books', to: '/', count: 66, match: ['/', '/book/', '/nation/', '/church/'] },
       { id: 'people', label: 'People', tab: 'People', icon: 'people', to: '/people', match: ['/people'] },
       { id: 'powers', label: 'Geopolitical Timeline', icon: 'globe', to: '/empire', match: ['/empire'] },
       { id: 'kings', label: 'Kings & Prophets', tab: 'Kings', icon: 'crown', to: '/kings', match: ['/kings'] },
       { id: 'christ', label: 'Christ in Scripture', tab: 'Christ', icon: 'christ', to: '/prophecies', match: ['/prophecies'] },
+      { id: 'leviticus', label: 'Leviticus Study', icon: 'tent', to: '/study/leviticus', match: ['/study/leviticus'] },
       { id: 'daniel', label: 'Daniel’s Prophecies', icon: 'scroll', to: '/daniel', match: ['/daniel'] },
       { id: 'journeys', label: 'Paul’s Journeys', icon: 'map', to: '/journeys', match: ['/journeys'] },
       { id: 'apocrypha', label: 'Apocrypha', icon: 'scroll', to: '/apocrypha', match: ['/apocrypha', '/book/1maccabees'] },

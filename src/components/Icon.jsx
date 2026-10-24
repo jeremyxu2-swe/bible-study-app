@@ -21,6 +21,7 @@ const P = {
   plus: <path d="M12 5v14M5 12h14" />,
   globe: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" /></>,
   map: <path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14" />,
+  tent: <path d="M3 20h18M5 20l7-14 7 14M12 6v14M9.5 20l2.5-5 2.5 5" />,
   crown: <path d="M4 17h16M5 17l-1-9 5 4 3-6 3 6 5-4-1 9" />,
   user: <><circle cx="12" cy="9" r="3.5" /><path d="M5.5 19.5a7 7 0 0113 0" /></>,
 };
