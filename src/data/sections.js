@@ -1,7 +1,7 @@
-// App sections shown in the sidebar (computer), the ☰ drawer and the bottom bar (phone).
+// App sections shown in the sidebar (computer), and the ☰ drawer (phone).
 // To add a section: add one entry here with a name, icon, color and pages, then add its routes in App.jsx.
 //   icon  — a key from the icon set in components/Icon.jsx
-//   tab   — the short label for the phone's bottom bar (pages without one stay in the sidebar only)
+//   tab   — a short label for the page (not shown anywhere right now; the phone bottom bar was removed)
 //   match — path prefixes that belong to this page ('/' on its own only matches the home page)
 //   soon  — shown greyed out with a "Soon" badge; its pages aren't clickable yet
 export const SECTIONS = [
@@ -54,7 +54,7 @@ export const SHARED = [
 
 const matches = (page, path) => (page.match || [page.to]).some((m) => (m === '/' ? path === '/' : path === m || path.startsWith(m.endsWith('/') ? m : m + '/')));
 
-// Remember the last section, so Notes / Search / Settings keep that section's bottom bar.
+// Remember the last section, so Notes / Search / Settings stay with that section.
 let lastSection = 'bible';
 
 // Where am I? → { section, page, shared }

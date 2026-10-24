@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import Header, { BottomNav } from './components/Header.jsx';
+import Header from './components/Header.jsx';
 import Overview from './pages/Overview.jsx';
 import Book from './pages/Book.jsx';
 import Chapter from './pages/Chapter.jsx';
@@ -82,7 +82,6 @@ export default function App() {
           a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
         </div>
       </footer>
-      <BottomNav />
       <BookPeek />
     </>
   );

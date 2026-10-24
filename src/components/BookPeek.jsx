@@ -118,7 +118,7 @@ export default function BookPeek() {
   const [pos, setPos] = useState(null);
 
   // Keep the whole card on screen (job #19): measure the visible viewport (iOS visualViewport), the
-  // phone's bottom bar (if shown) and the safe areas; put the card below the chip, flip it above when
+  // safe areas; put the card below the chip, flip it above when
   // there is no room, clamp it, and let long content scroll inside it. Re-measure when it resizes.
   useLayoutEffect(() => {
     if (!s || !cardRef.current) { setPos(null); return undefined; }
@@ -134,9 +134,7 @@ export default function BookPeek() {
       const gap = 10;
       const safe = safeAreas();
       const topSafe = 12 + safe.top;
-      const nav = document.querySelector('.bottomnav');
-      const navR = nav && getComputedStyle(nav).display !== 'none' && !nav.classList.contains('bn-hidden') ? nav.getBoundingClientRect() : null;
-      const bottomSafe = Math.max(12 + safe.bottom, navR && navR.top < vh ? vh - navR.top + 10 : 0);
+      const bottomSafe = 12 + safe.bottom;
       const room = Math.max(160, vh - topSafe - bottomSafe);
       // Natural height of the content (without a previous max-height squeezing it).
       const prevMax = el.style.maxHeight;
