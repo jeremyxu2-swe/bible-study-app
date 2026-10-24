@@ -1,7 +1,7 @@
-import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useCallback, useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
-  MAP_W, MAP_H, project, LAND, ISLETS, REGIONS, PLACES, MAJOR, LETTERS, JOURNEYS, journeyById, letterFor, stopPoint, TL_FROM, TL_TO,
+  MAP_W, MAP_H, project, LAND, ISLETS, REGIONS, PLACES, MAJOR, JOURNEYS, journeyById, letterFor, writtenAt, stopPoint, TL_FROM, TL_TO,
 } from '../data/journeys.js';
 import { CHARACTERS, getBook } from '../data/index.js';
 import { PersonLink, PeekChip } from '../components/BookPeek.jsx';
@@ -13,10 +13,11 @@ import { noteKey } from '../store/notes.js';
 //   Computer (A, "Atlas"): journey tabs; the whole eastern Mediterranean with every route; the chosen
 //     route lit up with numbered stops and city names; a side panel with who went, the letters written,
 //     and each stop (Acts reference, one line, and the letter its church later received); a timeline below.
-//     Gold tags on the map mark the cities whose church received a letter (a switch under the map).
-//   Phone (C, ≤760px): the map zooms in on the chosen journey; numbered stops, with a gold ring on cities
-//     that received a letter; the stop list below. No city names on the small map.
-// The chosen journey lives in the address: ?j=j1 | j2 | j3 | j4 (no ?j = all journeys).
+//     Gold tags on the map mark where Paul wrote his letters (a switch under the map; 24 Oct, was: who received them).
+//   Phone (C, ≤760px): the map zooms in on the chosen journey; numbered stops, with a gold ring where a letter
+//     was written; the stop list below. No city names on the small map.
+// The chosen journey lives in the address: ?j=j1 | j2 | j3 | j4 (no ?j = the 1st journey; the "All journeys"
+// view was removed on 24 Oct. Old notes saved under journey:all still show in My Notes).
 // 24 Oct: the map is now zoomable (components/JourneyLiveMap.jsx: Roman world, satellite or terrain under the
 //   routes, pinch / drag / + −, tap a stop for its card, a full-screen button). The drawn map below
 //   (JourneyMap) is the fallback when offline or when the map tiles can't be reached.
@@ -89,6 +90,19 @@ function LetterChip({ letter, className = 'jr-letter' }) {
   return <PeekChip kind="church" id={letter.church} to={`/church/${letter.church}`} className={className}>{letter.label}</PeekChip>;
 }
 
+// "Written here": the letters Paul wrote at a stop on this journey (24 Oct: the map tags show where letters
+// were written, not who received them).
+function WrittenLine({ w, note = true }) {
+  if (!w) return null;
+  return (
+    <span className="jr-lline jr-wline">
+      <span>Written here{w.maybe ? ' (possibly)' : ''}:</span>
+      <span>{w.books.map((b, i) => <span key={b}>{i > 0 && ', '}<Link to={`/book/${b}`}>{getBook(b)?.name || b}</Link></span>)}</span>
+      {note && w.note && <small>{w.note}</small>}
+    </span>
+  );
+}
+
 function JourneyMap({ sel, phone, lettersOn }) {
   const box = cropFor(sel, phone ? 4 / 3 : MAP_W / MAP_H, phone);
   const k = box[2] / MAP_W; // map units per unit at full size: keeps text and dashes the same size when zoomed
@@ -99,30 +113,20 @@ function JourneyMap({ sel, phone, lettersOn }) {
   const pins = [];
   const seen = new Set();
   if (sel) {
-    // A journey: its own stops only, each with the letter its church received (the Galatian towns share
-    // one "Galatians" tag, on the first of them; the Macedonia & Greece stop has none, it's a region).
-    let galatians = false;
+    // A journey: its own stops only, each tagged with the letters Paul wrote there on this journey.
     sel.stops.forEach((s, i) => {
       if (!s.place || seen.has(s.place)) return;
       seen.add(s.place);
-      const l = s.place === 'macedonia' ? null : letterFor(s.place);
-      const showL = l && !(l.church === 'galatia' && galatians);
-      if (l?.church === 'galatia') galatians = true;
+      const w = writtenAt(sel.id, s.place);
       pins.push({
         key: s.place, p: stopPoint(s), side: s.side || PLACES[s.place].side, n: i + 1,
         name: s.label || (s.at ? s.name : PLACES[s.place].name),
-        badge: lettersOn && showL ? l : null,
-        ring: !!letterFor(s.place),
+        badge: lettersOn ? w : null,
+        ring: !!w,
       });
     });
   } else {
-    MAJOR.forEach((id) => { seen.add(id); pins.push({ key: id, p: PLACES[id], side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, dot: true, badge: lettersOn ? LETTERS[id] || null : null }); });
-  }
-  if (lettersOn && !phone && !sel) {
-    Object.entries(LETTERS).forEach(([id, l]) => {
-      if (seen.has(id)) return;
-      pins.push({ key: id, p: PLACES[id], side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, dot: !l.region, badge: l, faint: true });
-    });
+    MAJOR.forEach((id) => { seen.add(id); pins.push({ key: id, p: PLACES[id], side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, dot: true, badge: lettersOn ? writtenAt(null, id) : null }); });
   }
 
   return (
@@ -153,7 +157,7 @@ function JourneyMap({ sel, phone, lettersOn }) {
           {!phone && (
             <span className="jr-tag">
               <b>{x.name}</b>
-              {x.badge && <LetterChip letter={x.badge} className="jr-badge" />}
+              {x.badge && <span className="jr-badge">{x.badge.label}</span>}
             </span>
           )}
         </div>
@@ -164,7 +168,7 @@ function JourneyMap({ sel, phone, lettersOn }) {
 
 export default function Journeys() {
   const [params, setParams] = useSearchParams();
-  const sel = journeyById[params.get('j')] || null;
+  const sel = journeyById[params.get('j')] || JOURNEYS[0]; // 24 Oct: no "All journeys" view; opens on the 1st
   const phone = useMedia('(max-width: 760px)');
   const [lettersOn, setLettersOn] = useState(readLetters);
   const toggleLetters = () => {
@@ -172,7 +176,7 @@ export default function Journeys() {
     setLettersOn(v);
     try { localStorage.setItem(LETTERS_KEY, v ? '1' : '0'); } catch { /* storage blocked */ }
   };
-  const pick = (id) => setParams(id ? { j: id } : {}, { replace: true });
+  const pick = (id) => setParams({ j: id }, { replace: true });
   const online = useOnline();
   const [failed, setFailed] = useState(false);
   const live = online && !failed;
@@ -192,12 +196,9 @@ export default function Journeys() {
   const onFail = useCallback(() => setFailed(true), []);
   const stop = sel && card != null ? sel.stops[card] : null;
   const stopLetter = stop ? letterFor(stop.place) : null;
+  const stopWritten = stop ? writtenAt(sel.id, stop.place) : null;
 
-  const tabs = [{ id: null, label: phone ? 'All' : 'All journeys', color: 'var(--muted)' }, ...JOURNEYS.map((j) => ({ id: j.id, label: phone ? j.short : j.name, color: `var(--${j.id})` }))];
-  const letterRows = useMemo(() => [
-    ['Rome', 'rome'], ['Corinth', 'corinth'], ['Galatia (Pisidian Antioch, Iconium, Lystra, Derbe)', 'galatia'],
-    ['Ephesus', 'ephesus'], ['Philippi', 'philippi'], ['Colossae (Paul never visited)', 'colossae'], ['Thessalonica', 'thessalonica'],
-  ], []);
+  const tabs = JOURNEYS.map((j) => ({ id: j.id, label: phone ? j.short : j.name, color: `var(--${j.id})` }));
 
   return (
     <main className={'wrap page jr-page' + (sel ? ' has-sel' : '')}>
@@ -207,7 +208,7 @@ export default function Journeys() {
 
       <div className="jr-tabs" role="tablist" aria-label="Journeys">
         {tabs.map((t) => {
-          const on = (sel?.id || null) === t.id;
+          const on = sel.id === t.id;
           return (
             <button key={t.id || 'all'} type="button" role="tab" aria-selected={on} className={'jr-tab' + (on ? ' on' : '')} onClick={() => pick(t.id)}>
               <i style={{ background: t.color }} aria-hidden="true" />{t.label}
@@ -239,6 +240,7 @@ export default function Journeys() {
                   <button type="button" className="jr-card-x" onClick={() => setCard(null)} aria-label="Close">×</button>
                   <div className="jr-place"><span className="jr-n" aria-hidden="true">{card + 1}</span>{stop.name} <Ref to={`/book/acts/${stop.ch}`} className="jr-sref">Acts {stop.ref}</Ref></div>
                   <p>{stop.text}</p>
+                  <WrittenLine w={stopWritten} />
                   {stopLetter && (stopLetter.multi
                     ? <span className="jr-lline">Letters to these churches: {stopLetter.multi.map((x) => <LetterChip key={x.church} letter={x} />)}</span>
                     : <span className="jr-lline">Letter to this church: <LetterChip letter={stopLetter} /></span>)}
@@ -254,13 +256,13 @@ export default function Journeys() {
             ))}
             {!phone && (
               <button type="button" className={'jr-ltoggle' + (lettersOn ? ' on' : '')} aria-pressed={lettersOn} onClick={toggleLetters}>
-                <i aria-hidden="true" />Cities that received a letter
+                <i aria-hidden="true" />Where letters were written
               </button>
             )}
-            {phone && sel && !live && <span><i className="jr-ringkey" aria-hidden="true" />Received a letter</span>}
+            {phone && sel && !live && <span><i className="jr-ringkey" aria-hidden="true" />A letter was written here</span>}
             {phone && live && (
               <button type="button" className={'jr-ltoggle' + (lettersOn ? ' on' : '')} aria-pressed={lettersOn} onClick={toggleLetters}>
-                <i aria-hidden="true" />Letter tags
+                <i aria-hidden="true" />Letters written
               </button>
             )}
             <span className="jr-approx">
@@ -290,28 +292,7 @@ export default function Journeys() {
         </div>
 
         <aside className="jr-side">
-          {!sel ? (
-            <>
-              <h2 className="jr-h2">Four journeys</h2>
-              <p className="jr-small">Choose a journey to see each stop, who travelled with Paul, and the letters tied to it.</p>
-              <div className="jr-cards">
-                {JOURNEYS.map((j) => (
-                  <button key={j.id} type="button" className="jr-jcard" onClick={() => pick(j.id)}>
-                    <b><i style={{ background: `var(--${j.id})` }} aria-hidden="true" />{j.name}</b>
-                    <span>{j.years} · {j.ref} · {j.stops.length} stops</span>
-                  </button>
-                ))}
-              </div>
-              <h3 className="jr-k">Cities that received a letter</h3>
-              <ul className="jr-lcities">
-                {letterRows.map(([city, id]) => {
-                  const l = Object.values(LETTERS).find((x) => x.church === id);
-                  return <li key={id}><span>{city}</span><LetterChip letter={l} className="jr-lc-link" /></li>;
-                })}
-              </ul>
-            </>
-          ) : (
-            <>
+          <>
               <div className="jr-head" style={{ '--c': `var(--${sel.id})` }}>
                 <span className="jr-years">{sel.years}</span>
                 <h2 className="jr-h2">{sel.name}</h2>
@@ -329,12 +310,14 @@ export default function Journeys() {
               <ol className="jr-stops" style={{ '--c': `var(--${sel.id})` }}>
                 {sel.stops.map((s, i) => {
                   const l = letterFor(s.place);
+                  const w = writtenAt(sel.id, s.place);
                   return (
                     <li key={i}>
-                      <span className={'jr-n' + (l ? ' ring' : '')} aria-hidden="true">{i + 1}</span>
+                      <span className={'jr-n' + (w ? ' ring' : '')} aria-hidden="true">{i + 1}</span>
                       <div>
                         <div className="jr-place">{s.name} <Ref to={`/book/acts/${s.ch}`} className="jr-sref">Acts {s.ref}</Ref></div>
                         <p>{s.text}</p>
+                        <WrittenLine w={w} note={false} />
                         {l && (l.multi
                           ? <span className="jr-lline">Letters to these churches: {l.multi.map((x) => <LetterChip key={x.church} letter={x} />)}</span>
                           : <span className="jr-lline">Letter to this church: <LetterChip letter={l} /></span>)}
@@ -343,9 +326,8 @@ export default function Journeys() {
                   );
                 })}
               </ol>
-            </>
-          )}
-          <NoteEditor noteKey={noteKey('journey', sel ? sel.id : 'all')} title={sel ? `My notes on the ${sel.name.toLowerCase()}` : 'My notes on Paul’s journeys'} />
+          </>
+          <NoteEditor noteKey={noteKey('journey', sel.id)} title={`My notes on the ${sel.name.toLowerCase()}`} />
         </aside>
       </div>
 

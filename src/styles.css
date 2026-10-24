@@ -3428,3 +3428,13 @@ html.jr-noscroll, html.jr-noscroll body { overflow: hidden; }
   .jr-card { bottom: 46px; right: 54px; }
   .lm-name { font-size: 12px; }
 }
+
+/* Paul's Journeys: letters tagged where they were WRITTEN (24 Oct) */
+.jr-wline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 4px; }
+.jr-wline small { flex-basis: 100%; font-size: calc(12px * var(--ts)); color: var(--muted); line-height: 1.45; }
+.jr-wcities li { align-items: flex-start; }
+.jr-wcities li > span:first-child { display: flex; flex-direction: column; gap: 1px; }
+.jr-wcities small { font-size: calc(11.5px * var(--ts)); color: var(--muted); }
+.jr-wbooks { text-align: right; font-size: calc(13px * var(--ts)); }
+.lm-badge svg { margin-right: 3px; vertical-align: -1px; }
+.lm-badge.maybe { background: #EAD7AE; }

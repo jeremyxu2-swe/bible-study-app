@@ -88,6 +88,28 @@ export function letterFor(place) {
   return null;
 }
 
+// Where Paul WROTE his letters (24 Oct: the map's letter tags show this, not who received them).
+// By journey: the stop the tag sits on → the letters written there. `all` places the tags on the cities for the
+// all-journeys view. `maybe` marks a debated place (Galatians). Dates and places follow the usual reconstruction;
+// the notes say where scholars differ.
+export const WRITTEN = {
+  j1: { antioch: { books: ['galatians'], label: 'Galatians?', maybe: true, note: 'Possibly from Antioch soon after this journey (c. AD 48–49), if it went to the churches of south Galatia; others date it later, from Ephesus or Macedonia.' } },
+  j2: { corinth: { books: ['1thessalonians', '2thessalonians'], label: '1 & 2 Thessalonians', note: 'From Corinth, c. AD 50–51, after Timothy brought news from Thessalonica (1 Thessalonians 3:6; Acts 18:5).' } },
+  j3: {
+    ephesus: { books: ['1corinthians'], label: '1 Corinthians', note: 'From Ephesus, c. AD 54–55 (1 Corinthians 16:8).' },
+    macedonia: { books: ['2corinthians', 'romans'], label: '2 Corinthians · Romans', note: '2 Corinthians from Macedonia, c. AD 55–56 (2 Corinthians 7:5; 9:2), traditionally Philippi; Romans from Corinth, c. AD 57 (Romans 16:1, 23).' },
+  },
+  j4: { rome: { books: ['ephesians', 'philippians', 'colossians', 'philemon'], label: 'Eph · Phil · Col · Philemon', note: 'Traditionally from Rome, under house arrest, c. AD 60–62 (Acts 28:30); some suggest Ephesus or Caesarea instead.' } },
+  all: {
+    antioch: { books: ['galatians'], label: 'Galatians?', maybe: true },
+    corinth: { books: ['1thessalonians', '2thessalonians', 'romans'], label: '1 & 2 Thess · Romans' },
+    ephesus: { books: ['1corinthians'], label: '1 Corinthians' },
+    philippi: { books: ['2corinthians'], label: '2 Corinthians', maybe: true },
+    rome: { books: ['ephesians', 'philippians', 'colossians', 'philemon'], label: 'Eph · Phil · Col · Philemon' },
+  },
+};
+export const writtenAt = (jid, place) => (place && WRITTEN[jid || 'all']?.[place]) || null;
+
 // Timeline band: AD 45–61.
 export const TL_FROM = 45;
 export const TL_TO = 61;

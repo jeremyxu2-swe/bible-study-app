@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import * as L from '../vendor/leaflet/leaflet.js';
 import '../vendor/leaflet/leaflet.css';
-import { PLACES, MAJOR, LETTERS, JOURNEYS, letterFor } from '../data/journeys.js';
+import { PLACES, MAJOR, JOURNEYS, writtenAt } from '../data/journeys.js';
 import { ROUTES } from '../data/journeysRoutes.js';
 
 // Paul's Journeys › the zoomable map (24 Oct). Leaflet (vendored in src/vendor/leaflet, BSD-2) over a choice of
@@ -43,26 +43,22 @@ const toLatLng = (x, y) => [44 - y / 30, x / 25 + 10];
 const ROUTE_LL = Object.fromEntries(Object.entries(ROUTES).map(([id, d]) => [id, (d.match(/-?[\d.]+,-?[\d.]+/g) || []).map((s) => { const [x, y] = s.split(',').map(Number); return toLatLng(x, y); })]));
 const placeLL = (id) => [PLACES[id].lat, PLACES[id].lon];
 const stopLL = (s) => (s.at ? [s.at[1], s.at[0]] : placeLL(s.place));
+const PEN = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16z"/></svg>';
 const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-// The pins for the current view (same rules as the drawn map): a journey's own stops, numbered, with the
-// letter its church received (Galatians once); or, for all journeys, the major places plus letter cities.
+// The pins for the current view (same rules as the drawn map): a journey's own stops, numbered, each tagged with
+// the letters Paul wrote there on that journey; or, for all journeys, the major places with every letter written there.
 function pinsFor(sel) {
   const pins = [];
   const seen = new Set();
   if (sel) {
-    let galatians = false;
     sel.stops.forEach((s, i) => {
       if (!s.place || seen.has(s.place)) return;
       seen.add(s.place);
-      const l = s.place === 'macedonia' ? null : letterFor(s.place);
-      const showL = l && !(l.church === 'galatia' && galatians);
-      if (l?.church === 'galatia') galatians = true;
-      pins.push({ key: s.place, ll: stopLL(s), n: i + 1, i, side: s.side || PLACES[s.place].side, name: s.label || (s.at ? s.name : PLACES[s.place].name), badge: showL ? l : null });
+      pins.push({ key: s.place, ll: stopLL(s), n: i + 1, i, side: s.side || PLACES[s.place].side, name: s.label || (s.at ? s.name : PLACES[s.place].name), badge: writtenAt(sel.id, s.place) });
     });
   } else {
-    MAJOR.forEach((id) => { seen.add(id); pins.push({ key: id, ll: placeLL(id), side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, badge: LETTERS[id] || null }); });
-    Object.entries(LETTERS).forEach(([id, l]) => { if (!seen.has(id) && PLACES[id]) pins.push({ key: id, ll: placeLL(id), side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, badge: l, faint: true }); });
+    MAJOR.forEach((id) => { seen.add(id); pins.push({ key: id, ll: placeLL(id), side: PLACES[id].allSide || PLACES[id].side, name: PLACES[id].name, badge: writtenAt(null, id) }); });
   }
   return pins;
 }
@@ -125,7 +121,7 @@ export default function JourneyLiveMap({ sel, phone, lettersOn, base, onStop, on
     });
     pinsFor(sel).forEach((p) => {
       const col = sel ? C[sel.id] : null;
-      const badge = lettersOn && p.badge ? `<a class="lm-badge" href="#/church/${p.badge.church}">${esc(p.badge.label)}</a>` : '';
+      const badge = lettersOn && p.badge ? `<span class="lm-badge${p.badge.maybe ? ' maybe' : ''}" title="Letters written here">${PEN}${esc(p.badge.label)}</span>` : '';
       const html = `<span class="lm-pin s-${p.side || 'r'}${p.faint ? ' faint' : ''}">${p.n ? `<b class="lm-num" style="background:${col};color:${C.ink}">${p.n}</b>` : '<i class="lm-dot"></i>'}<span class="lm-lab"><span class="lm-name">${esc(p.name)}</span>${badge}</span></span>`;
       const size = p.n ? 26 : 12;
       const mk = L.marker(p.ll, { icon: L.divIcon({ className: 'lm-icon', html, iconSize: [size, size], iconAnchor: [size / 2, size / 2] }), keyboard: !!p.n, title: p.name, riseOnHover: true }).addTo(g);
