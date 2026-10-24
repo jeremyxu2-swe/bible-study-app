@@ -3365,3 +3365,66 @@ a.ed-pref:hover { text-decoration: underline; }
 .em-more b { color: var(--accent-ink); font-size: calc(14px * var(--ts)); }
 .em-more span { color: var(--ink-2); font-size: calc(13px * var(--ts)); line-height: 1.45; }
 .em-more:hover { border-color: var(--accent); }
+
+/* ───────── Paul's Journeys: zoomable map (24 Oct) ─────────
+   JourneyLiveMap.jsx (Leaflet). The base maps are light (Roman world, terrain) or dark (satellite); the pins and
+   labels change contrast with them (.lm-light / .lm-dark), not with the app theme. */
+.jr-live { position: relative; border-radius: 10px; overflow: hidden; background: var(--sea); }
+.lm, .lm-map { width: 100%; }
+.lm-map { aspect-ratio: 750 / 470; background: #AFC8DA; font-family: var(--sans); }
+.lm-phone .lm-map { aspect-ratio: 1 / 1.02; }
+.jr-live.full { position: fixed; inset: 0; z-index: 130; border-radius: 0; }
+.jr-live.full .lm-map { aspect-ratio: auto; height: calc(100dvh / var(--z)); }
+html.jr-noscroll, html.jr-noscroll body { overflow: hidden; }
+:root:not([data-theme="light"]) .lm-light .leaflet-tile-pane { filter: brightness(.92) saturate(.95); }
+/* Leaflet chrome in the app's style */
+.lm .leaflet-bar { border: 1px solid var(--line-2); box-shadow: 0 2px 8px rgb(0 0 0 / .25); border-radius: 10px; overflow: hidden; }
+.lm .leaflet-bar a { width: 34px; height: 34px; line-height: 32px; background: var(--surface); color: var(--ink); border-bottom-color: var(--line); font-size: 18px; }
+.lm .leaflet-bar a:hover { background: var(--surface-2); }
+.lm .leaflet-bar a.leaflet-disabled { color: var(--muted); background: var(--surface); }
+.lm .leaflet-control-attribution { font-size: 9.5px; line-height: 1.35; max-width: 70%; background: rgb(255 255 255 / .78); color: #333; border-top-left-radius: 6px; }
+.lm .leaflet-control-attribution a { color: #24508a; }
+.lm-phone .leaflet-control-attribution { max-width: 100%; }
+.lm-phone .leaflet-control-zoom { display: none; }  /* pinch to zoom on the phone */
+.lm .leaflet-container:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+/* Pins */
+.lm-icon { background: none; border: 0; }
+/* Hide the hairline seams between tiles at in-between zoom levels */
+.lm .leaflet-tile-container img.leaflet-tile { width: 257.5px !important; height: 257.5px !important; mix-blend-mode: normal; }
+.lm-pin { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.lm-num { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font: 700 12px/1 var(--sans); box-shadow: 0 0 0 2px #fff, 0 2px 6px rgb(0 0 0 / .35); cursor: pointer; }
+.lm-dark .lm-num { box-shadow: 0 0 0 2px #14161B, 0 2px 6px rgb(0 0 0 / .5); }
+.lm-dot { width: 10px; height: 10px; border-radius: 50%; background: #1d1f24; box-shadow: 0 0 0 2px #fff; }
+.lm-dark .lm-dot { background: #fff; box-shadow: 0 0 0 2px #14161B; }
+.lm-lab { position: absolute; left: calc(100% + 5px); top: 50%; transform: translateY(-50%); display: none; flex-direction: column; align-items: flex-start; gap: 2px; pointer-events: none; }
+.lm-names .lm-lab { display: flex; }
+.lm-names .lm-lab.lm-hide { visibility: hidden; }
+.lm-pin.s-l .lm-lab { left: auto; right: calc(100% + 5px); align-items: flex-end; }
+.lm-pin.s-t .lm-lab { left: 50%; top: auto; bottom: calc(100% + 3px); transform: translateX(-50%); align-items: center; }
+.lm-pin.s-b .lm-lab { left: 50%; top: calc(100% + 3px); transform: translateX(-50%); align-items: center; }
+.lm-name { white-space: nowrap; font: 600 12.5px/1.2 var(--sans); color: #1b1d22; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #fff; }
+.lm-dark .lm-name { color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 4px #000; }
+.lm-pin.faint .lm-name { opacity: .8; font-weight: 500; }
+.lm-badge { display: none; pointer-events: auto; white-space: nowrap; font: 600 10.5px/1 var(--sans); padding: 3px 6px; border-radius: 5px; background: #D9B26A; color: #1b1d22; text-decoration: none; box-shadow: 0 1px 3px rgb(0 0 0 / .3); }
+.lm-badge:hover { background: #ECC983; }
+.lm-badges .lm-badge { display: inline-block; }  /* on a journey (computer), or once zoomed in */
+/* Base-map switch, full-screen button and the stop card, over the map */
+.jr-bases { position: absolute; top: 10px; right: 10px; z-index: 500; display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgb(20 22 27 / .82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.jr-bases button { font: inherit; font-size: calc(12px * var(--ts)); min-height: 30px; padding: 0 11px; border-radius: 999px; border: 0; background: none; color: #CFC9BC; cursor: pointer; }
+.jr-bases button.on { background: #D9B26A; color: #14161B; font-weight: 600; }
+.jr-full { position: absolute; z-index: 500; right: 10px; top: 52px; width: 36px; height: 36px; border-radius: 10px; border: 0; background: rgb(20 22 27 / .82); color: #ECE8DF; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.jr-full:hover { background: rgb(20 22 27 / .95); }
+.jr-card { position: absolute; z-index: 600; left: 10px; right: 10px; bottom: 36px; max-width: 420px; background: var(--pop-bg, var(--surface)); border: 1px solid var(--line-2); border-left: 4px solid var(--c); border-radius: 12px; padding: 10px 36px 10px 12px; box-shadow: 0 10px 30px rgb(0 0 0 / .35); display: flex; flex-direction: column; gap: 5px; }
+.jr-card .jr-place { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 600; }
+.jr-card .jr-n { width: 22px; height: 22px; }
+.jr-card p { margin: 0; font-size: calc(14px * var(--ts)); line-height: 1.5; color: var(--ink-2); }
+.jr-card-x { position: absolute; top: 4px; right: 4px; width: 32px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; }
+.jr-card-x:hover { color: var(--ink); background: var(--surface-2); }
+@media (max-width: 760px) {
+  .jr-live { border-radius: 0; }
+  .jr-bases { top: 8px; right: 8px; left: auto; }
+  .jr-bases button { min-height: 32px; padding: 0 10px; }
+  .jr-full { top: auto; bottom: 50px; right: 8px; }
+  .jr-card { bottom: 46px; right: 54px; }
+  .lm-name { font-size: 12px; }
+}
