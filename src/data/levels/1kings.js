@@ -1,0 +1,155 @@
+// 1 Kings at three reading levels. s = Simple, m = Moderate, d = Detailed, v = key verse, p = people.
+// Book key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+export default {
+  book: {
+    simple: 'Solomon builds the temple, but the kingdom splits and Elijah confronts idolatry.',
+    moderate: '1 Kings begins with Solomon\'s wise and glorious reign and the building of the temple in Jerusalem. But Solomon\'s many foreign wives turn his heart to idols, and after his death the kingdom splits into Israel in the north and Judah in the south. The book ends with the prophet Elijah challenging King Ahab and the worship of Baal.',
+    detailed: '1 Kings opens with David\'s death and Solomon securing the throne, asking God for wisdom, and becoming famous for justice, wealth and learning. Solomon builds the temple, and at its dedication God\'s glory fills it and Solomon prays that God will hear His people when they turn to Him, but in his old age foreign wives lead him into idolatry. Under his son Rehoboam the ten northern tribes break away under Jeroboam, who sets up golden calves, and the book traces the kings of both kingdoms, measured by whether they walked in the ways of David or of Jeroboam. The final third centers on Elijah, who announces drought, defeats the prophets of Baal on Mount Carmel, hears God\'s still small voice at Horeb, and confronts Ahab and Jezebel, until Ahab dies in battle as the prophets foretold.',
+    verse: { ref: '1 Kings 18:21', text: 'How long will you go limping between two different opinions? If the LORD is God, follow him; but if Baal, then follow him.' },
+    themes: ['Wisdom and its misuse', 'The temple and God\'s presence', 'Idolatry divides and destroys', 'God\'s prophets confront kings'],
+    keyVerses: [
+      { ref: '3:9', text: 'Give your servant therefore an understanding mind to govern your people, that I may discern between good and evil.' },
+      { ref: '8:27', text: 'But will God indeed dwell on the earth? Behold, heaven and the highest heaven cannot contain you; how much less this house that I have built!' },
+      { ref: '19:12', text: 'And after the earthquake a fire, but the LORD was not in the fire. And after the fire the sound of a low whisper.' },
+    ],
+  },
+  sections: {
+    1: { short: 'Solomon becomes king, asks for wisdom and builds the temple.' },
+    12: { short: 'The kingdom splits into Israel and Judah.' },
+    17: { short: 'Elijah confronts Ahab, Jezebel and the prophets of Baal.' },
+  },
+  chapters: [
+    { // 1
+      s: 'Solomon is anointed king as Adonijah tries to seize the throne.',
+      m: 'As David grows old, his son Adonijah declares himself king with the support of Joab and Abiathar. Nathan and Bathsheba remind David of his promise that Solomon would reign. David has Solomon anointed king at Gihon, and Adonijah\'s supporters scatter in fear.',
+      d: 'King David is old and cannot keep warm, and Abishag the Shunammite is brought to care for him. His son Adonijah, handsome and never disciplined by his father, exalts himself and holds a feast to make himself king, joined by Joab and Abiathar but not Nathan, Zadok, Benaiah or Solomon. Nathan and Bathsheba go to David and remind him of his oath that Solomon would reign, and David commands that Solomon ride on the king\'s mule to Gihon, where Zadok anoints him and the people shout, "Long live King Solomon!" Adonijah\'s guests hear the noise and flee, and Adonijah grabs the horns of the altar until Solomon promises to spare him if he proves worthy.',
+      p: ['david', 'solomon', 'nathan', 'bathsheba'],
+    },
+    { // 2
+      s: 'David charges Solomon and dies, and Solomon secures his kingdom.',
+      m: 'David charges Solomon to be strong, keep the LORD\'s commands, and deal with old enemies. After David dies, Solomon executes Adonijah for a renewed bid for power, and later Joab and Shimei. He banishes Abiathar the priest, and the kingdom is firmly established in Solomon\'s hand.',
+      d: 'As he dies, David tells Solomon to be strong and show himself a man by keeping the LORD\'s statutes, so that God will keep His promise of a lasting throne. He also tells him to repay Joab for murdering Abner and Amasa, show kindness to Barzillai\'s sons, and not hold Shimei guiltless, and David is buried in the City of David after reigning forty years. When Adonijah asks Bathsheba to request Abishag as his wife, Solomon sees it as a claim to the throne and has Benaiah execute him, removes Abiathar from the priesthood in fulfillment of the word against Eli\'s house, and has Joab killed at the altar. Shimei is confined to Jerusalem and executed when he leaves, "so the kingdom was established in the hand of Solomon."',
+      p: ['david', 'solomon', 'bathsheba'],
+    },
+    { // 3
+      s: 'Solomon asks God for wisdom and judges between two mothers.',
+      m: 'God appears to Solomon in a dream and invites him to ask for anything. Solomon asks for an understanding heart to govern God\'s people, and God gives him wisdom plus riches and honor. Solomon shows his wisdom when two women claim the same baby, and he reveals the true mother by ordering the child cut in two.',
+      d: 'Solomon makes a marriage alliance with Pharaoh and loves the LORD, though he still sacrifices at the high places. At Gibeon God appears to him in a dream and says, "Ask what I shall give you," and Solomon, calling himself a little child, asks for an understanding mind to govern God\'s people and discern between good and evil. Pleased, God gives him a wise and discerning heart beyond anyone before or after, and adds riches and honor, with long life if he walks in God\'s ways. When two prostitutes each claim the same living baby, Solomon calls for a sword to divide the child, and the real mother begs that the baby be given to the other woman, so Solomon gives her the child, and all Israel stands in awe because God\'s wisdom is in him.',
+      p: ['solomon'],
+    },
+    { // 4
+      s: 'Solomon\'s officials, prosperity and wisdom.',
+      m: 'The chapter lists Solomon\'s high officials and the twelve governors who provide food for the royal household. Judah and Israel are as many as the sand by the sea, eating, drinking and being happy. Solomon\'s wisdom surpasses all the wise men of the east, and he speaks thousands of proverbs and songs.',
+      d: 'Solomon organizes his government with priests, secretaries, a recorder, an army commander and other officials. Twelve district governors each supply the king\'s household for one month of the year, providing huge daily amounts of flour, cattle, sheep and game. Israel is numerous and secure, "every man under his vine and under his fig tree," and Solomon rules from the Euphrates to the border of Egypt. God gives him wisdom and understanding beyond measure, greater than all the people of the east and Egypt, and he speaks three thousand proverbs and a thousand and five songs and teaches about plants and animals, so people come from all nations to hear him.',
+      p: ['solomon'],
+    },
+    { // 5
+      s: 'Solomon prepares to build the temple with Hiram\'s help.',
+      m: 'Solomon tells Hiram, king of Tyre, that he will build a house for the LORD as God promised David. Hiram agrees to supply cedar and cypress from Lebanon in exchange for food. Solomon drafts laborers to cut timber and quarry great stones for the foundation.',
+      d: 'Hiram king of Tyre, a longtime friend of David, sends servants when he hears Solomon is king. Solomon explains that David could not build a house for God because of constant wars, but now God has given rest, so he intends to build it as God promised. Hiram rejoices, blesses the LORD for giving David a wise son, and agrees to float cedar and cypress logs down the coast in exchange for wheat and oil, and the two make a treaty. Solomon conscripts thirty thousand men from Israel to work in Lebanon in shifts and has many more carry loads and quarry great, costly stones for the temple\'s foundation.',
+      p: ['solomon', 'david'],
+    },
+    { // 6
+      s: 'Solomon builds the temple.',
+      m: 'In the 480th year after the Exodus, Solomon begins building the temple. Its stones are prepared at the quarry so no hammer is heard at the site, and the inside is lined with cedar and gold. God promises to dwell among Israel if Solomon obeys, and the temple is finished after seven years.',
+      d: 'In the four hundred eightieth year after Israel came out of Egypt, in Solomon\'s fourth year, construction begins on the house of the LORD, about ninety feet long and thirty feet wide, with a porch and side chambers. The stones are dressed at the quarry, so no hammer, axe or iron tool is heard in the temple while it is being built. In the middle of the work, God tells Solomon that if he walks in His statutes, He will establish His word to David and dwell among Israel and not forsake them. The walls are paneled with cedar carved with gourds and flowers, the inner sanctuary is overlaid with pure gold and holds two giant olivewood cherubim, and the temple is finished after seven years.',
+      p: ['solomon'],
+    },
+    { // 7
+      s: 'Solomon\'s palace and the temple furnishings.',
+      m: 'Solomon spends thirteen years building his own palace complex, including the House of the Forest of Lebanon. Hiram, a skilled bronze worker, casts two great pillars named Jachin and Boaz and a huge bronze sea. Solomon also makes the gold furnishings for the temple and brings in the treasures David dedicated.',
+      d: 'Solomon builds his own palace over thirteen years, along with the House of the Forest of Lebanon, the Hall of Pillars, the Hall of the Throne where he judges, and a house for Pharaoh\'s daughter, all of costly stone. He brings Hiram, a bronze craftsman from Tyre, who casts two great bronze pillars for the porch, naming them Jachin, "he establishes," and Boaz, "in him is strength." Hiram also casts the Sea, a huge basin resting on twelve bronze oxen, ten bronze stands with basins, and many utensils, so much bronze that it is not weighed. Solomon makes the golden altar, table, lampstands and other vessels for the temple and places in its treasuries the silver and gold David had dedicated.',
+      p: ['solomon'],
+    },
+    { // 8
+      s: 'The ark comes to the temple, God\'s glory fills it, and Solomon prays.',
+      m: 'Solomon gathers Israel to bring the ark into the Most Holy Place, and the cloud of the LORD\'s glory fills the temple. He prays that God, whom even heaven cannot contain, will hear His people when they pray toward this house and forgive them. Solomon blesses the people and they celebrate with sacrifices and a great feast.',
+      d: 'In the seventh month, the elders and priests bring the ark into the inner sanctuary under the cherubim\'s wings, and when the priests come out, the cloud fills the house so that they cannot minister, "for the glory of the LORD filled the house of the LORD." Solomon blesses God for keeping His promise to David, then kneels with hands spread toward heaven and prays, admitting that heaven cannot contain God, much less this house. He asks God to hear from heaven when Israel prays toward this place in times of sin, defeat, drought, famine or exile, and even to hear foreigners, so that all peoples may know His name, and to forgive when they repent. Solomon blesses the assembly, urges them to be wholly true to the LORD, and offers 22,000 oxen and 120,000 sheep at a fourteen-day feast, after which the people go home joyful.',
+      p: ['solomon', 'david'],
+    },
+    { // 9
+      s: 'God answers Solomon with a promise and a warning.',
+      m: 'God appears to Solomon a second time and says He has consecrated the temple. If Solomon walks in integrity like David, his throne will last, but if Israel turns to other gods, God will cut them off and the temple will become a ruin. The chapter then describes Solomon\'s building projects, forced labor and fleet of ships.',
+      d: 'After the temple and palace are finished, the LORD appears to Solomon as at Gibeon and says He has heard his prayer and consecrated the house, putting His name there forever, with His eyes and heart there continually. If Solomon walks before Him with integrity like David, his royal throne will be established, but if he or his sons turn to serve other gods, God will cut Israel off from the land and make the temple a heap of ruins that passersby hiss at. Solomon gives Hiram twenty cities in Galilee, which Hiram dislikes, and the chapter describes Solomon\'s forced labor for building cities such as Hazor, Megiddo and Gezer. Solomon also offers sacrifices three times a year and builds a fleet at Ezion-geber that brings gold from Ophir.',
+      p: ['solomon', 'david'],
+    },
+    { // 10
+      s: 'The queen of Sheba visits, and Solomon\'s wealth grows.',
+      m: 'The queen of Sheba visits Solomon to test him with hard questions and is overwhelmed by his wisdom and splendor. She praises the LORD for setting Solomon on Israel\'s throne. Solomon becomes richer and wiser than all the kings of the earth, though he gathers many horses and chariots from Egypt.',
+      d: 'Hearing of Solomon\'s fame connected with the name of the LORD, the queen of Sheba comes with a great caravan of spices, gold and precious stones to test him with hard questions, and Solomon answers them all. When she sees his wisdom, palace, food, servants and offerings, "there was no more breath in her," and she says that not even half had been told her. She blesses the LORD who delighted in Solomon and made him king to execute justice, and they exchange lavish gifts. Solomon\'s wealth becomes legendary, with six hundred sixty-six talents of gold each year, a great ivory throne, silver as common as stone, and horses and chariots imported from Egypt, the very things Deuteronomy 17 warned kings not to multiply.',
+      p: ['solomon'],
+    },
+    { // 11
+      s: 'Solomon\'s wives turn his heart to idols, and God raises adversaries.',
+      m: 'Solomon loves many foreign women, and in his old age his seven hundred wives turn his heart to other gods. God is angry and says He will tear most of the kingdom from his son, leaving one tribe for David\'s sake. God raises adversaries, and the prophet Ahijah tells Jeroboam he will rule ten tribes.',
+      d: 'King Solomon loves many foreign women, including Moabites, Ammonites, Edomites, Sidonians and Hittites, though God had forbidden such marriages, and he has seven hundred wives and three hundred concubines. When he is old, his wives turn his heart after Ashtoreth, Milcom and Chemosh, and he builds high places for their gods, so his heart is not wholly true to the LORD as David\'s was. God is angry and declares He will tear the kingdom from him, but not in his days and not all of it, for David\'s sake and for Jerusalem\'s, and He raises adversaries: Hadad the Edomite, Rezon of Damascus, and Jeroboam, an able Ephraimite official. The prophet Ahijah tears his new cloak into twelve pieces and gives ten to Jeroboam, promising him ten tribes and a lasting house if he obeys, so Solomon seeks to kill Jeroboam, who flees to Egypt until Solomon dies after reigning forty years.',
+      p: ['solomon', 'jeroboam'],
+    },
+    { // 12
+      s: 'The kingdom splits, and Jeroboam sets up golden calves.',
+      m: 'The people ask Rehoboam to lighten Solomon\'s heavy burdens, but he follows his young friends\' advice and threatens to make it heavier. The ten northern tribes rebel and make Jeroboam king, leaving Rehoboam with Judah and Benjamin. Fearing his people will return to Jerusalem to worship, Jeroboam sets up golden calves at Bethel and Dan.',
+      d: 'Rehoboam goes to Shechem to be made king, and Jeroboam and the assembly ask him to lighten the hard service Solomon imposed. The old men advise him to be a servant to the people, but he follows the young men he grew up with and answers harshly, "My father disciplined you with whips, but I will discipline you with scorpions," a turn of affairs brought about by the LORD to fulfill Ahijah\'s word. Israel cries, "What portion do we have in David?" and makes Jeroboam king over the northern tribes, while Rehoboam reigns over Judah and Benjamin and is told by the prophet Shemaiah not to fight his brothers. Afraid that worship in Jerusalem will draw the people back to Rehoboam, Jeroboam makes two golden calves, saying, "Behold your gods, O Israel, who brought you up out of the land of Egypt," sets them in Bethel and Dan, appoints non-Levite priests and invents his own feast, a sin that will haunt the north to its end.',
+      p: ['rehoboam', 'jeroboam'],
+    },
+    { // 13
+      s: 'A man of God condemns Jeroboam\'s altar but disobeys and dies.',
+      m: 'A man of God from Judah cries out against Jeroboam\'s altar at Bethel, foretelling a king named Josiah. The altar splits and Jeroboam\'s hand withers until the man prays for him. But the man of God is deceived by an old prophet into disobeying God\'s command not to eat there, and a lion kills him on the way home.',
+      d: 'As Jeroboam stands at the altar in Bethel, a man of God from Judah prophesies that a son of David named Josiah will one day burn the bones of these false priests on it, and gives a sign: the altar will split. Jeroboam stretches out his hand to seize him, and it withers, the altar splits and the ashes pour out, and at the king\'s plea the man prays and the hand is restored. The man refuses the king\'s hospitality because God told him not to eat or drink there, but an old prophet lies, claiming an angel said he may come home with him, and the man believes him and eats. God then announces judgment through the old prophet, a lion kills the man of God on the road, and the old prophet buries him, while Jeroboam still does not turn from his evil way.',
+      p: ['jeroboam', 'josiah'],
+    },
+    { // 14
+      s: 'Ahijah prophesies against Jeroboam, and Judah also sins.',
+      m: 'Jeroboam\'s son falls ill, and he sends his wife in disguise to the blind prophet Ahijah. Ahijah announces that the boy will die and Jeroboam\'s whole house will be destroyed for his idolatry. In Judah, Rehoboam\'s people also build high places and idols, and Shishak of Egypt plunders the temple.',
+      d: 'When Jeroboam\'s son Abijah becomes sick, Jeroboam sends his wife disguised to Ahijah at Shiloh, but God tells the nearly blind prophet who she is. Ahijah declares that because Jeroboam has done more evil than all before him, making other gods and casting the LORD behind his back, God will sweep away his house, and the child will die as she enters the city, the only one of his family to be buried with honor. Jeroboam dies after reigning twenty-two years. In Judah under Rehoboam, the people build high places, pillars and Asherim and even have male cult prostitutes, and in Rehoboam\'s fifth year Shishak king of Egypt carries away the temple and palace treasures, including Solomon\'s gold shields, which Rehoboam replaces with bronze.',
+      p: ['jeroboam', 'rehoboam'],
+    },
+    { // 15
+      s: 'Abijam and Asa rule Judah; Nadab and Baasha rule Israel.',
+      m: 'Abijam rules Judah briefly and walks in his father\'s sins, but God preserves David\'s line for David\'s sake. His son Asa does what is right, removing idols and even deposing his grandmother for her Asherah image. In Israel, Baasha kills Nadab, wipes out Jeroboam\'s family, and wars with Asa.',
+      d: 'Abijam reigns three years in Jerusalem, and his heart is not wholly true to the LORD, yet for David\'s sake God gives him a lamp in Jerusalem, because David did what was right except in the matter of Uriah. Asa reigns forty-one years and does what is right like David: he puts away the cult prostitutes and idols, removes his grandmother Maacah from being queen mother because of her Asherah image, and brings dedicated gifts into the temple, though the high places remain. When Baasha of Israel builds Ramah to blockade Judah, Asa sends temple treasures to Ben-hadad of Syria to break his alliance with Israel. In Israel, Jeroboam\'s son Nadab reigns two years before Baasha kills him and strikes down Jeroboam\'s whole house as Ahijah foretold, but Baasha too walks in Jeroboam\'s sin.',
+      p: ['david', 'jeroboam'],
+    },
+    { // 16
+      s: 'Northern kings rise and fall, and Ahab marries Jezebel.',
+      m: 'The prophet Jehu announces that Baasha\'s house will be destroyed like Jeroboam\'s. Israel goes through a series of violent coups, and Omri becomes king and builds Samaria as his capital. His son Ahab does more evil than all before him, marrying Jezebel and building a temple to Baal.',
+      d: 'The prophet Jehu son of Hanani declares that Baasha\'s house will be swept away like Jeroboam\'s because he provoked God, and Baasha\'s son Elah is assassinated by his chariot commander Zimri while drunk. Zimri kills Baasha\'s family but reigns only seven days before the army makes Omri king, and Zimri burns the palace over himself. After a civil war with Tibni, Omri reigns twelve years, buys the hill of Samaria and builds it as Israel\'s capital, but does more evil than all before him. His son Ahab reigns twenty-two years and does even worse: he marries Jezebel, daughter of the king of Sidon, serves Baal, builds a house of Baal in Samaria and makes an Asherah, and in his days Hiel rebuilds Jericho at the cost of his sons, as Joshua had foretold.',
+      p: ['ahab', 'jezebel'],
+    },
+    { // 17
+      s: 'Elijah announces a drought and is cared for by a widow.',
+      m: 'The prophet Elijah tells King Ahab there will be no rain except at his word. God sends Elijah to a brook where ravens feed him, and then to a widow in Zarephath whose flour and oil never run out. When the widow\'s son dies, Elijah prays and God brings the boy back to life.',
+      d: 'Elijah the Tishbite suddenly appears before Ahab and declares in the name of the living God of Israel that there will be neither dew nor rain except by his word, striking at Baal, the supposed god of storms. God hides Elijah by the brook Cherith, where ravens bring him bread and meat morning and evening until the brook dries up. Then God sends him to a widow in Zarephath of Sidon, Jezebel\'s homeland, who is preparing her last meal, and Elijah tells her to make him a cake first, promising that her flour and oil will not run out until the rain comes, and they last day after day. When her son falls ill and stops breathing, Elijah carries him upstairs, stretches himself on him three times and cries to the LORD, and the child revives, so the woman says, "Now I know that you are a man of God."',
+      p: ['elijah', 'ahab'],
+    },
+    { // 18
+      s: 'Elijah defeats the prophets of Baal on Mount Carmel.',
+      m: 'In the third year of drought, Elijah challenges Ahab to gather Israel and the 450 prophets of Baal on Mount Carmel. The prophets of Baal cry out all day, but no fire comes; then Elijah drenches his altar with water and prays, and fire from the LORD consumes everything. The people fall down crying, "The LORD, he is God," the false prophets are killed, and rain finally comes.',
+      d: 'In the third year God sends Elijah back to Ahab, and Obadiah, a God-fearing palace official who has hidden a hundred prophets from Jezebel, arranges the meeting, where Ahab calls Elijah the "troubler of Israel." Elijah summons all Israel and the 450 prophets of Baal and 400 of Asherah to Mount Carmel and challenges the people, "How long will you go limping between two different opinions?" proposing that the God who answers by fire is God. Baal\'s prophets call on him from morning to evening, dancing, cutting themselves and raving while Elijah mocks them, but there is no voice and no answer; then Elijah repairs the LORD\'s altar with twelve stones, drenches the sacrifice with water three times, and prays simply, and the fire of the LORD falls and consumes the offering, wood, stones, dust and water. The people fall on their faces crying, "The LORD, he is God," the prophets of Baal are executed at the brook Kishon, and Elijah prays seven times on the mountain until a small cloud appears and a great rain falls, as he runs ahead of Ahab\'s chariot to Jezreel.',
+      p: ['elijah', 'ahab'],
+    },
+    { // 19
+      s: 'Elijah flees in despair and hears God\'s quiet voice.',
+      m: 'Jezebel threatens to kill Elijah, and he flees into the wilderness, asking God to take his life. An angel feeds him, and he travels to Mount Horeb, where God speaks not in wind, earthquake or fire but in a low whisper. God gives him new tasks, including anointing Elisha as his successor, and reveals that seven thousand in Israel have not bowed to Baal.',
+      d: 'When Jezebel vows to kill Elijah within a day, he runs for his life to Beersheba and goes alone into the wilderness, where he sits under a broom tree and asks to die. An angel touches him twice and gives him bread and water, and in the strength of that food he travels forty days to Horeb, the mountain of God. There a great wind tears the mountains, then comes an earthquake and fire, but the LORD is not in them, and after the fire comes "the sound of a low whisper," and God asks, "What are you doing here, Elijah?" Elijah complains he alone is left, but God sends him to anoint Hazael king of Syria, Jehu king of Israel and Elisha as prophet, assures him seven thousand have not bowed to Baal, and Elijah throws his cloak on Elisha, who leaves his plowing to follow him.',
+      p: ['elijah', 'elisha', 'jezebel'],
+    },
+    { // 20
+      s: 'God gives Ahab victories over Syria, but Ahab spares its king.',
+      m: 'Ben-hadad of Syria besieges Samaria, and a prophet tells Ahab that God will give him victory so he will know the LORD. Israel defeats the Syrians twice, including a year later at Aphek. But Ahab lets Ben-hadad go with a treaty, and a prophet announces that Ahab\'s life will be forfeit.',
+      d: 'Ben-hadad king of Syria and thirty-two kings besiege Samaria and make arrogant demands, and a prophet tells Ahab that God will give this great multitude into his hand "and you shall know that I am the LORD." The young servants of the district governors lead the attack, and Syria is routed. The Syrians decide Israel\'s gods are gods of the hills and attack on the plain at Aphek the next year, but God again gives Israel a great victory to show He is LORD of all. When Ben-hadad begs for mercy, Ahab calls him "my brother" and makes a treaty, so a prophet disguises himself as a wounded soldier to tell a story that condemns Ahab for releasing the man God had devoted to destruction, and Ahab goes home sullen and angry.',
+      p: ['ahab'],
+    },
+    { // 21
+      s: 'Jezebel has Naboth killed so Ahab can take his vineyard.',
+      m: 'Ahab wants Naboth\'s vineyard, but Naboth refuses to sell his family inheritance. Jezebel arranges false witnesses so Naboth is stoned, and Ahab takes the vineyard. Elijah announces that dogs will lick Ahab\'s blood, but when Ahab humbles himself, God delays the disaster to his son\'s days.',
+      d: 'Naboth of Jezreel owns a vineyard next to Ahab\'s palace, and when Ahab offers to buy it, Naboth refuses because the LORD forbids him to give up his fathers\' inheritance. Ahab sulks in bed, and Jezebel mocks him and writes letters in his name ordering the elders to proclaim a fast, seat two worthless men to accuse Naboth of cursing God and the king, and stone him, and they do it. As Ahab goes to take possession, Elijah meets him, and Ahab says, "Have you found me, O my enemy?" Elijah declares that dogs will lick Ahab\'s blood where they licked Naboth\'s, his house will be wiped out, and dogs will eat Jezebel, but when Ahab tears his clothes and fasts in humility, God tells Elijah He will bring the disaster in his son\'s days instead.',
+      p: ['ahab', 'jezebel', 'elijah'],
+    },
+    { // 22
+      s: 'Micaiah warns Ahab, who dies in battle at Ramoth-gilead.',
+      m: 'Ahab persuades Jehoshaphat of Judah to join him in battle against Syria at Ramoth-gilead. Four hundred prophets promise victory, but the prophet Micaiah foretells Ahab\'s death and is thrown in prison. Ahab disguises himself, but a random arrow kills him, and dogs lick his blood as Elijah prophesied.',
+      d: 'After three years of peace, Ahab invites Jehoshaphat king of Judah to help retake Ramoth-gilead, and Jehoshaphat asks first to inquire of the LORD. Ahab\'s four hundred prophets all promise victory, but Jehoshaphat asks for another, and Micaiah, whom Ahab hates because he never prophesies good about him, describes Israel scattered like sheep without a shepherd and a vision of the LORD sending a lying spirit into the prophets\' mouths. Ahab imprisons Micaiah and goes into battle in disguise while Jehoshaphat wears his royal robes, but a man draws his bow at random and strikes Ahab between the plates of his armor, and he dies at evening; his chariot is washed at the pool of Samaria and dogs lick up his blood, as the LORD had spoken. The book closes with Jehoshaphat\'s good reign in Judah and Ahab\'s son Ahaziah, who serves Baal in Israel.',
+      p: ['ahab', 'elijah'],
+    },
+  ],
+};

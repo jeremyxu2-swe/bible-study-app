@@ -1,0 +1,86 @@
+// Deeper "background" for book summaries at the Detailed level (job #17), books 31–40.
+// Same schema as bg1.js (documented in bookBackground/index.js).
+const p = (label, book, ch, note) => ({ label, book, ch, note });
+
+export default {
+  obadiah: {
+    authorship: 'Written by Obadiah ("servant of the LORD"), about whom nothing else is known. Most scholars date it soon after Babylon destroyed Jerusalem in 586 BC, when Edom gloated and joined in; a minority place it earlier, after a Philistine and Arab raid in Jehoram\'s day (2 Chronicles 21).',
+    setting: 'A message against Edom, the nation descended from Esau, Jacob\'s brother, living in the rugged mountains southeast of the Dead Sea. It comforted Judah after the fall of Jerusalem.',
+    context: 'Edom\'s capital and strongholds were cut into high cliffs, which made them feel safe ("you who live in the clefts of the rock"). When Babylon sacked Jerusalem, Edomites looted the city and handed over refugees (Psalm 137:7). Later Edom itself was overrun by Arab tribes; by Jesus\' day its descendants, the Idumeans, included the family of Herod.',
+    structure: [['1–9', 'Edom\'s pride brought down'], ['10–14', 'Edom\'s violence against its brother'], ['15–21', 'The day of the LORD; the kingdom shall be the LORD\'s']],
+    passages: [p('Obadiah 1', 'obadiah', 1, 'The whole book: Edom\'s pride and the LORD\'s kingdom')],
+    christ: 'Obadiah ends, "the kingdom shall be the LORD\'s" (v. 21). That kingdom came in Jesus, who was opposed at His birth by Herod the Idumean, a descendant of Edom. In Christ the old enmity is answered: James quotes Amos to say that even "the remnant of Edom" will seek the Lord (Acts 15:17).',
+  },
+  jonah: {
+    authorship: 'The book is about Jonah son of Amittai, a prophet in Jeroboam II\'s day (2 Kings 14:25), but it is written about him in the third person, so the author is unknown. Dates range from the 8th century BC to after the exile. Many Christians read it as history, as Jesus\' references suggest; some scholars read it as a parable.',
+    setting: 'Set about 780–760 BC, moving from Israel to the port of Joppa, the open sea and the great Assyrian city of Nineveh on the Tigris.',
+    context: 'Assyria was Israel\'s feared and brutal enemy, which would destroy the northern kingdom a few decades later. In the early 700s BC Assyria went through a weak period, with revolts, plagues and a total solar eclipse in 763 BC, which some think made Nineveh open to a prophet\'s warning.',
+    structure: [['1', 'Jonah runs; the storm'], ['2', 'Jonah\'s prayer from the fish'], ['3', 'Nineveh repents'], ['4', 'Jonah\'s anger and God\'s compassion']],
+    passages: [p('Jonah 1', 'jonah', 1, 'Running from God'), p('Jonah 2', 'jonah', 2, '"Salvation belongs to the LORD"'), p('Jonah 3', 'jonah', 3, 'Nineveh repents'), p('Jonah 4', 'jonah', 4, 'Should I not pity Nineveh?')],
+    christ: 'Jesus called His resurrection "the sign of Jonah": "as Jonah was three days and three nights in the belly of the great fish, so will the Son of Man be three days and three nights in the heart of the earth" (Matthew 12:40). He also said that Nineveh repented at Jonah\'s preaching, and "something greater than Jonah is here." God\'s mercy to Israel\'s enemies points to the gospel for all nations.',
+  },
+  micah: {
+    authorship: 'Micah of Moresheth, a country town in Judah\'s lowlands, is accepted as the source of most of the book. Some scholars think parts of the hopeful sections (chapters 4–5 and 7) were added after the exile; others see them as Micah\'s own words.',
+    setting: 'Micah prophesied about 735–700 BC, under Jotham, Ahaz and Hezekiah, to both Samaria and Jerusalem. He was a younger contemporary of Isaiah. Jeremiah 26:18 records that Micah\'s warning led Hezekiah to repent.',
+    context: 'Assyria was on the march: Samaria fell in 722 BC, and in 701 BC Sennacherib swept through Micah\'s own region, destroying towns like Lachish. At home, wealthy landowners seized fields and houses, and judges, priests and prophets took bribes.',
+    structure: [['1–2', 'Judgment on Samaria and Jerusalem; land-grabbers'], ['3–5', 'Corrupt leaders; future peace; the ruler from Bethlehem'], ['6–7', 'The LORD\'s case against His people; hope in His mercy']],
+    passages: [p('Micah 4', 'micah', 4, 'Swords into plowshares'), p('Micah 5', 'micah', 5, 'A ruler from Bethlehem'), p('Micah 6', 'micah', 6, '"Do justice, love kindness, walk humbly"'), p('Micah 7', 'micah', 7, '"Who is a God like you?"')],
+    christ: 'Micah 5:2 names Bethlehem as the birthplace of a ruler "whose coming forth is from of old, from ancient days," and the chief priests quoted it to Herod when the wise men asked where the Messiah would be born (Matthew 2:5–6). Micah\'s closing praise of a God who casts sins into the depths of the sea is fulfilled in the forgiveness Jesus brings.',
+  },
+  nahum: {
+    authorship: 'Written by Nahum of Elkosh, a village whose location is uncertain. The book refers to the fall of Thebes in Egypt (663 BC) as past and to Nineveh\'s fall (612 BC) as future, so it was written between those dates.',
+    setting: 'A message about Nineveh, Assyria\'s capital, about a century after Jonah. It was good news for Judah, which had suffered under Assyria for generations.',
+    context: 'Assyria publicly boasted of its cruelty on palace reliefs showing impaled and flayed captives. Nineveh, surrounded by massive walls and canals, seemed unconquerable, but in 612 BC Babylonians and Medes destroyed it. Ancient writers say floodwaters helped breach its walls, which fits Nahum\'s images of rivers and gates opened (2:6).',
+    structure: [['1', 'The LORD, slow to anger but great in power'], ['2', 'The fall of Nineveh described'], ['3', 'Woe to the bloody city']],
+    passages: [p('Nahum 1', 'nahum', 1, '"The LORD is good, a stronghold"'), p('Nahum 2', 'nahum', 2, 'The attack on Nineveh'), p('Nahum 3', 'nahum', 3, 'Woe to the bloody city')],
+    christ: 'Nahum 1:15, "Behold, upon the mountains, the feet of him who brings good news, who publishes peace!" echoes Isaiah 52:7, which Paul applies to the gospel of Christ (Romans 10:15). Nahum shows that God is both "slow to anger" and just; the cross is where His justice and mercy meet.',
+  },
+  habakkuk: {
+    authorship: 'Habakkuk is called "the prophet" (1:1), and chapter 3 is a psalm with musical notes, which suggests he may have been a temple musician. Nothing else is known. A commentary on chapters 1–2 was found among the Dead Sea Scrolls.',
+    setting: 'Written about 609–598 BC, as the Babylonians (Chaldeans) rose to power under Nebuchadnezzar and Judah, under King Jehoiakim, sank into violence and injustice.',
+    context: 'After defeating Egypt at Carchemish in 605 BC, Babylon became master of the region. Habakkuk is troubled first that God seems to ignore Judah\'s injustice, and then that He would use the even more wicked Babylonians to judge it.',
+    structure: [['1', 'Two complaints and God\'s first answer'], ['2', 'God\'s answer: the righteous live by faith; woes on Babylon'], ['3', 'Habakkuk\'s prayer and song of trust']],
+    passages: [p('Habakkuk 1', 'habakkuk', 1, '"How long, O LORD?"'), p('Habakkuk 2', 'habakkuk', 2, 'The righteous shall live by his faith'), p('Habakkuk 3', 'habakkuk', 3, '"Yet I will rejoice in the LORD"')],
+    christ: '"The righteous shall live by his faith" (2:4) is quoted three times in the New Testament (Romans 1:17; Galatians 3:11; Hebrews 10:38) and became a rallying cry of the Reformation. It finds its center in faith in Christ, through whom God declares sinners righteous.',
+  },
+  zephaniah: {
+    authorship: 'Zephaniah introduces himself as a descendant of "Hezekiah," probably the king, which would make him a member of the royal family. The book is generally accepted as his, with some scholars suggesting later additions to the hopeful ending.',
+    setting: 'Zephaniah prophesied "in the days of Josiah" (640–609 BC), probably before or early in Josiah\'s reforms of 622 BC, since idolatry is still widespread.',
+    context: 'After the long, wicked reign of Manasseh, Judah was full of Baal worship, star worship on rooftops and foreign customs. Assyria was weakening, and Nineveh would fall in 612 BC, as Zephaniah predicted (2:13).',
+    structure: [['1', 'The great day of the LORD is near'], ['2', 'Seek the LORD; judgment on the nations'], ['3', 'Jerusalem\'s sin and the joy of restoration']],
+    passages: [p('Zephaniah 1', 'zephaniah', 1, 'The day of the LORD'), p('Zephaniah 2', 'zephaniah', 2, '"Seek the LORD, all you humble"'), p('Zephaniah 3', 'zephaniah', 3, '"He will rejoice over you with gladness"')],
+    christ: 'Zephaniah ends with the LORD as King in the midst of His people, "a mighty one who will save," rejoicing over them with singing (3:15–17). That promise of God dwelling among His people is fulfilled in Jesus, "God with us," and finally in the new creation where God dwells with humanity.',
+  },
+  haggai: {
+    authorship: 'The prophet Haggai is named in the book and in Ezra 5:1 and 6:14. His four messages are precisely dated within a few months of 520 BC, and the book is written about him in the third person, perhaps by a close associate.',
+    setting: 'Jerusalem in 520 BC, about 18 years after the first exiles returned under Cyrus. The temple foundation had been laid, but work stopped amid opposition and hard times, while people built their own paneled houses.',
+    context: 'Darius I had just put down revolts across the Persian Empire. Judah was a small, poor province under the governor Zerubbabel, a descendant of David, and the high priest Joshua. Haggai and Zechariah stirred the people to finish the temple, completed in 516 BC.',
+    structure: [['1', 'Consider your ways: build the house'], ['2:1–9', 'The latter glory will be greater'], ['2:10–19', 'From this day I will bless you'], ['2:20–23', 'Zerubbabel, God\'s signet ring']],
+    passages: [p('Haggai 1', 'haggai', 1, '"Consider your ways"'), p('Haggai 2', 'haggai', 2, 'The latter glory and the signet ring')],
+    christ: 'Haggai promised that the glory of the rebuilt temple would be greater than Solomon\'s (2:9). That temple, rebuilt by Herod, was where Jesus walked and taught: God\'s glory in person. Zerubbabel, chosen as God\'s "signet ring," appears in both genealogies of Jesus (Matthew 1:12; Luke 3:27).',
+  },
+  zechariah: {
+    authorship: 'Zechariah son of Berechiah, a priest and prophet, began in 520 BC alongside Haggai. Chapters 1–8 are dated to 520–518 BC. Many scholars assign chapters 9–14, which are undated and different in style, to a later prophet (perhaps the Greek period); others see them as Zechariah\'s later work.',
+    setting: 'Jerusalem after the return from exile, as the people rebuilt the temple under Zerubbabel and Joshua the high priest.',
+    context: 'The returned community was discouraged, small and surrounded by larger powers. Zechariah\'s night visions, with horses, horns, lampstands and a flying scroll, use vivid symbols to assure them that God sees, will judge the nations and will dwell again in Jerusalem.',
+    structure: [['1–6', 'Eight night visions'], ['7–8', 'Fasting, justice and promises of blessing'], ['9–11', 'The coming king and the rejected shepherd'], ['12–14', 'The pierced one and the LORD\'s final victory']],
+    passages: [p('Zechariah 3', 'zechariah', 3, 'Joshua\'s filthy garments removed; the Branch'), p('Zechariah 4', 'zechariah', 4, '"Not by might, nor by power, but by my Spirit"'), p('Zechariah 9', 'zechariah', 9, 'Your king comes, riding on a donkey'), p('Zechariah 12', 'zechariah', 12, 'They will look on me, whom they have pierced'), p('Zechariah 14', 'zechariah', 14, 'The LORD will be king over all the earth')],
+    christ: 'Zechariah is full of passages fulfilled in Jesus\' final week: the king riding on a donkey (9:9; Matthew 21:5), thirty pieces of silver thrown to the potter (11:12–13; Matthew 27:9–10), the struck shepherd and scattered sheep (13:7; Matthew 26:31), and the one they pierced (12:10; John 19:37). The "Branch" who is both priest and king (6:12–13) points to Christ.',
+  },
+  malachi: {
+    authorship: 'The name Malachi means "my messenger," and some scholars think it is a title rather than a personal name. Nothing else is known of him. The book fits about 460–430 BC, around the time of Ezra and Nehemiah.',
+    setting: 'Jerusalem, decades after the temple was rebuilt. The people and priests have grown cynical and careless, offering blemished animals, withholding tithes, divorcing their wives and marrying idol-worshipers.',
+    context: 'Judah remained a small Persian province, and the glorious future the prophets promised had not yet appeared, leading to disappointment and doubt: "Where is the God of justice?" Malachi\'s style is a series of disputes, with God\'s statement, the people\'s objection ("But you say, How have we...?") and God\'s answer.',
+    structure: [['1:1–5', 'God\'s love for Israel'], ['1:6–2:9', 'Faithless priests and polluted offerings'], ['2:10–16', 'Faithlessness in marriage'], ['2:17–3:5', 'The messenger of the covenant is coming'], ['3:6–18', 'Robbing God; the book of remembrance'], ['4', 'The day of the LORD and the coming of Elijah']],
+    passages: [p('Malachi 1', 'malachi', 1, '"I have loved you"'), p('Malachi 3', 'malachi', 3, 'My messenger; bring the full tithe'), p('Malachi 4', 'malachi', 4, 'The sun of righteousness; Elijah')],
+    christ: 'Malachi promises a messenger to prepare the way, and then the Lord coming suddenly to His temple (3:1), and Elijah coming before the great day (4:5). Jesus said John the Baptist was this messenger and "Elijah who is to come" (Matthew 11:10–14), which means the Lord who followed him is Jesus. In the Christian order of books, Malachi\'s last words lead straight into the Gospels.',
+  },
+  matthew: {
+    authorship: 'The early church unanimously credited Matthew (Levi), the tax collector who became an apostle; the Gospel itself is anonymous. Papias (about AD 125) said Matthew compiled Jesus\' sayings "in the Hebrew language." Many scholars think Matthew used Mark\'s Gospel and date it about AD 70–85; others date it before AD 70, since Jesus\' prophecy of the temple\'s fall is not described as already fulfilled.',
+    setting: 'Covers Jesus\' life from His birth in Bethlehem (about 5 BC) to His resurrection and the Great Commission (about AD 30), mostly in Galilee and Jerusalem. It was written for Jewish Christians, perhaps in Antioch of Syria, to show that Jesus is the promised Messiah.',
+    context: 'Judea was under Roman rule through Herod the Great, his sons, and Roman governors like Pilate. Jewish groups such as the Pharisees, Sadducees and scribes debated how to keep the Law. Matthew quotes the Old Testament more than any other Gospel, often with "this was to fulfill what the Lord had spoken by the prophet."',
+    structure: [['1–4', 'Jesus\' birth, baptism and temptation'], ['5–7', 'The Sermon on the Mount'], ['8–10', 'Miracles and the mission of the Twelve'], ['11–18', 'Parables, growing opposition, and teaching the disciples'], ['19–25', 'To Jerusalem; warnings and the end of the age'], ['26–28', 'The cross, the resurrection and the Great Commission']],
+    passages: [p('Matthew 1–2', 'matthew', 1, 'The genealogy and birth of the King'), p('Matthew 5–7', 'matthew', 5, 'The Sermon on the Mount'), p('Matthew 13', 'matthew', 13, 'Parables of the kingdom'), p('Matthew 16', 'matthew', 16, 'Peter\'s confession'), p('Matthew 26–27', 'matthew', 26, 'The Last Supper and the cross'), p('Matthew 28', 'matthew', 28, 'The resurrection and the Great Commission')],
+    christ: 'Matthew presents Jesus as the son of David and son of Abraham (1:1), the King of the Jews, Immanuel ("God with us"), and the new Moses who gives His teaching on a mountain. He organizes Jesus\' teaching into five great speeches, perhaps echoing the five books of Moses, and ends with the risen Christ, given all authority, promising, "I am with you always, to the end of the age."',
+  },
+};

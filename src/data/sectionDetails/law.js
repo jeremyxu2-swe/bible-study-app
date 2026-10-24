@@ -1,0 +1,175 @@
+// "See more" details for each section of Genesis–Deuteronomy, keyed by the section's first chapter.
+// what: what happens (paragraphs split by a blank line); unfolds: [chapters, summary]; themes; verse (ESV);
+// christ: where the section points to Jesus; power: a world-power page to link.
+// Key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+
+export default {
+  genesis: {
+    1: {
+      what: 'God creates the heavens and the earth by His word, calling everything "good," and makes humanity in His own image, male and female, to fill the earth and rule it. On the seventh day He rests. Chapter 2 looks closer: the LORD God forms the man from dust, plants the garden of Eden, gives one command, and makes the woman as a fitting partner.\n\nThe serpent tempts Eve, and she and Adam eat the forbidden fruit. Shame, blame and curses follow, yet God clothes them and promises that the woman\'s offspring will crush the serpent\'s head. Outside Eden, Cain murders Abel and sin spreads. The family line of chapter 5 repeats "and he died," with Enoch, who "walked with God," as the bright exception.',
+      unfolds: [['1', 'Six days of creation; people made in God\'s image'], ['2', 'The garden, the command and the first marriage'], ['3', 'The fall and the first promise of a Savior'], ['4', 'Cain and Abel; sin spreads'], ['5', 'From Adam to Noah']],
+      themes: ['God the Creator', 'The image of God', 'Sin and death', 'The promised offspring'],
+      verse: { ref: 'Genesis 1:27', text: 'So God created man in his own image, in the image of God he created him; male and female he created them.' },
+      christ: 'God\'s promise that the woman\'s offspring will crush the serpent\'s head (3:15) is the first hint of the gospel. Paul calls Jesus "the last Adam" (1 Corinthians 15:45), who brings life where Adam brought death.',
+    },
+    6: {
+      what: 'Wickedness fills the earth, and God is grieved that He made man. But Noah "found favor in the eyes of the LORD." He builds the ark, and God saves him, his family and the animals through the flood. Afterward God makes a covenant never again to destroy the earth by a flood, with the rainbow as its sign, and repeats the command to be fruitful and multiply.\n\nSin goes on: Noah gets drunk and his son Ham dishonors him. The Table of Nations in chapter 10 traces the peoples of the world from Noah\'s three sons. At Babel, people unite to build a tower and "make a name for ourselves," and God confuses their language and scatters them. The section ends with the family line of Shem leading down to Abram.',
+      unfolds: [['6', 'Corruption, and Noah builds the ark'], ['7–8', 'The flood and the dove'], ['9', 'The covenant and the rainbow'], ['10', 'The Table of Nations'], ['11', 'The tower of Babel; Shem to Abram']],
+      themes: ['Judgment and grace', 'Covenant', 'Human pride', 'The nations'],
+      verse: { ref: 'Genesis 6:8', text: 'But Noah found favor in the eyes of the LORD.' },
+      christ: 'Peter compares the flood to baptism, saving through water (1 Peter 3:20–21), and Jesus said His return would be "as were the days of Noah" (Matthew 24:37). At Pentecost the confusion of Babel is reversed as people hear the gospel in their own languages (Acts 2).',
+    },
+    12: {
+      what: 'God calls Abram to leave his country for a land He will show him, promising to make him a great nation and to bless all the families of the earth through him. Abram obeys, but during a famine he goes to Egypt and lies about Sarai. He parts from Lot, rescues him from four kings, and is blessed by Melchizedek. When God promises offspring as many as the stars, Abram "believed the LORD, and he counted it to him as righteousness," and God makes a covenant with him.\n\nImpatient, Sarai gives Hagar to Abram, and Ishmael is born. God renames them Abraham and Sarah, gives circumcision as the sign of the covenant, and promises Isaac. Abraham pleads for Sodom, which is destroyed, and at last Isaac is born. Then God tests Abraham: "Take your son, your only son Isaac." On Mount Moriah God provides a ram instead. Sarah dies and is buried at Machpelah, a servant finds Rebekah for Isaac, and Abraham dies "full of years."',
+      unfolds: [['12–14', 'The call, Egypt, Lot and Melchizedek'], ['15–17', 'Covenant promises, Hagar and circumcision'], ['18–19', 'Three visitors; Sodom and Gomorrah'], ['20–22', 'Isaac is born; the test on Moriah'], ['23–25', 'Sarah\'s grave, Rebekah, and Abraham\'s death']],
+      themes: ['Faith', 'God\'s promises', 'Covenant', 'Blessing for the nations'],
+      verse: { ref: 'Genesis 15:6', text: 'And he believed the LORD, and he counted it to him as righteousness.' },
+      christ: 'Paul says the promise that "in you shall all the nations be blessed" was the gospel preached beforehand, fulfilled in Christ, Abraham\'s offspring (Galatians 3:8, 16). Abraham offering "your only son" on Moriah, where God provides the lamb, points to the Father giving His only Son (John 3:16).',
+      power: 'egypt',
+    },
+    26: {
+      what: 'Isaac receives the same promises as his father and, like him, lies about his wife; he reopens Abraham\'s wells and makes peace with Abimelech. Rebekah and Jacob deceive blind Isaac to win the blessing meant for Esau, and Jacob flees. At Bethel he dreams of a stairway reaching to heaven, and God repeats the promises: "I am with you and will keep you wherever you go."\n\nIn Haran the deceiver is deceived: Laban gives him Leah before Rachel. Jacob has eleven sons and a daughter and grows rich, then slips away back to Canaan. At the Jabbok he wrestles all night with a man and will not let go without a blessing, and God renames him Israel. He makes peace with Esau, but Dinah is violated at Shechem and her brothers take revenge. Jacob returns to Bethel, Rachel dies giving birth to Benjamin, and Isaac dies. Esau\'s descendants, the Edomites, are listed.',
+      unfolds: [['26', 'Isaac and the wells'], ['27–28', 'The stolen blessing; Jacob\'s ladder'], ['29–31', 'Jacob in Haran: wives, sons and Laban'], ['32–33', 'Wrestling with God; meeting Esau'], ['34–36', 'Shechem, Bethel and Esau\'s family']],
+      themes: ['God\'s choice by grace', 'Deception and its fruit', 'Wrestling with God', 'Reconciliation'],
+      verse: { ref: 'Genesis 28:15', text: 'Behold, I am with you and will keep you wherever you go, and will bring you back to this land. For I will not leave you until I have done what I have promised you.' },
+      christ: 'Jesus told Nathanael he would see "heaven opened, and the angels of God ascending and descending on the Son of Man" (John 1:51), presenting Himself as Jacob\'s ladder, the true connection between heaven and earth.',
+    },
+    37: {
+      what: 'Jacob\'s favorite son Joseph dreams that his family will bow to him. His jealous brothers sell him to traders, and he becomes a slave in Potiphar\'s house in Egypt. Falsely accused by Potiphar\'s wife, he is thrown into prison, but "the LORD was with Joseph." He interprets the dreams of Pharaoh\'s cupbearer and baker, and two years later Pharaoh\'s dreams of fat and thin cows. Pharaoh makes him ruler over Egypt to prepare for seven years of famine.\n\nWhen the famine reaches Canaan, Joseph\'s brothers come to buy grain and bow before him without knowing him. Joseph tests them; Judah offers himself in Benjamin\'s place, and Joseph reveals who he is: "God sent me before you to preserve life." Jacob\'s family settles in Goshen. Jacob blesses his sons, promising the scepter to Judah, and dies. Joseph tells his brothers, "you meant evil against me, but God meant it for good," and makes them promise to carry his bones to Canaan.',
+      unfolds: [['37–38', 'Joseph sold; Judah and Tamar'], ['39–41', 'Potiphar, prison and Pharaoh\'s dreams'], ['42–45', 'The brothers in Egypt; Joseph revealed'], ['46–47', 'Jacob\'s family moves to Goshen'], ['48–50', 'Jacob\'s blessings and death; Joseph\'s last words']],
+      themes: ['God\'s providence', 'Forgiveness', 'Faithfulness in suffering', 'The line of Judah'],
+      verse: { ref: 'Genesis 50:20', text: 'As for you, you meant evil against me, but God meant it for good, to bring it about that many people should be kept alive, as they are today.' },
+      christ: 'Like Joseph, Jesus was rejected by His brothers, sold for silver, suffered unjustly and was raised up to save many. Jacob\'s promise that "the scepter shall not depart from Judah" (49:10) is fulfilled in Jesus, "the Lion of the tribe of Judah" (Revelation 5:5).',
+      power: 'egypt',
+    },
+  },
+  exodus: {
+    1: {
+      what: 'Jacob\'s descendants multiply in Egypt, and a new Pharaoh who "did not know Joseph" enslaves them and orders every newborn boy thrown into the Nile. The Hebrew midwives fear God and refuse. Moses\' mother hides him in a basket among the reeds, and Pharaoh\'s daughter adopts him. Grown, Moses kills an Egyptian and flees to Midian, where he marries Zipporah.\n\nForty years later God appears in a burning bush, hears His people\'s cry, reveals His name, "I AM WHO I AM," and sends Moses to bring Israel out, with Aaron as his spokesman. Pharaoh answers, "Who is the LORD?" and forces the slaves to make bricks without straw. The people turn on Moses, but God renews His promise: "I will take you to be my people, and I will be your God."',
+      unfolds: [['1', 'Oppression and the brave midwives'], ['2', 'Moses born, rescued and exiled'], ['3–4', 'The burning bush and God\'s name'], ['5–6', 'Bricks without straw; the promise renewed']],
+      themes: ['God hears His people', 'The name of the LORD', 'A reluctant servant', 'Faith under pressure'],
+      verse: { ref: 'Exodus 3:14', text: 'I AM WHO I AM.' },
+      christ: 'Jesus took God\'s name for Himself: "before Abraham was, I am" (John 8:58). Moses, rescued as a baby from a king\'s slaughter of boys, foreshadows Jesus, saved from Herod\'s massacre in Bethlehem (Matthew 2).',
+      power: 'egypt',
+    },
+    7: {
+      what: 'Pharaoh hardens his heart, and God sends ten plagues: blood, frogs, gnats, flies, disease on livestock, boils, hail, locusts, darkness, and finally the death of the firstborn. Each strikes at Egypt\'s gods and shows "that you may know that I am the LORD." Pharaoh bargains and breaks his word again and again.\n\nBefore the last plague God gives the Passover. Each household kills a lamb without blemish and puts its blood on the doorposts, and the LORD passes over them. At midnight every firstborn in Egypt dies, and Pharaoh drives Israel out. They leave in haste with unleavened bread, carrying Egypt\'s silver and gold and Joseph\'s bones. God tells them to remember that night every year, and leads them by a pillar of cloud and fire.',
+      unfolds: [['7–8', 'Blood, frogs, gnats and flies'], ['9–10', 'Livestock, boils, hail, locusts and darkness'], ['11–12', 'The death of the firstborn and the Passover'], ['13', 'Unleavened bread; the cloud and fire']],
+      themes: ['God\'s power over false gods', 'Judgment', 'Rescue by blood', 'Remembering'],
+      verse: { ref: 'Exodus 12:13', text: 'The blood shall be a sign for you, on the houses where you are. And when I see the blood, I will pass over you, and no plague will befall you to destroy you, when I strike the land of Egypt.' },
+      christ: '"Christ, our Passover lamb, has been sacrificed" (1 Corinthians 5:7). Jesus died at Passover, and like the lamb, none of His bones were broken (Exodus 12:46; John 19:36).',
+      power: 'egypt',
+    },
+    14: {
+      what: 'Pharaoh changes his mind and chases Israel to the sea. Trapped, the people panic, but Moses says, "The LORD will fight for you, and you have only to be silent." God parts the waters, Israel crosses on dry ground, and the Egyptian army drowns. Moses and Miriam lead Israel in songs of praise.\n\nIn the wilderness the people quickly grumble. God sweetens the bitter water at Marah, sends manna and quail and teaches the Sabbath rest, and brings water from the rock at Massah and Meribah. Amalek attacks at Rephidim and is defeated while Aaron and Hur hold up Moses\' hands. Jethro, Moses\' father-in-law, visits, praises God, and advises Moses to share the work of judging.',
+      unfolds: [['14', 'Crossing the Red Sea'], ['15', 'The song of the sea; bitter water made sweet'], ['16', 'Manna, quail and the Sabbath'], ['17', 'Water from the rock; victory over Amalek'], ['18', 'Jethro\'s visit and advice']],
+      themes: ['Salvation', 'Praise', 'Testing and grumbling', 'Daily bread'],
+      verse: { ref: 'Exodus 14:14', text: 'The LORD will fight for you, and you have only to be silent.' },
+      christ: 'Paul says Israel was "baptized into Moses in the cloud and in the sea" and drank from the rock, "and the Rock was Christ" (1 Corinthians 10:1–4). Jesus called Himself "the bread of life," the true bread from heaven, greater than manna (John 6:32–35).',
+    },
+    19: {
+      what: 'Three months after leaving Egypt, Israel camps at Mount Sinai. God offers a covenant: if they obey, they will be His "treasured possession... a kingdom of priests and a holy nation." Amid thunder, lightning, fire and smoke, God speaks the Ten Commandments, and the terrified people ask Moses to speak to them instead.\n\nThe Book of the Covenant (chapters 21–23) applies the commandments to daily life: slaves, injuries, property, justice for the poor, kindness to the foreigner, the widow and the orphan, the Sabbath year and the three yearly feasts. The people promise, "All that the LORD has spoken we will do." Moses sprinkles them with "the blood of the covenant," and the elders see God and eat in His presence. Moses climbs the mountain for forty days.',
+      unfolds: [['19', 'Arriving at Sinai; the people prepare'], ['20', 'The Ten Commandments'], ['21–23', 'The Book of the Covenant'], ['24', 'The covenant sealed with blood']],
+      themes: ['Covenant', 'God\'s holiness', 'Law and justice', 'A mediator'],
+      verse: { ref: 'Exodus 19:5–6', text: 'Now therefore, if you will indeed obey my voice and keep my covenant, you shall be my treasured possession among all peoples, for all the earth is mine; and you shall be to me a kingdom of priests and a holy nation.' },
+      christ: 'At the Last Supper Jesus echoed Moses: "This is my blood of the covenant" (Mark 14:24). Hebrews contrasts the terror of Sinai with Mount Zion, where Jesus is "the mediator of a new covenant" (Hebrews 12:18–24).',
+    },
+    25: {
+      what: 'On the mountain God gives Moses detailed plans for the tabernacle, a portable tent where He will live among His people: the ark of the covenant, the table, the lampstand, the altars and curtains, and the garments and ordination of the priests. Bezalel and Oholiab are filled with God\'s Spirit to make it all.\n\nMeanwhile the people make a golden calf and worship it. Moses breaks the tablets, and the Levites punish the idolaters. Moses pleads for the people, and God shows him His glory and proclaims His name: "merciful and gracious, slow to anger, and abounding in steadfast love." The covenant is renewed, Moses\' face shines, and the people give so generously they must be told to stop. The tabernacle is built exactly as commanded, and the cloud of God\'s glory fills it.',
+      unfolds: [['25–27', 'The ark, table, lampstand, tent and altar'], ['28–31', 'Priests\' garments, ordination, incense and the Sabbath'], ['32', 'The golden calf'], ['33–34', 'Moses pleads; God\'s glory; covenant renewed'], ['35–40', 'Building the tabernacle; the glory fills it']],
+      themes: ['God\'s presence', 'Worship', 'Idolatry', 'Mercy'],
+      verse: { ref: 'Exodus 34:6', text: 'The LORD, the LORD, a God merciful and gracious, slow to anger, and abounding in steadfast love and faithfulness.' },
+      christ: 'John writes that "the Word became flesh and dwelt among us, and we have seen his glory" (John 1:14); "dwelt" literally means "tabernacled." Hebrews calls the tabernacle "a copy and shadow" of heavenly things, fulfilled in Christ (Hebrews 8:5).',
+    },
+  },
+  leviticus: {
+    1: {
+      what: 'From the tent of meeting, God tells Moses how Israel may come near to Him. There are five main offerings: the burnt offering, completely burned as an act of devotion; the grain offering of flour and oil; the peace offering, shared in a meal with God; the sin (purification) offering for unintentional sins; and the guilt (reparation) offering, which includes repaying what was wronged plus a fifth.\n\nThe animal had to be without blemish, and the worshiper laid a hand on its head, as if to say "this one in my place." Chapters 6–7 give the priests\' instructions for each offering and their share. The sacrifices taught that sin brings death, that atonement requires blood, and that God in His grace provides a way to come near.',
+      unfolds: [['1', 'The burnt offering'], ['2', 'The grain offering'], ['3', 'The peace offering'], ['4–5', 'The sin and guilt offerings'], ['6–7', 'Instructions for the priests']],
+      themes: ['Atonement', 'Substitution', 'Holiness', 'Fellowship with God'],
+      verse: { ref: 'Leviticus 1:4', text: 'He shall lay his hand on the head of the burnt offering, and it shall be accepted for him to make atonement for him.' },
+      christ: 'Christ "offered for all time a single sacrifice for sins" (Hebrews 10:12) and "gave himself up for us, a fragrant offering and sacrifice to God" (Ephesians 5:2), fulfilling every kind of offering.',
+    },
+    8: {
+      what: 'Moses ordains Aaron and his sons in a seven-day ceremony: washing, robing, anointing with oil, sacrifices, and blood placed on the right ear, thumb and big toe. On the eighth day Aaron offers the first sacrifices and blesses the people. Fire comes out from the LORD and consumes the offering, and the people shout and fall on their faces.\n\nBut Aaron\'s sons Nadab and Abihu offer "unauthorized fire," and fire from the LORD consumes them. God says, "Among those who are near me I will be sanctified," and Aaron holds his peace. The priests are told not to drink wine before serving and to teach the difference between holy and common, clean and unclean.',
+      unfolds: [['8', 'Aaron and his sons ordained'], ['9', 'The first sacrifices; fire from the LORD'], ['10', 'Nadab and Abihu; rules for priests']],
+      themes: ['Holiness', 'Priesthood', 'Obedient worship', 'Reverence'],
+      verse: { ref: 'Leviticus 10:3', text: 'Among those who are near me I will be sanctified, and before all the people I will be glorified.' },
+      christ: 'Jesus is "a great high priest who has passed through the heavens," able to sympathize with our weaknesses, yet without sin (Hebrews 4:14–15). Unlike Aaron, He did not need to offer sacrifices for Himself (Hebrews 7:27).',
+    },
+    11: {
+      what: 'These chapters teach Israel to tell clean from unclean in everyday life. Chapter 11 lists animals that may and may not be eaten: land animals that chew the cud and have split hooves, fish with fins and scales, and certain birds and insects. Chapter 12 covers purification after childbirth.\n\nChapters 13–14 deal with skin diseases (often translated "leprosy") and mold in clothing and houses. The priest examines them, and a person who is healed is restored with a ceremony using two birds. Chapter 15 covers bodily discharges. Being unclean was not a sin in itself, but it kept a person from the sanctuary until cleansed, teaching that God is holy and life in His presence must be pure.',
+      unfolds: [['11', 'Clean and unclean animals'], ['12', 'After childbirth'], ['13', 'Skin diseases'], ['14', 'Cleansing rituals; mold in houses'], ['15', 'Bodily discharges']],
+      themes: ['Holiness', 'Being set apart', 'Purity', 'Restoration'],
+      verse: { ref: 'Leviticus 11:44', text: 'For I am the LORD your God. Consecrate yourselves therefore, and be holy, for I am holy.' },
+      christ: 'Jesus touched lepers and the unclean and made them clean (Mark 1:40–42; 5:25–34), and He declared all foods clean (Mark 7:19). Peter quotes Leviticus to Christians: "You shall be holy, for I am holy" (1 Peter 1:16).',
+    },
+    16: {
+      what: 'Once a year, on the tenth day of the seventh month, the high priest enters the Most Holy Place behind the veil. After the death of Nadab and Abihu, God warns that Aaron may not come in whenever he chooses. Dressed in plain linen, Aaron first offers a bull for his own sins and his household, then takes two goats.\n\nOne goat is sacrificed as a sin offering, and its blood is sprinkled on the mercy seat to cleanse the sanctuary. Over the other, the scapegoat, Aaron confesses all the people\'s sins and sends it away into the wilderness. The people fast and rest: "on this day shall atonement be made for you to cleanse you." The day is still kept by Jews as Yom Kippur.',
+      unfolds: [['16:1–10', 'Preparation and the two goats'], ['16:11–19', 'Blood on the mercy seat'], ['16:20–28', 'The scapegoat sent away'], ['16:29–34', 'A statute forever']],
+      themes: ['Atonement', 'Cleansing', 'Substitution', 'Access to God'],
+      verse: { ref: 'Leviticus 16:30', text: 'For on this day shall atonement be made for you to cleanse you. You shall be clean before the LORD from all your sins.' },
+      christ: 'Hebrews 9 explains that Christ entered the true holy place "once for all by means of his own blood, thus securing an eternal redemption" (9:12). Like the sin offering burned outside the camp, He "suffered outside the gate" (13:12).',
+    },
+    17: {
+      what: '"You shall be holy, for I the LORD your God am holy" sums up these chapters. They cover the sacredness of blood, sexual purity and holiness in ordinary life: leaving the edges of the harvest for the poor, honest scales, justice for the deaf and the blind, and "you shall love your neighbor as yourself." Penalties are set for serious sins, and further rules are given for priests and offerings.\n\nChapter 23 sets Israel\'s calendar: the Sabbath, Passover and Unleavened Bread, Firstfruits, Weeks, Trumpets, the Day of Atonement and Booths. Chapter 25 commands a Sabbath rest for the land every seventh year and a Jubilee every fiftieth, when land returns to its family and slaves go free. Chapter 26 sets out blessings for obedience and curses for disobedience, ending with God\'s promise to remember His covenant. Chapter 27 covers vows.',
+      unfolds: [['17–20', 'Blood, sexual holiness, love your neighbor'], ['21–22', 'Holiness for priests and offerings'], ['23', 'The appointed feasts'], ['24–25', 'The Sabbath year and the Jubilee'], ['26–27', 'Blessings and curses; vows']],
+      themes: ['Holiness in all of life', 'Love for neighbor', 'Sacred time', 'Covenant faithfulness'],
+      verse: { ref: 'Leviticus 19:18', text: 'You shall love your neighbor as yourself: I am the LORD.' },
+      christ: 'Jesus named Leviticus 19:18 the second great commandment (Mark 12:31). He began His ministry by announcing "the year of the Lord\'s favor" (Luke 4:19), the freedom of the Jubilee fulfilled in Him.',
+    },
+  },
+  numbers: {
+    1: {
+      what: 'A year after the Exodus, God has Moses count the fighting men: 603,550, not counting the Levites. The tribes camp in order around the tabernacle, three on each side, with the Levites closest, and they march in the same order. The Levites are set apart to carry and guard the tabernacle in place of Israel\'s firstborn.\n\nLaws follow on purity and the Nazirite vow, and God gives the priestly blessing: "The LORD bless you and keep you." The tribal leaders bring gifts for the altar, the Levites are dedicated, and the second Passover is kept. The cloud over the tabernacle shows when to camp and when to march, silver trumpets are made, and Israel sets out from Sinai.',
+      unfolds: [['1–2', 'The census and the camp'], ['3–4', 'The Levites and their duties'], ['5–6', 'Purity, the Nazirite vow and the blessing'], ['7–8', 'Offerings; the Levites dedicated'], ['9–10', 'Passover, the cloud and setting out']],
+      themes: ['Order', 'God\'s presence at the center', 'Blessing', 'Guidance'],
+      verse: { ref: 'Numbers 6:24–26', text: 'The LORD bless you and keep you; the LORD make his face to shine upon you and be gracious to you; the LORD lift up his countenance upon you and give you peace.' },
+      christ: 'The camp gathered around God\'s dwelling pictures God\'s people gathered around Christ, who "dwelt among us" (John 1:14) and is "God with us" (Matthew 1:23).',
+    },
+    11: {
+      what: 'Soon after leaving Sinai, the people complain about hardship and crave meat; God sends quail and a plague. Miriam and Aaron speak against Moses, and Miriam is struck with leprosy. Twelve spies explore Canaan; ten report giants and walled cities, and the people refuse to go in. God sentences that generation to wander forty years until they die, except Joshua and Caleb.\n\nKorah, Dathan and Abiram rebel against Moses and Aaron, and the ground swallows them; Aaron\'s staff buds to confirm his priesthood. At Meribah Moses strikes the rock in anger and is barred from entering the land. Miriam and Aaron die. When serpents bite the people, God tells Moses to make a bronze serpent, and whoever looks at it lives. Israel defeats Sihon and Og. Balak of Moab hires Balaam to curse Israel, but he can only bless them and foresees a star rising from Jacob. The section ends with Israel\'s sin at Peor.',
+      unfolds: [['11–12', 'Complaints, quail, Miriam and Aaron'], ['13–14', 'The spies and forty years of wandering'], ['15–19', 'Korah\'s rebellion; Aaron\'s staff buds'], ['20–21', 'Meribah, Edom, the bronze serpent, Sihon and Og'], ['22–25', 'Balaam\'s blessings; Baal of Peor']],
+      themes: ['Unbelief', 'God\'s patience and judgment', 'Leadership', 'A blessing no one can reverse'],
+      verse: { ref: 'Numbers 14:9', text: 'Only do not rebel against the LORD. And do not fear the people of the land, for they are bread for us. Their protection is removed from them, and the LORD is with us; do not fear them.' },
+      christ: 'Jesus said, "as Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life" (John 3:14–15). Hebrews 3–4 warns readers not to harden their hearts as the wilderness generation did.',
+    },
+    26: {
+      what: 'After the plague at Peor, a second census counts the new generation: 601,730 men. None of the first generation are left except Caleb and Joshua. The daughters of Zelophehad ask for their father\'s inheritance, and God grants it. God tells Moses he will see the land but not enter it, and Joshua is commissioned to lead after him.\n\nOfferings for every day, Sabbath and feast are listed, along with rules for vows. Israel goes to war against Midian. Reuben and Gad ask to settle east of the Jordan and promise to fight beside their brothers. Moses records the stages of the journey from Egypt. God sets the borders of Canaan, the towns for the Levites and six cities of refuge for those who kill by accident. The book ends on the plains of Moab, ready to enter.',
+      unfolds: [['26–27', 'Second census; Zelophehad\'s daughters; Joshua chosen'], ['28–30', 'Offerings, feasts and vows'], ['31–32', 'War on Midian; the tribes east of the Jordan'], ['33–34', 'The journey recorded; the borders of the land'], ['35–36', 'Levite towns, cities of refuge, inheritance']],
+      themes: ['A fresh start', 'Faithful succession', 'Inheritance', 'Justice and refuge'],
+      verse: { ref: 'Numbers 27:16–17', text: 'Let the LORD, the God of the spirits of all flesh, appoint a man over the congregation who shall go out before them and come in before them, who shall lead them out and bring them in, that the congregation of the LORD may not be as sheep that have no shepherd.' },
+      christ: 'Joshua\'s name is the Hebrew form of "Jesus." Jesus had compassion on the crowds "because they were like sheep without a shepherd" (Mark 6:34), the very words of Moses\' prayer. Hebrews pictures believers as those who "have fled for refuge" to the hope set before them (6:18).',
+    },
+  },
+  deuteronomy: {
+    1: {
+      what: 'On the plains of Moab, in the fortieth year, Moses speaks to the new generation. He retells the journey: appointing judges at Horeb, the spies and the people\'s refusal at Kadesh, forty years of wandering, passing by Edom, Moab and Ammon, and the victories over Sihon and Og. He reminds them that he himself may not enter the land.\n\nIn chapter 4 Moses urges them to keep God\'s statutes, which will be their wisdom before the nations. They must never make idols, because they saw no form when God spoke from the fire at Horeb. If they turn away they will be scattered, but if they seek the LORD with all their heart they will find Him, for "the LORD is God; there is no other besides him."',
+      unfolds: [['1', 'From Horeb to Kadesh'], ['2–3', 'Edom, Moab and Ammon; Sihon and Og'], ['4', 'Keep God\'s law; make no idols']],
+      themes: ['Remembering', 'God\'s faithfulness', 'Warning', 'The one true God'],
+      verse: { ref: 'Deuteronomy 4:29', text: 'But from there you will seek the LORD your God and you will find him, if you search after him with all your heart and with all your soul.' },
+      christ: 'When Jesus was tempted in the wilderness, He answered each time from Deuteronomy (Matthew 4:1–11). Where Israel failed during forty years in the wilderness, Jesus, tested forty days, obeyed perfectly.',
+    },
+    5: {
+      what: 'Moses restates the Ten Commandments and gives the heart of the law, the Shema: "Hear, O Israel: The LORD our God, the LORD is one. You shall love the LORD your God with all your heart and with all your soul and with all your might." These words are to be taught to children and talked about at home and on the road. Moses warns against forgetting God when life is easy, and reminds them that God chose them not because they were great or righteous but because He loved them.\n\nChapters 12–26 apply the covenant to life in the land: worship at the place God chooses, warnings against false prophets, clean food, tithes, cancelling debts, the feasts, judges and kings, priests and prophets (God will raise up "a prophet like me"), cities of refuge, rules for war, family life, and justice and kindness for the poor, the foreigner, the widow and the orphan. It ends with the firstfruits confession: "A wandering Aramean was my father."',
+      unfolds: [['5–7', 'The Ten Commandments, the Shema, God\'s love'], ['8–11', 'Do not forget; the golden calf remembered'], ['12–16', 'Worship, tithes, release of debts, feasts'], ['17–21', 'Kings, priests, prophets, refuge and war'], ['22–26', 'Family, justice and mercy; firstfruits']],
+      themes: ['Love for God', 'Obedience from the heart', 'Justice and mercy', 'Remember'],
+      verse: { ref: 'Deuteronomy 6:4–5', text: 'Hear, O Israel: The LORD our God, the LORD is one. You shall love the LORD your God with all your heart and with all your soul and with all your might.' },
+      christ: 'Jesus called the Shema "the great and first commandment" (Matthew 22:37–38). Moses promised that God would raise up "a prophet like me" (18:15), and Peter declared that Jesus is that prophet (Acts 3:22).',
+    },
+    27: {
+      what: 'Moses commands that, once in the land, the people write the law on plastered stones on Mount Ebal and stand on Mounts Gerizim and Ebal to proclaim blessings and curses. Chapter 28 lists blessings for obedience, in the city and in the field, and long, terrible curses for disobedience, ending in being scattered among the nations.\n\nIn chapters 29–30 Moses renews the covenant with this generation. He foresees exile but promises that when they return to the LORD, He will gather them and circumcise their hearts so they can love Him. The command is not too hard or far away: "the word is very near you." Moses sets before them life and death and urges, "Therefore choose life."',
+      unfolds: [['27', 'Stones on Mount Ebal; the curses proclaimed'], ['28', 'Blessings and curses'], ['29', 'The covenant renewed in Moab'], ['30', 'Return, restoration and "choose life"']],
+      themes: ['A covenant choice', 'Blessing and curse', 'Exile and return', 'A new heart'],
+      verse: { ref: 'Deuteronomy 30:19', text: 'I call heaven and earth to witness against you today, that I have set before you life and death, blessing and curse. Therefore choose life, that you and your offspring may live.' },
+      christ: 'Paul applies Deuteronomy 30, "the word is near you," to the message of faith in Christ (Romans 10:6–8). Christ "redeemed us from the curse of the law by becoming a curse for us" (Galatians 3:13, quoting Deuteronomy 21:23).',
+    },
+    31: {
+      what: 'Moses, now 120 years old, announces that Joshua will lead Israel across the Jordan. Before all Israel he charges Joshua, "Be strong and courageous," and writes down the law, commanding that it be read aloud every seven years. God warns that Israel will turn to other gods, and gives Moses a song to stand as a witness.\n\nThe Song of Moses (chapter 32) praises God as the faithful Rock and recounts Israel\'s unfaithfulness and God\'s compassion. Moses blesses each tribe, as Jacob once did. Then he climbs Mount Nebo, sees the whole land, and dies there, and God buries him. "There has not arisen a prophet since in Israel like Moses, whom the LORD knew face to face."',
+      unfolds: [['31', 'Joshua commissioned; the law written down'], ['32', 'The Song of Moses'], ['33', 'Moses blesses the tribes'], ['34', 'Moses dies on Mount Nebo']],
+      themes: ['Passing the torch', 'God\'s faithfulness', 'Warning and hope', 'The end of an era'],
+      verse: { ref: 'Deuteronomy 31:8', text: 'It is the LORD who goes before you. He will be with you; he will not leave you or forsake you. Do not fear or be dismayed.' },
+      christ: 'Moses saw the land but could not lead Israel in; Joshua, whose name is "Jesus" in Hebrew, did. Hebrews says Jesus "has been counted worthy of more glory than Moses" (3:3), and Moses appeared with Jesus at the transfiguration (Luke 9:30–31).',
+    },
+  },
+};

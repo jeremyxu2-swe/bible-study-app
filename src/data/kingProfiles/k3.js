@@ -1,0 +1,163 @@
+// Kings' profiles, batch 3: Judah's last kings (609–586 BC) and Israel from Nadab to Zimri (910–885 BC).
+import { s, d, r } from './_h.js';
+
+const G = 'Kings & Kingdom';
+
+export const chars = [
+  { id: 'jehoiakim', name: 'Jehoiakim', title: 'King of Judah who burned Jeremiah’s scroll, 609–598 BC', group: G, tribe: 'Judah', family: 'Son of Josiah; father of Jehoiachin (born Eliakim)', when: 'Reigned ~609–598 BC',
+    bio: 'Put on the throne by Pharaoh Neco, he taxed the land to pay Egypt, then served Babylon and rebelled. He built himself a palace with unpaid labor, killed the prophet Uriah, and cut up and burned Jeremiah’s scroll as it was read to him.',
+    books: ['2kings', '2chronicles', 'jeremiah', 'daniel'],
+    story: [s('2 Kings 23:34 – 24:7', '2kings', 23, 'Made king by Neco; becomes Nebuchadnezzar’s vassal and rebels.'), s('Jeremiah 36', 'jeremiah', 36, 'Burns Jeremiah’s scroll column by column in the fire.'), s('Daniel 1:1–2', 'daniel', 1, 'In his third year Nebuchadnezzar besieges Jerusalem and takes Daniel to Babylon.')],
+    related: [{ id: 'josiah', rel: 'father' }, { id: 'jehoahaz_j', rel: 'brother' }, { id: 'jehoiachin', rel: 'son' }, { id: 'jeremiah', rel: 'prophet he opposed' }, { id: 'nebuchadnezzar', rel: 'overlord' }] },
+  { id: 'jehoiachin', name: 'Jehoiachin', title: 'King of Judah taken to Babylon, 598–597 BC', group: G, tribe: 'Judah', family: 'Son of Jehoiakim (also called Jeconiah and Coniah)', when: 'Reigned 598–597 BC',
+    bio: 'King for three months at eighteen, he surrendered Jerusalem to Nebuchadnezzar and was taken to Babylon with his family and 10,000 others, including Ezekiel. After 37 years in prison he was released and given a place at the Babylonian king’s table.',
+    books: ['2kings', '2chronicles', 'jeremiah', 'ezekiel', 'matthew'],
+    story: [s('2 Kings 24:8–16', '2kings', 24, 'Surrenders to Nebuchadnezzar and is taken into exile.'), s('Jeremiah 22:24–30', 'jeremiah', 22, 'Jeremiah’s word: no descendant of his will sit on David’s throne.'), s('2 Kings 25:27–30', '2kings', 25, 'Released from prison and honored at the king’s table.')],
+    related: [{ id: 'jehoiakim', rel: 'father' }, { id: 'zedekiah', rel: 'uncle' }, { id: 'nebuchadnezzar', rel: 'captor' }, { id: 'ezekiel', rel: 'fellow exile' }] },
+  { id: 'zedekiah', name: 'Zedekiah', title: 'Last king of Judah, 597–586 BC', group: G, tribe: 'Judah', family: 'Son of Josiah; uncle of Jehoiachin (born Mattaniah)', when: 'Reigned ~597–586 BC',
+    bio: 'Installed by Nebuchadnezzar, he swore loyalty to Babylon, then rebelled. He secretly asked Jeremiah for God’s word but lacked the courage to obey it. Jerusalem fell after a long siege; Zedekiah was captured, saw his sons killed, was blinded, and was taken to Babylon in chains.',
+    books: ['2kings', '2chronicles', 'jeremiah', 'ezekiel'],
+    story: [s('Jeremiah 37–38', 'jeremiah', 37, 'Consults Jeremiah in secret but lets his officials throw him into a cistern.'), s('2 Kings 25:1–7', '2kings', 25, 'Jerusalem falls; he is captured near Jericho, blinded and taken to Babylon.'), s('Jeremiah 39', 'jeremiah', 39, 'The fall of the city as Jeremiah tells it.')],
+    related: [{ id: 'josiah', rel: 'father' }, { id: 'jehoiachin', rel: 'nephew' }, { id: 'jeremiah', rel: 'prophet' }, { id: 'nebuchadnezzar', rel: 'overlord' }] },
+  { id: 'nadab', name: 'Nadab', title: 'King of Israel, 910–909 BC', group: G, tribe: 'Ephraim', family: 'Son of Jeroboam I', when: 'Reigned ~910–909 BC',
+    bio: 'Jeroboam’s son, who kept his father’s golden calves. In his second year, while besieging the Philistine town of Gibbethon, he was killed by Baasha, who then wiped out Jeroboam’s whole family as the prophet Ahijah had warned.',
+    books: ['1kings'],
+    story: [s('1 Kings 15:25–31', '1kings', 15, 'Reigns two years; killed by Baasha at Gibbethon.'), s('1 Kings 14:10–11', '1kings', 14, 'Ahijah’s earlier warning against Jeroboam’s house.')],
+    related: [{ id: 'jeroboam', rel: 'father' }, { id: 'baasha', rel: 'killed him' }] },
+  { id: 'baasha', name: 'Baasha', title: 'King of Israel, 909–886 BC', group: G, tribe: 'Issachar', family: 'Son of Ahijah; father of Elah', when: 'Reigned ~909–886 BC',
+    bio: 'A soldier from the tribe of Issachar who killed King Nadab and destroyed Jeroboam’s family. He kept Jeroboam’s sins, fought Asa of Judah all his reign, and heard the prophet Jehu son of Hanani announce that his house would fall in the same way.',
+    books: ['1kings', '2chronicles'],
+    story: [s('1 Kings 15:27–34', '1kings', 15, 'Kills Nadab and takes the throne; walks in Jeroboam’s ways.'), s('1 Kings 15:16–22', '1kings', 15, 'Fortifies Ramah against Judah; withdraws when Syria attacks.'), s('1 Kings 16:1–7', '1kings', 16, 'Jehu son of Hanani prophesies the end of his house.')],
+    related: [{ id: 'nadab', rel: 'killed' }, { id: 'elah', rel: 'son' }, { id: 'asa', rel: 'enemy' }] },
+  { id: 'elah', name: 'Elah', title: 'King of Israel, 886–885 BC', group: G, tribe: 'Issachar', family: 'Son of Baasha', when: 'Reigned ~886–885 BC',
+    bio: 'Baasha’s son, who reigned about two years from Tirzah. While he was getting drunk at his steward’s house, Zimri, one of his chariot commanders, murdered him and destroyed Baasha’s family, fulfilling the prophet Jehu’s word.',
+    books: ['1kings'],
+    story: [s('1 Kings 16:8–14', '1kings', 16, 'Killed while drunk by Zimri, who wipes out Baasha’s house.')],
+    related: [{ id: 'baasha', rel: 'father' }, { id: 'zimri', rel: 'killed him' }] },
+  { id: 'zimri', name: 'Zimri', title: 'King of Israel for seven days, 885 BC', group: G, tribe: 'Israel', family: 'Unknown; a chariot commander', when: 'Reigned 885 BC',
+    bio: 'A chariot commander who murdered King Elah and seized the throne. The army in the field made their general Omri king instead and besieged Tirzah. After seven days Zimri set the palace on fire around himself and died.',
+    books: ['1kings', '2kings'],
+    story: [s('1 Kings 16:9–20', '1kings', 16, 'Kills Elah, reigns seven days, and dies in the burning palace.'), s('2 Kings 9:31', '2kings', 9, 'Years later Jezebel taunts Jehu by calling him “Zimri.”')],
+    related: [{ id: 'elah', rel: 'killed' }, { id: 'omri', rel: 'overthrew him' }] },
+];
+
+export const levels = {
+  jehoiakim: {
+    facts: { occupation: 'King of Judah (reigned c. 609–598 BC)', people: 'Israelite, of Judah (house of David)', languages: 'Hebrew; Aramaic for diplomacy with Egypt and Babylon', era: 'Last years of Judah, late 7th century BC', hometown: 'Jerusalem' },
+    simple: 'Jehoiakim was put on the throne by the king of Egypt. When the prophet Jeremiah’s warnings were read to him, he cut up the scroll and burned it. In his day the Babylonians began taking people from Judah into exile, including Daniel.',
+    moderate: 'After Pharaoh Neco deposed Jehoahaz, he made Josiah’s older son Eliakim king and renamed him Jehoiakim. Jehoiakim taxed the people to pay Egypt’s tribute. When Nebuchadnezzar defeated Egypt at Carchemish in 605 BC, Jehoiakim became Babylon’s servant for three years, and that same year Daniel and other young nobles were taken to Babylon. Then he rebelled, and raiding bands from Babylon, Syria, Moab and Ammon were sent against Judah.\n\nJeremiah condemned him for building a lavish palace with unpaid labor while his father Josiah had defended the poor and needy. Jehoiakim had the prophet Uriah brought back from Egypt and killed. When Jeremiah’s scroll of warnings was read to him as he sat by a fire in his winter house, he cut off each few columns with a knife and threw them into the fire until the whole scroll was gone. Jeremiah simply dictated it again, with more added. Jehoiakim died around the time Babylon came against Jerusalem in 598 BC.',
+    detailed: {
+      background: 'He became king at 25 and reigned eleven years. His mother was Zebidah. Neco changed his name from Eliakim (“God raises up”) to Jehoiakim (“the LORD raises up”), a sign that he ruled at Egypt’s pleasure.',
+      world: 'His reign spans the great power shift of the age. The Babylonian Chronicles record Nebuchadnezzar’s victory at Carchemish in 605 BC and his siege of “the city of Judah” in 597 BC. Habakkuk wrestled in these years with God’s use of the Babylonians to judge Judah.',
+      significance: 'Jehoiakim is the clearest picture in the Bible of someone trying to destroy God’s word. The scroll burned, but the word was written again and fulfilled. His contempt for the prophets led directly to the exile.',
+      moments: [
+        d('609 BC', 'Made king by Egypt', 'Neco makes Eliakim king, renames him and imposes tribute.', '2 Kings 23:34–35', '2kings', 23),
+        d('605 BC', 'Daniel taken', 'Nebuchadnezzar besieges Jerusalem and carries off young nobles, including Daniel.', 'Daniel 1:1–6', 'daniel', 1),
+        d('His reign', 'A palace built by injustice', 'Jeremiah condemns his palace built with unpaid labor.', 'Jeremiah 22:13–19', 'jeremiah', 22),
+        d('604 BC', 'The scroll burned', 'He cuts up Jeremiah’s scroll and burns it in the brazier.', 'Jeremiah 36:20–26', 'jeremiah', 36),
+        d('c. 601 BC', 'Rebellion', 'After three years as Babylon’s vassal he rebels; raiders are sent against Judah.', '2 Kings 24:1–2', '2kings', 24),
+      ],
+      questions: [{ q: 'How did Jehoiakim die?', a: 'Kings simply says he “slept with his fathers.” Jeremiah had foretold he would have “the burial of a donkey,” dragged and thrown outside Jerusalem (Jeremiah 22:19). Chronicles says Nebuchadnezzar bound him to take him to Babylon. The details are not certain.' }],
+      reading: [r('2 Kings 23:34 – 24:7', '2kings', 23, 'His reign'), r('Jeremiah 36', 'jeremiah', 36, 'The burned scroll'), r('Jeremiah 22:13–19', 'jeremiah', 22, 'Jeremiah’s rebuke')],
+    },
+  },
+  jehoiachin: {
+    facts: { occupation: 'King of Judah (reigned three months, 598–597 BC), then a captive in Babylon', people: 'Israelite, of Judah (house of David)', languages: 'Hebrew; later Aramaic and Babylonian in exile', era: 'Fall of Judah and exile, 6th century BC', hometown: 'Jerusalem; Babylon in exile' },
+    simple: 'Jehoiachin became king at eighteen and ruled for only three months before the Babylonians took Jerusalem. He was taken to Babylon as a prisoner, but many years later he was set free and treated kindly.',
+    moderate: 'Jehoiachin, also called Jeconiah or Coniah, came to the throne as Nebuchadnezzar’s army closed in on Jerusalem. After three months he surrendered: he went out to the king of Babylon with his mother, servants, officials and palace officers. Nebuchadnezzar carried off the treasures of the temple and palace and took into exile the king, his household, the officials, the warriors and the craftsmen, about 10,000 people. Among them was the young priest Ezekiel, who dated his prophecies by “the exile of King Jehoiachin.” Jeremiah declared that none of his offspring would sit on David’s throne and rule again in Judah.\n\nThe story of Kings ends with him. In the 37th year of his exile, the new king of Babylon, Evil-merodach, released Jehoiachin from prison, spoke kindly to him, gave him a seat above the other captive kings, and let him eat at the king’s table for the rest of his life. It is a small, quiet sign of hope that David’s line was not finished.',
+    detailed: {
+      background: 'He was the son of Jehoiakim and Nehushta. The Babylonian Chronicles record that Nebuchadnezzar captured Jerusalem on the second of Adar (March 16, 597 BC) and appointed a king of his own choosing, matching 2 Kings 24.',
+      world: 'Clay tablets found in Babylon list rations of oil for “Ya’ukin, king of the land of Judah” and his five sons, striking outside evidence for his life in exile.',
+      significance: 'Despite Jeremiah’s word that no descendant of his would reign in Judah, Jehoiachin appears in Matthew’s genealogy of Jesus as Jechoniah. His grandson Zerubbabel led the return from exile. His release at the end of Kings keeps the promise to David alive through the darkest chapter of Israel’s history.',
+      moments: [
+        d('598 BC', 'King at eighteen', 'He succeeds his father as Babylon’s army arrives.', '2 Kings 24:8–9', '2kings', 24),
+        d('597 BC', 'Surrender and exile', 'He surrenders and is taken to Babylon with 10,000 captives.', '2 Kings 24:10–16', '2kings', 24),
+        d('In exile', 'A signet ring pulled off', 'Jeremiah says that even if he were God’s signet ring, he would be torn off.', 'Jeremiah 22:24–30', 'jeremiah', 22),
+        d('561 BC', 'Released', 'Evil-merodach frees him and gives him a place at his table.', '2 Kings 25:27–30', '2kings', 25),
+      ],
+      questions: [{ q: 'How can Jesus descend from Jehoiachin if his line was cursed?', a: 'Christians answer in different ways. Matthew traces Jesus’ legal right to the throne through Joseph, while Luke traces Mary’s (or Joseph’s natural) descent through David’s son Nathan, not through Jehoiachin. Some also note God’s later words to Zerubbabel, his grandson, that God would make him “like a signet ring” (Haggai 2:23), reversing Jeremiah’s image.' }],
+      reading: [r('2 Kings 24:8–17', '2kings', 24, 'His surrender'), r('2 Kings 25:27–30', '2kings', 25, 'His release'), r('Jeremiah 22:24–30', 'jeremiah', 22, 'Jeremiah’s word about him')],
+    },
+  },
+  zedekiah: {
+    facts: { occupation: 'King of Judah (reigned c. 597–586 BC)', people: 'Israelite, of Judah (house of David)', languages: 'Hebrew; Aramaic for diplomacy', era: 'Fall of Judah, early 6th century BC', hometown: 'Jerusalem; died in Babylon' },
+    simple: 'Zedekiah was the last king of Judah. He knew Jeremiah was speaking God’s word but was too afraid to obey. When he rebelled against Babylon, Jerusalem was destroyed and he was taken away as a blinded prisoner.',
+    moderate: 'Nebuchadnezzar made Mattaniah, Josiah’s youngest son, king in place of his nephew Jehoiachin and renamed him Zedekiah (“the LORD is righteous”). He swore an oath of loyalty in God’s name, but under pressure from his officials and hoping for help from Egypt, he rebelled. Babylon’s army besieged Jerusalem in 588 BC.\n\nThroughout the siege Zedekiah sent for Jeremiah in secret to ask, “Is there any word from the LORD?” Jeremiah told him plainly to surrender and live. Zedekiah was afraid of his own officials and of the Judeans who had already deserted. He let them throw Jeremiah into a muddy cistern, and later quietly had him rescued. In 586 BC, with famine in the city, the wall was breached. Zedekiah fled by night toward the Jordan but was caught in the plains of Jericho. At Riblah, Nebuchadnezzar killed his sons before his eyes, then put out his eyes and took him to Babylon in bronze chains. A month later the temple, the palace and the city were burned.',
+    detailed: {
+      background: 'He was 21 when he became king and reigned eleven years. He was the full brother of Jehoahaz (their mother was Hamutal) and the half-brother of Jehoiakim.',
+      world: 'Egypt under Pharaoh Hophra (Apries) encouraged the small states of the region to revolt against Babylon, and briefly forced Babylon to lift the siege. Lachish letters, written on pottery by a Judean officer during the final campaign, say the signal fires of Azekah could no longer be seen.',
+      significance: 'Zedekiah shows that knowing God’s word is not the same as obeying it. Ezekiel, in Babylon, foretold that he would be brought to Babylon yet not see it, fulfilled when he was blinded before the journey (Ezekiel 12:13). With him the line of Davidic kings in Jerusalem came to an end until the promised King.',
+      moments: [
+        d('597 BC', 'Made king by Babylon', 'Nebuchadnezzar installs him and changes his name.', '2 Kings 24:17–18', '2kings', 24),
+        d('588 BC', 'Rebellion and siege', 'He rebels; Babylon besieges Jerusalem.', '2 Kings 25:1', '2kings', 25),
+        d('During the siege', 'Secret meetings', 'He asks Jeremiah for God’s word but fears to obey.', 'Jeremiah 38:14–28', 'jeremiah', 38),
+        d('586 BC', 'Captured and blinded', 'The wall is breached; he is caught near Jericho, his sons are killed, and he is blinded.', '2 Kings 25:4–7', '2kings', 25),
+        d('586 BC', 'Jerusalem burned', 'The temple, palace and houses of Jerusalem are burned.', '2 Kings 25:8–10', '2kings', 25),
+      ],
+      questions: [{ q: 'Why was breaking his oath to Babylon counted against him?', a: 'He had sworn by the LORD’s name. Ezekiel 17 and 2 Chronicles 36:13 treat breaking that oath as despising God himself, not just a political choice.' }],
+      reading: [r('Jeremiah 37–39', 'jeremiah', 37, 'The siege and Jeremiah'), r('2 Kings 24:17 – 25:21', '2kings', 24, 'The fall of Jerusalem'), r('2 Chronicles 36:11–21', '2chronicles', 36, 'Chronicles’ verdict')],
+    },
+  },
+  nadab: {
+    facts: { occupation: 'King of Israel (reigned c. 910–909 BC)', people: 'Israelite, of Ephraim (house of Jeroboam)', languages: 'Hebrew', era: 'Early divided kingdom, 10th century BC', hometown: 'Tirzah' },
+    simple: 'Nadab was the son of Jeroboam, Israel’s first king after the split. He kept his father’s golden calves and was killed after two years by Baasha, who took his throne.',
+    moderate: 'Nadab became king in the second year of Asa of Judah and reigned two years. He did what was evil in the sight of the LORD and walked in the way of his father Jeroboam, in the sin of the golden calves at Bethel and Dan that Jeroboam had made Israel commit.\n\nWhile Nadab and all Israel were besieging Gibbethon, a town held by the Philistines, Baasha son of Ahijah of the tribe of Issachar conspired against him and struck him down. As soon as Baasha was king, he killed every member of Jeroboam’s family, leaving no one alive, just as the LORD had said through the prophet Ahijah of Shiloh, because of the sins of Jeroboam.',
+    detailed: {
+      background: 'His brother Abijah died as a child, the only one in Jeroboam’s house in whom God found “something pleasing” (1 Kings 14:13).',
+      world: 'Gibbethon stood on the border with Philistia and was fought over for decades; the army was besieging it again when Zimri seized power 25 years later.',
+      significance: 'Nadab’s death began a pattern in the northern kingdom: dynasties ending in assassination. Of Israel’s nineteen kings, seven were assassinated and an eighth, Zimri, died in the fire he set, and the north had no promise like God’s covenant with David to hold a family on the throne.',
+      moments: [
+        d('910 BC', 'King in Jeroboam’s footsteps', 'He continues the golden calf worship.', '1 Kings 15:25–26', '1kings', 15),
+        d('909 BC', 'Killed at Gibbethon', 'Baasha kills him during the siege and destroys Jeroboam’s house.', '1 Kings 15:27–30', '1kings', 15),
+      ],
+      reading: [r('1 Kings 14:1–18', '1kings', 14, 'Ahijah’s warning'), r('1 Kings 15:25–31', '1kings', 15, 'His reign')],
+    },
+  },
+  baasha: {
+    facts: { occupation: 'King of Israel (reigned c. 909–886 BC)', people: 'Israelite, of Issachar', languages: 'Hebrew', era: 'Early divided kingdom, 10th–9th century BC', hometown: 'Tirzah (his capital)' },
+    simple: 'Baasha took the throne of Israel by killing King Nadab. He did evil like Jeroboam, and a prophet warned that his family would be destroyed the same way.',
+    moderate: 'Baasha came from the tribe of Issachar and rose from obscurity to seize the throne. He reigned 24 years at Tirzah and kept Jeroboam’s golden calves. There was war between him and Asa of Judah all their days. Baasha fortified Ramah, just north of Jerusalem, to stop anyone going to or coming from Judah, but when Asa paid Ben-hadad of Syria to attack Israel’s northern towns, Baasha had to abandon the work.\n\nThe prophet Jehu son of Hanani brought him the LORD’s word: “I exalted you out of the dust and made you leader over my people Israel, and you have walked in the way of Jeroboam.” Because of this, his house would be swept away like Jeroboam’s. Baasha died and was buried in Tirzah, and his son Elah succeeded him, but within two years the prophecy came true.',
+    detailed: {
+      background: 'He was the son of Ahijah, not the prophet of the same name. Nothing is said of his life before he killed Nadab during the siege of Gibbethon.',
+      world: 'Baasha’s war with Asa drew Syria into Israel’s affairs for the first time. Ben-hadad’s raid captured Ijon, Dan, Abel-beth-maacah and the region around the Sea of Galilee.',
+      significance: 'God used Baasha to judge Jeroboam’s house, yet Baasha committed the same sins and met the same fate. Being an instrument of judgment did not make him righteous.',
+      moments: [
+        d('909 BC', 'Seizes the throne', 'He kills Nadab and destroys Jeroboam’s family.', '1 Kings 15:27–30', '1kings', 15),
+        d('His reign', 'Ramah fortified', 'He builds up Ramah to blockade Judah, then withdraws when Syria attacks.', '1 Kings 15:16–22', '1kings', 15),
+        d('His reign', '“Out of the dust”', 'Jehu son of Hanani announces the end of his house.', '1 Kings 16:1–4', '1kings', 16),
+      ],
+      reading: [r('1 Kings 15:16 – 16:7', '1kings', 15, 'His reign and the prophet’s word'), r('2 Chronicles 16:1–6', '2chronicles', 16, 'The war with Asa')],
+    },
+  },
+  elah: {
+    facts: { occupation: 'King of Israel (reigned c. 886–885 BC)', people: 'Israelite, of Issachar (house of Baasha)', languages: 'Hebrew', era: 'Early divided kingdom, 9th century BC', hometown: 'Tirzah' },
+    simple: 'Elah was Baasha’s son. He was drinking himself drunk when one of his own commanders, Zimri, killed him and took the throne.',
+    moderate: 'Elah began to reign in the 26th year of Asa of Judah and reigned two years in Tirzah. Like his father, he provoked the LORD with idols. While the army was away fighting at Gibbethon, Elah was at Tirzah drinking himself drunk in the house of Arza, the steward of his palace.\n\nZimri, commander of half his chariots, came in, struck him down and killed him, and reigned in his place. As soon as he sat on the throne, Zimri killed the whole house of Baasha, not leaving a single male, either relatives or friends, according to the word the LORD had spoken against Baasha through Jehu the prophet.',
+    detailed: {
+      background: 'His reign is counted as two years by Israel’s method of counting part years, though it may have lasted little more than one.',
+      world: 'Israel’s army was again besieging Gibbethon on the Philistine border, leaving the capital lightly guarded.',
+      significance: 'Elah’s death fulfilled Jehu son of Hanani’s prophecy exactly. His careless drunkenness while his army fought shows a king with no sense of responsibility.',
+      moments: [
+        d('886 BC', 'King in Tirzah', 'He succeeds Baasha and continues his idolatry.', '1 Kings 16:8', '1kings', 16),
+        d('885 BC', 'Killed while drunk', 'Zimri murders him at Arza’s house and wipes out Baasha’s family.', '1 Kings 16:9–13', '1kings', 16),
+      ],
+      reading: [r('1 Kings 16:8–14', '1kings', 16, 'His reign and death')],
+    },
+  },
+  zimri: {
+    facts: { occupation: 'King of Israel for seven days (885 BC); earlier a chariot commander', people: 'Israelite', languages: 'Hebrew', era: 'Early divided kingdom, 9th century BC', hometown: 'Tirzah' },
+    simple: 'Zimri killed King Elah and made himself king, but the army chose its general Omri instead. After only seven days Zimri burned the palace down around himself.',
+    moderate: 'Zimri commanded half of King Elah’s chariots. He murdered Elah while the king was drunk, took the throne in Tirzah and destroyed Baasha’s family. But the army camped at Gibbethon heard that Zimri had conspired and killed the king, and that same day they made Omri, the army commander, king over Israel in the camp.\n\nOmri and all Israel marched to Tirzah and besieged it. When Zimri saw that the city was taken, he went into the citadel of the king’s house, burned it over himself with fire, and died, because of the sins he had committed in walking in the way of Jeroboam. His reign of seven days is the shortest of any king of Israel. His name became a byword: when Jehu later rode into Jezreel after killing his king, Jezebel greeted him, “Is it peace, you Zimri, murderer of your master?”',
+    detailed: {
+      background: 'Nothing is known of his family. As a chariot commander he held real power in the capital while the infantry was away.',
+      world: 'His coup set off a civil war. Even after his death, half the people followed Tibni son of Ginath while the other half followed Omri, until Omri prevailed four years later.',
+      significance: 'Zimri’s seven days show the chaos of the northern kingdom without God’s covenant to steady its throne. Yet out of this chaos rose Omri’s dynasty, which led Israel into its worst idolatry under Ahab.',
+      moments: [
+        d('885 BC', 'Kills the king', 'He murders Elah and destroys Baasha’s family.', '1 Kings 16:9–12', '1kings', 16),
+        d('885 BC', 'The army chooses Omri', 'The troops at Gibbethon proclaim Omri king and besiege Tirzah.', '1 Kings 16:15–17', '1kings', 16),
+        d('885 BC', 'The palace in flames', 'After seven days he burns the palace over himself.', '1 Kings 16:18–19', '1kings', 16),
+      ],
+      reading: [r('1 Kings 16:9–20', '1kings', 16, 'His seven days'), r('2 Kings 9:30–31', '2kings', 9, 'Jezebel’s taunt')],
+    },
+  },
+};

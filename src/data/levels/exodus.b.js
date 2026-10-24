@@ -1,0 +1,123 @@
+// Exodus 21–40 at three reading levels (see exodus.js).
+export default [
+  { // 21
+    s: 'Laws about servants and personal injury.',
+    m: 'God gives laws to guide everyday justice in Israel. Hebrew servants must be freed in the seventh year, and violent crimes such as murder and kidnapping carry the death penalty. Punishments must fit the harm done: "eye for eye, tooth for tooth."',
+    d: 'This chapter begins the Book of the Covenant, practical laws applying the Ten Commandments to daily life. A Hebrew servant must go free in the seventh year unless he chooses out of love to stay for life, and female servants are protected from mistreatment. Murder, striking or cursing parents, and kidnapping are capital crimes, while accidental killing is treated differently. Injuries are to be repaid fairly, "eye for eye, tooth for tooth," a principle that limits revenge, and owners are held responsible when their animals cause harm.',
+    p: ['moses'],
+  },
+  { // 22
+    s: 'Laws about property and caring for the vulnerable.',
+    m: 'These laws require thieves to make restitution and people to be responsible for damage to others\' property. God forbids sorcery, idolatry and mistreating foreigners, widows and orphans. He warns that He hears the cry of the oppressed and will act on their behalf.',
+    d: 'Stolen animals must be repaid several times over, and those who damage fields or lose goods entrusted to them must make it right. A man who seduces a virgin must pay the bride-price and marry her if her father agrees. Sorcery, bestiality and sacrifice to other gods are punished severely. God commands Israel not to wrong or oppress the sojourner, "for you were sojourners in the land of Egypt," never to afflict widows or orphans, and not to charge interest to the poor, because He is compassionate and hears their cry.',
+    p: ['moses'],
+  },
+  { // 23
+    s: 'Laws of justice, Sabbath and feasts; God\'s angel will lead them.',
+    m: 'God commands honest testimony, fairness to enemies and justice for the poor and foreigners. He sets the Sabbath year, the weekly Sabbath and three annual feasts. He promises to send His angel ahead to bring them into the land and drive out its nations gradually.',
+    d: 'Israel must not spread false reports, follow a crowd in doing evil, take bribes, or twist justice for rich or poor, and must even help an enemy\'s stray or fallen animal. The land is to rest every seventh year so the poor can eat, and people and animals rest every seventh day. Three times a year all males must appear before the LORD at the Feasts of Unleavened Bread, Harvest and Ingathering. God promises to send an angel before them to guard them and bring them into the land, warning them to obey him, and says He will drive out the nations little by little while forbidding any covenant with them or their gods.',
+    p: ['moses'],
+  },
+  { // 24
+    s: 'Israel confirms the covenant, and Moses goes up the mountain.',
+    m: 'Moses reads the Book of the Covenant, and the people promise to obey. He sprinkles them with blood, calling it "the blood of the covenant." The elders see the God of Israel and eat a meal in His presence, and Moses enters the cloud on the mountain for forty days.',
+    d: 'Moses tells the people all the LORD\'s words, and they answer with one voice that they will do them. He writes the words down, builds an altar with twelve pillars for the tribes, offers sacrifices, and reads the Book of the Covenant aloud. Then he throws blood on the people, saying, "Behold the blood of the covenant that the LORD has made with you." Moses, Aaron, Nadab, Abihu and seventy elders go up and see the God of Israel, with something like a pavement of sapphire under His feet, and they eat and drink; then Moses enters the cloud of glory on the mountain for forty days and nights.',
+    p: ['moses', 'aaron', 'joshua'],
+  },
+  { // 25
+    s: 'God gives plans for the ark, table and lampstand.',
+    m: 'God asks the people to bring offerings so they can build a sanctuary where He will dwell among them. He gives exact plans for the ark of the covenant with its mercy seat and cherubim. He also describes the table for the bread of the Presence and the golden lampstand.',
+    d: 'The LORD tells Moses to receive a voluntary offering of gold, silver, fabrics, wood, oil and precious stones from everyone whose heart moves him. "Let them make me a sanctuary, that I may dwell in their midst," He says, and it must follow the pattern He shows Moses exactly. He describes the ark, an acacia chest overlaid with gold, to hold the testimony, with a gold mercy seat and two cherubim where He will meet with Moses. He also gives plans for a gold-covered table for the bread of the Presence and a lampstand of pure gold shaped like an almond tree.',
+    p: ['moses'],
+  },
+  { // 26
+    s: 'Plans for the tabernacle\'s curtains, frames and veil.',
+    m: 'God gives detailed instructions for the tabernacle\'s inner curtains, goat-hair covering and protective skins. Gold-covered frames form its walls. A veil embroidered with cherubim separates the Holy Place from the Most Holy Place, where the ark will rest.',
+    d: 'The tabernacle is to be made of ten fine linen curtains embroidered with cherubim and joined with gold clasps, covered by goat-hair curtains and layers of rams\' and goatskins. Upright frames of acacia wood overlaid with gold, set in silver bases and held by crossbars, form its walls. A veil of blue, purple and scarlet with cherubim divides the Holy Place from the Most Holy Place, where the ark and mercy seat will be. The table and lampstand stand outside the veil, and a screen covers the entrance of the tent.',
+    p: ['moses'],
+  },
+  { // 27
+    s: 'Plans for the bronze altar, courtyard and lamp oil.',
+    m: 'God describes a bronze-covered altar for burnt offerings. The tabernacle is surrounded by a courtyard of linen hangings with a colorful gate. The people are to bring pure olive oil so the lamp can burn continually before the LORD.',
+    d: 'The altar is to be a square box of acacia wood overlaid with bronze, with horns at its corners and poles for carrying. A courtyard about 150 feet long and 75 feet wide surrounds the tabernacle, with linen hangings on bronze posts and an embroidered gate on the east side. All the utensils of the courtyard are bronze. Israel must bring clear oil of beaten olives so that Aaron and his sons can keep the lamp burning from evening to morning as a lasting statute.',
+    p: ['moses', 'aaron'],
+  },
+  { // 28
+    s: 'Holy garments for Aaron and the priests.',
+    m: 'God appoints Aaron and his sons as priests and gives designs for their holy garments "for glory and for beauty." The high priest\'s ephod and breastpiece bear the names of Israel\'s twelve tribes over his heart. His turban carries a gold plate engraved "Holy to the LORD."',
+    d: 'God tells Moses to bring Aaron and his sons near to serve as priests and to make holy garments for them for glory and beauty. The ephod has two onyx stones on its shoulders engraved with the tribes\' names, and the breastpiece of judgment holds twelve precious stones, one for each tribe, along with the Urim and Thummim, so Aaron carries Israel on his heart before the LORD. The blue robe has bells and pomegranates on its hem, and the turban bears a gold plate inscribed "Holy to the LORD." Coats, sashes, caps and linen undergarments are made for Aaron\'s sons as well.',
+    p: ['aaron', 'moses'],
+  },
+  { // 29
+    s: 'Instructions for ordaining the priests.',
+    m: 'God gives a seven-day ceremony to consecrate Aaron and his sons as priests. They are washed, clothed, anointed and set apart through sacrifices, with blood placed on their ear, thumb and toe. God promises to dwell among Israel and be their God.',
+    d: 'Aaron and his sons are to be washed at the tent entrance, dressed in their garments, and anointed with oil. A bull is offered for sin, a ram as a burnt offering, and a second ram for ordination, whose blood is put on the right ear, thumb and big toe of each priest to dedicate their hearing, work and walk. The ordination lasts seven days, and daily offerings of two lambs, morning and evening, are to continue at the altar. God promises, "I will dwell among the people of Israel and will be their God," and they will know He brought them out of Egypt to dwell with them.',
+    p: ['aaron', 'moses'],
+  },
+  { // 30
+    s: 'The incense altar, atonement money, basin and holy oil.',
+    m: 'God describes a golden altar for burning incense before the veil. Each counted Israelite must pay half a shekel as atonement money for the tabernacle\'s service. A bronze basin is made for priests to wash, and special anointing oil and incense are reserved for holy use.',
+    d: 'A small gold-covered altar of incense stands before the veil, and Aaron must burn fragrant incense on it every morning and evening, with atonement made on its horns once a year. When Israel is counted, everyone twenty and older pays the same half shekel, rich and poor alike, as a ransom for his life to support the tent of meeting. A bronze basin is placed between the tent and the altar so priests can wash their hands and feet before serving. God gives recipes for holy anointing oil and incense that may never be used for ordinary purposes.',
+    p: ['aaron', 'moses'],
+  },
+  { // 31
+    s: 'God fills craftsmen with His Spirit and gives the Sabbath sign.',
+    m: 'God chooses Bezalel and Oholiab and fills them with His Spirit and skill to build the tabernacle. He commands Israel to keep the Sabbath as a sign of His covenant forever. Then He gives Moses two stone tablets written by the finger of God.',
+    d: 'The LORD calls Bezalel of Judah by name and fills him with the Spirit of God, with skill, intelligence and knowledge in every craft, and appoints Oholiab to assist him along with other skilled workers. They are to make everything God has commanded, from the tent to the garments and incense. God then stresses that Israel must keep His Sabbaths as a sign between Him and them forever, showing that He sanctifies them, because He made the world in six days and rested on the seventh. When He finishes speaking, He gives Moses the two tablets of the testimony, written with the finger of God.',
+    p: ['moses'],
+  },
+  { // 32
+    s: 'Israel worships a golden calf, and Moses intercedes.',
+    m: 'While Moses is on the mountain, the people persuade Aaron to make a golden calf and worship it. God says He will destroy them, but Moses pleads for mercy, and God relents. Moses breaks the tablets, destroys the calf, and the Levites carry out judgment on the rebels.',
+    d: 'Tired of waiting for Moses, the people demand gods to lead them, and Aaron melts their gold earrings into a calf, declaring a feast to the LORD. God tells Moses the people have corrupted themselves and He will consume them and make a great nation from Moses, but Moses pleads on the basis of God\'s name and promises, and the LORD relents. Seeing the calf and the dancing, Moses smashes the tablets, burns the calf, grinds it to powder and makes the people drink it, while Aaron makes excuses. The Levites rally to Moses and about three thousand die, and Moses offers to be blotted out of God\'s book if He will forgive the people.',
+    p: ['moses', 'aaron', 'joshua'],
+  },
+  { // 33
+    s: 'Moses asks to see God\'s glory.',
+    m: 'God says He will not go with Israel because they are stiff-necked, and the people mourn. Moses speaks with the LORD face to face in the tent of meeting and pleads for His presence to go with them. God agrees and allows Moses to see His goodness pass by, though not His face.',
+    d: 'God tells Israel to go to the promised land but says He will send an angel rather than go among them, lest He consume them on the way, and the people mourn and strip off their ornaments. Moses pitches a tent of meeting outside the camp, where the pillar of cloud descends and the LORD speaks with him face to face, as a man speaks to his friend. Moses pleads, "If your presence will not go with me, do not bring us up from here," and the LORD agrees. When Moses asks to see His glory, God promises to make His goodness pass before him and proclaim His name, hiding him in a cleft of the rock, since no one can see His face and live.',
+    p: ['moses', 'joshua'],
+  },
+  { // 34
+    s: 'God renews the covenant and proclaims His name.',
+    m: 'Moses cuts two new tablets, and the LORD passes by, proclaiming that He is merciful, gracious, slow to anger and abounding in steadfast love. God renews His covenant and repeats key laws. When Moses comes down, his face shines from being with God, so he wears a veil.',
+    d: 'God tells Moses to cut two tablets like the first and come up Mount Sinai alone. The LORD descends in the cloud and proclaims His name: "The LORD, the LORD, a God merciful and gracious, slow to anger, and abounding in steadfast love and faithfulness," forgiving sin but not clearing the guilty. Moses bows and asks God to pardon the people and take them as His inheritance, and God renews the covenant, warning against covenants with the Canaanites and repeating laws about worship and feasts. After forty days Moses comes down with his face shining, which frightens the people, so he veils his face except when speaking with the LORD.',
+    p: ['moses', 'aaron'],
+  },
+  { // 35
+    s: 'The people give generously for the tabernacle.',
+    m: 'Moses repeats the Sabbath command and asks for contributions for the tabernacle. Everyone whose heart is stirred brings gold, fabric, wood, stones and spices. Skilled men and women offer their work, and Bezalel and Oholiab lead the craftsmen.',
+    d: 'Moses gathers the people, reminds them to rest on the Sabbath, and invites everyone with a generous heart to bring offerings for the tabernacle. Men and women whose hearts move them bring jewelry, gold, yarn, skins, acacia wood, oil, spices and precious stones as a freewill offering. Skilled women spin yarn and goat hair, and leaders bring stones for the ephod and breastpiece. Moses announces that God has filled Bezalel and Oholiab with His Spirit, skill and the ability to teach, so they can direct all the work.',
+    p: ['moses'],
+  },
+  { // 36
+    s: 'The people give more than enough, and the work begins.',
+    m: 'The craftsmen receive the offerings, but the people keep bringing more each morning. Moses has to tell them to stop because there is more than enough. The workers make the tabernacle\'s curtains, coverings, frames and veil as God commanded.',
+    d: 'Bezalel, Oholiab and every skillful person begin the work using the contributions Moses gives them. The people keep bringing freewill offerings every morning until the craftsmen tell Moses they have more than enough. Moses sends word through the camp that no one should bring anything more, and the people are restrained from giving. The workers then make the linen and goat-hair curtains, the coverings of skins, the gold-covered frames and bars, and the embroidered veil and screen exactly as the LORD commanded.',
+    p: ['moses'],
+  },
+  { // 37
+    s: 'Bezalel makes the ark, table, lampstand and incense altar.',
+    m: 'Bezalel crafts the ark of acacia wood overlaid with gold, with its mercy seat and two cherubim. He makes the table for the bread of the Presence and the pure gold lampstand. He also makes the altar of incense, the anointing oil and the fragrant incense.',
+    d: 'Bezalel makes the ark of acacia wood, overlays it with pure gold, and makes the mercy seat with two cherubim of hammered gold facing each other, their wings overshadowing it. He makes the table with its gold plates, dishes and bowls, and the lampstand of pure gold with its cups shaped like almond blossoms and seven lamps. He makes the gold-covered incense altar with its horns and poles. He also prepares the holy anointing oil and the pure fragrant incense, carefully following the instructions God gave in chapters 25 and 30.',
+    p: [],
+  },
+  { // 38
+    s: 'The bronze altar, basin and courtyard are made.',
+    m: 'Bezalel builds the bronze altar of burnt offering and the bronze basin, made from the mirrors of the serving women. The courtyard\'s hangings and gate are completed. The chapter records the large amounts of gold, silver and bronze used.',
+    d: 'Bezalel makes the altar of burnt offering of acacia wood overlaid with bronze, with its utensils and grating. The bronze basin is made from the mirrors of the women who served at the entrance of the tent of meeting. The courtyard is enclosed with fine linen hangings on bronze posts with silver hooks, and an embroidered screen forms its gate. Ithamar, Aaron\'s son, records the materials: about a ton of gold, nearly four tons of silver from the half-shekel census, and almost three tons of bronze.',
+    p: ['aaron'],
+  },
+  { // 39
+    s: 'The priests\' garments are finished, and Moses blesses the work.',
+    m: 'The workers make Aaron\'s ephod, breastpiece, robe and turban with its gold plate engraved "Holy to the LORD." Everything is completed just as the LORD commanded Moses. Moses inspects the finished work and blesses the people.',
+    d: 'Using blue, purple and scarlet yarns and fine linen, the craftsmen make the holy garments for Aaron. They make the ephod with onyx stones engraved with Israel\'s names, the breastpiece with twelve precious stones, the robe with bells and pomegranates, the linen coats and turbans, and the gold plate inscribed "Holy to the LORD." Again and again the text repeats that they did it "as the LORD had commanded Moses." When all the pieces are brought to Moses, he sees that they have done everything exactly as commanded, and he blesses them.',
+    p: ['aaron', 'moses'],
+  },
+  { // 40
+    s: 'The tabernacle is set up, and God\'s glory fills it.',
+    m: 'On the first day of the second year, Moses sets up the tabernacle and places everything inside as God directed. Aaron and his sons are anointed for their service. Then the cloud covers the tent and the glory of the LORD fills the tabernacle, leading Israel throughout their journeys.',
+    d: 'God tells Moses to erect the tabernacle on the first day of the first month, almost a year after the Exodus. Moses sets up the frames and curtains, places the testimony in the ark behind the veil, arranges the table, lampstand, incense altar, bronze altar and basin, and anoints everything to make it holy. Aaron and his sons are washed, clothed and anointed as a perpetual priesthood, and Moses finishes the work. Then the cloud covers the tent of meeting and the glory of the LORD fills the tabernacle so that even Moses cannot enter, and from then on the cloud by day and fire by night guide Israel on all their journeys.',
+    p: ['moses', 'aaron'],
+  },
+];

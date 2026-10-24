@@ -1,0 +1,13 @@
+import c1 from './c1.js';
+import c2 from './c2.js';
+import c3 from './c3.js';
+import c4 from './c4.js';
+import c5 from './c5.js';
+import c6 from './c6.js';
+import c7 from './c7.js';
+import c8 from './c8.js';
+import c9 from './c9.js';
+import c10 from './c10.js';
+import { KING_LEVELS } from '../kingProfiles/index.js';
+import { MORE_LEVELS } from '../moreProfiles/index.js';
+export default { ...c1, ...c2, ...c3, ...c4, ...c5, ...c6, ...c7, ...c8, ...c9, ...c10, ...KING_LEVELS, ...MORE_LEVELS };

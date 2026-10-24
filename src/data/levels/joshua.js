@@ -1,0 +1,168 @@
+// Joshua at three reading levels. s = Simple, m = Moderate, d = Detailed, v = key verse, p = people.
+// Book key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+export default {
+  book: {
+    simple: 'Joshua leads Israel into the promised land, and God gives them victory.',
+    moderate: 'After Moses dies, Joshua leads Israel across the Jordan into Canaan. God gives them victory at Jericho and in campaigns across the land, though sin at Ai shows that obedience matters. The land is divided among the tribes, and Joshua calls the people to choose to serve the LORD.',
+    detailed: 'Joshua shows God keeping His promise to give Abraham\'s descendants the land of Canaan. God commissions Joshua to be strong and courageous and meditate on His law, then parts the Jordan, brings down the walls of Jericho, and gives Israel victories in the south and north, while Achan\'s sin at Ai and the Gibeonite deception show the cost of disobedience and prayerlessness. The second half carefully divides the land among the tribes, sets up cities of refuge and Levitical cities, and declares that not one of God\'s good promises has failed. In his farewell speeches, Joshua urges Israel to hold fast to the LORD, and the people renew the covenant at Shechem, promising, "We will serve the LORD."',
+    verse: { ref: 'Joshua 1:9', text: 'Be strong and courageous. Do not be frightened, and do not be dismayed, for the LORD your God is with you wherever you go.' },
+    themes: ['God keeps His promises', 'Courage rooted in God\'s presence', 'Holiness and the danger of hidden sin', 'Choosing to serve the LORD'],
+    keyVerses: [
+      { ref: '1:8', text: 'This Book of the Law shall not depart from your mouth, but you shall meditate on it day and night.' },
+      { ref: '21:45', text: 'Not one word of all the good promises that the LORD had made to the house of Israel had failed; all came to pass.' },
+      { ref: '24:15', text: 'But as for me and my house, we will serve the LORD.' },
+    ],
+  },
+  sections: {
+    1: { short: 'Rahab hides the spies, and Israel crosses the Jordan.' },
+    6: { short: 'Jericho falls, Ai is taken, and Israel conquers the south and north.' },
+    13: { short: 'The land is divided among the tribes by lot.' },
+    22: { short: 'Joshua urges Israel to choose to serve the LORD.' },
+  },
+  chapters: [
+    { // 1
+      s: 'God tells Joshua to be strong and courageous.',
+      m: 'After Moses dies, God tells Joshua to lead the people across the Jordan into the land He promised. He promises to be with Joshua as He was with Moses and commands him to be strong and courageous and meditate on the law. The eastern tribes pledge to fight alongside their brothers.',
+      d: 'After Moses\' death, the LORD tells Joshua to arise and take the people across the Jordan into the land, promising every place their feet tread. God promises to be with him as He was with Moses and never to leave or forsake him, and three times He commands Joshua to be strong and courageous. Joshua must keep the Book of the Law in his mouth and meditate on it day and night, so that he will be careful to obey and have success. Joshua tells the officers to prepare provisions, and Reuben, Gad and half of Manasseh promise to cross armed and follow him as they followed Moses.',
+      p: ['joshua', 'moses'],
+    },
+    { // 2
+      s: 'Rahab hides the spies in Jericho.',
+      m: 'Joshua sends two spies into Jericho, and they stay at the house of Rahab, a prostitute. She hides them from the king\'s men and confesses that the LORD is God in heaven and on earth. In return the spies promise to spare her family if she ties a scarlet cord in her window.',
+      d: 'Joshua secretly sends two spies to look over the land, especially Jericho, and they lodge in the house of Rahab, a prostitute built into the city wall. When the king of Jericho demands that she bring them out, she hides them under stalks of flax on her roof and sends the soldiers on a false chase. She tells the spies that the whole land is melting in fear because they heard about the Red Sea and the defeat of Sihon and Og, and confesses, "The LORD your God, he is God in the heavens above and on the earth beneath." The spies swear to spare her and her family if she ties a scarlet cord in her window, and she lets them down by a rope, after which they report to Joshua that the LORD has given them the land.',
+      p: ['rahab', 'joshua'],
+    },
+    { // 3
+      s: 'Israel crosses the Jordan on dry ground.',
+      m: 'Israel follows the ark of the covenant to the Jordan, which is at flood stage. When the priests\' feet touch the water, the river stops flowing and piles up upstream. The priests stand in the riverbed while the whole nation crosses on dry ground.',
+      d: 'Joshua tells the people to follow the ark at a distance and to consecrate themselves, "for tomorrow the LORD will do wonders among you." God promises to exalt Joshua in Israel\'s sight so they know He is with him as He was with Moses, proving that the living God will drive out the nations. Though the Jordan is overflowing its banks at harvest time, the moment the priests carrying the ark step into the water, the river stops and stands up in a heap far upstream at Adam. The priests stand firm on dry ground in the middle of the Jordan until the entire nation has crossed over.',
+      p: ['joshua'],
+    },
+    { // 4
+      s: 'Twelve stones are set up as a memorial.',
+      m: 'God tells Joshua to have one man from each tribe take a stone from the middle of the Jordan. They set up the stones at Gilgal as a memorial so future generations will ask what they mean. When the priests carry the ark out, the river returns to its course.',
+      d: 'At God\'s command twelve men, one from each tribe, take stones from the riverbed where the priests stood and carry them to the camp at Gilgal, and Joshua also sets up twelve stones in the river itself. About forty thousand armed men from the eastern tribes cross ahead of the people as promised, and God exalts Joshua so that the people revere him as they revered Moses. As soon as the priests\' feet reach dry land, the Jordan returns to its place. Joshua explains that when children ask about the stones, parents should tell how Israel crossed on dry ground, so that all the peoples may know that the LORD\'s hand is mighty and Israel may fear Him forever.',
+      p: ['joshua'],
+    },
+    { // 5
+      s: 'Israel is circumcised, keeps Passover, and the manna stops.',
+      m: 'The kings of Canaan lose heart when they hear what God has done. Israel\'s new generation is circumcised at Gilgal, and they celebrate the Passover in the promised land. The manna stops, and Joshua meets the commander of the LORD\'s army.',
+      d: 'When the Amorite and Canaanite kings hear how God dried up the Jordan, their hearts melt. Because the men born in the wilderness had not been circumcised, Joshua circumcises them at Gilgal, and God says, "Today I have rolled away the reproach of Egypt from you." Israel keeps the Passover on the plains of Jericho, eats produce of the land, and the next day the manna stops after forty years. Near Jericho Joshua meets a man with a drawn sword who says he is the commander of the army of the LORD, and Joshua falls on his face and removes his sandals, for the place is holy.',
+      p: ['joshua'],
+    },
+    { // 6
+      s: 'The walls of Jericho fall.',
+      m: 'God gives Joshua an unusual battle plan: march around Jericho once a day for six days with priests blowing trumpets before the ark. On the seventh day they march around seven times, shout, and the walls collapse. The city is devoted to destruction, but Rahab and her family are saved.',
+      d: 'Jericho is shut up tight, but the LORD tells Joshua He has given it into his hand and gives a strange plan of faith. For six days the armed men, seven priests with ram\'s-horn trumpets, and the ark circle the city once in silence, and on the seventh day they circle it seven times. When the priests blow a long blast and the people shout, the wall falls down flat and Israel goes straight in, devoting the city and its people to destruction and putting its silver and gold in the LORD\'s treasury. The two spies bring Rahab and her family out safely, she lives in Israel from then on, and Joshua pronounces a curse on anyone who rebuilds Jericho.',
+      p: ['joshua', 'rahab'],
+    },
+    { // 7
+      s: 'Achan\'s hidden sin causes defeat at Ai.',
+      m: 'Israel confidently sends a small force against the town of Ai and is defeated, losing thirty-six men. God reveals that someone has taken devoted things from Jericho. Achan confesses that he hid silver, gold and a robe in his tent, and he and his household are stoned.',
+      d: 'Achan of Judah secretly takes some of the devoted things from Jericho, and the LORD\'s anger burns against Israel. The spies say only a few thousand men are needed for Ai, but the Israelites are routed and thirty-six are killed, and the people\'s hearts melt. Joshua tears his clothes and falls before the ark, and God tells him that Israel has sinned and must remove the devoted things from among them. By lot the guilt is narrowed to Achan, who confesses that he saw, coveted and took a beautiful cloak, silver and gold and hid them in his tent; Israel stones him and his household in the Valley of Achor and raises a heap of stones over them.',
+      p: ['joshua'],
+    },
+    { // 8
+      s: 'Israel captures Ai and renews the covenant at Mount Ebal.',
+      m: 'God encourages Joshua and gives him a plan to take Ai using an ambush. Israel pretends to flee, drawing the men of Ai out, and then the hidden force captures and burns the city. Joshua builds an altar on Mount Ebal and reads the whole law to all Israel.',
+      d: 'God tells Joshua not to fear, and this time Israel may keep the livestock and spoil. Joshua sets an ambush behind the city, then leads the main army in a feigned retreat, and when the men of Ai and Bethel chase them, the ambush takes the undefended city and sets it on fire. Caught between the two forces, Ai\'s army is destroyed, and its king is hanged and buried under a heap of stones. Then, as Moses commanded, Joshua builds an altar on Mount Ebal, writes a copy of the law on stones, and reads every word of it to the whole assembly, including women, children and sojourners, with half the people facing Mount Gerizim and half Mount Ebal.',
+      p: ['joshua', 'moses'],
+    },
+    { // 9
+      s: 'The Gibeonites trick Israel into a treaty.',
+      m: 'The kings of Canaan unite to fight Israel, but the people of Gibeon use a trick instead. They pretend to come from a distant land with worn-out clothes and moldy bread. Israel\'s leaders make a treaty with them without asking the LORD, and when the truth comes out, they keep their oath but make the Gibeonites servants.',
+      d: 'When the kings west of the Jordan hear of Israel\'s victories, they gather to fight. The inhabitants of Gibeon, however, act with cunning, sending men with worn sacks, patched wineskins, old sandals and dry, crumbly bread to claim they have traveled from a far country. The Israelite leaders examine the provisions "but did not ask counsel from the LORD," and Joshua makes a covenant of peace with them, sealed by an oath. Three days later they learn the Gibeonites are neighbors, and though the people grumble, the leaders keep the oath sworn by the LORD and make the Gibeonites woodcutters and water carriers for the house of God.',
+      p: ['joshua'],
+    },
+    { // 10
+      s: 'The sun stands still as Israel defeats five kings.',
+      m: 'Five Amorite kings attack Gibeon for making peace with Israel, and Joshua marches all night to defend them. God throws the enemy into panic and sends huge hailstones. At Joshua\'s prayer the sun stands still until Israel wins, and then Joshua conquers the southern cities.',
+      d: 'Adoni-zedek, king of Jerusalem, persuades four other Amorite kings to attack Gibeon, and the Gibeonites send for help. God tells Joshua not to fear, and after an all-night march Israel surprises the enemy, while the LORD throws them into a panic and kills more with great hailstones than Israel does with the sword. Joshua prays before Israel, "Sun, stand still at Gibeon," and the sun stops in the midst of heaven about a whole day; there has been no day like it, "when the LORD heeded the voice of a man, for the LORD fought for Israel." The five kings hide in a cave and are executed, and Joshua goes on to capture Makkedah, Libnah, Lachish, Eglon, Hebron and Debir, taking the whole south.',
+      p: ['joshua'],
+    },
+    { // 11
+      s: 'Joshua defeats the northern kings and takes the whole land.',
+      m: 'Jabin, king of Hazor, gathers a huge northern army with horses and chariots. God tells Joshua not to fear, and Israel defeats them at the waters of Merom and burns Hazor. Joshua takes the whole land as God commanded Moses, and the land has rest from war.',
+      d: 'Jabin king of Hazor forms a vast coalition of northern kings, with troops "like the sand that is on the seashore" and many horses and chariots. The LORD tells Joshua not to be afraid, for tomorrow He will give them all over slain, and Israel attacks suddenly at the waters of Merom, routs them, hamstrings their horses and burns their chariots. Joshua captures Hazor, the head of those kingdoms, and burns it, then makes war a long time against all the kings of the land and even cuts off the Anakim. The chapter stresses that Joshua left nothing undone of all that the LORD commanded Moses, and "the land had rest from war."',
+      p: ['joshua', 'moses'],
+    },
+    { // 12
+      s: 'A list of the kings Israel defeated.',
+      m: 'This chapter lists the kings Israel defeated on both sides of the Jordan. Moses led the victories over Sihon and Og in the east. Joshua defeated thirty-one kings west of the Jordan.',
+      d: 'The chapter summarizes the conquest so far. East of the Jordan, Moses and Israel defeated Sihon king of the Amorites and Og king of Bashan, and Moses gave their land to Reuben, Gad and half of Manasseh. West of the Jordan, Joshua and Israel defeated kings from Mount Halak to Baal-gad, in the hill country, lowlands and wilderness. The list names thirty-one kings, from Jericho and Ai to Jerusalem, Hebron, Hazor and Megiddo, a record of God\'s faithfulness in battle.',
+      p: ['joshua', 'moses'],
+    },
+    { // 13
+      s: 'Land still to be taken and the eastern tribes\' territory.',
+      m: 'Joshua is old, and much land remains to be taken, including the Philistine cities. God promises to drive out those peoples and tells Joshua to divide the land among the tribes. The chapter describes the land Moses gave to Reuben, Gad and half of Manasseh east of the Jordan.',
+      d: 'God tells the aged Joshua that very much land remains to be possessed, including the territory of the Philistines and Geshurites and the region of Lebanon. He promises to drive out these peoples Himself and instructs Joshua to allot the land to the nine and a half tribes as an inheritance now. The chapter then reviews the territories east of the Jordan given by Moses to Reuben, Gad and half of Manasseh. It notes that Israel failed to drive out the Geshurites and Maacathites, that Balaam was killed, and that the tribe of Levi received no land, "the LORD God of Israel is their inheritance."',
+      p: ['joshua', 'moses'],
+    },
+    { // 14
+      s: 'Caleb receives Hebron.',
+      m: 'The land west of the Jordan is to be divided by lot, as the LORD commanded. Caleb reminds Joshua of the promise Moses made to him forty-five years earlier because he wholly followed the LORD. At eighty-five, still strong, Caleb asks for the hill country of Hebron, and Joshua gives it to him.',
+      d: 'Eleazar the priest, Joshua and the tribal heads distribute the land west of the Jordan by lot to nine and a half tribes, with the Levites receiving only cities and pasturelands. Caleb of Judah comes to Joshua at Gilgal and recalls how, as a forty-year-old spy, he brought back an honest report "because I wholly followed the LORD my God," and Moses swore that the land he walked on would be his. He says God has kept him alive forty-five years and he is as strong at eighty-five as he was then. Caleb asks for the hill country where the giant Anakim live, trusting the LORD to help him drive them out, and Joshua blesses him and gives him Hebron.',
+      p: ['caleb', 'joshua', 'moses'],
+    },
+    { // 15
+      s: 'Judah\'s territory, and Caleb conquers Hebron.',
+      m: 'The chapter describes the borders of Judah\'s land in the south and lists its many cities. Caleb drives the Anakim from Hebron and gives his daughter Achsah to Othniel for capturing Debir. Judah cannot drive the Jebusites out of Jerusalem.',
+      d: 'Judah receives the largest southern territory, bounded by Edom and the wilderness of Zin in the south, the Salt Sea in the east, the Mediterranean in the west, and a line near Jerusalem in the north. Caleb drives the three sons of Anak from Hebron and promises his daughter Achsah to whoever captures Kiriath-sepher, and his nephew Othniel takes it and marries her. Achsah asks her father for springs of water to go with her dry land, and he gives her the upper and lower springs. The chapter lists over a hundred towns of Judah but notes that the Jebusites still live in Jerusalem, because Judah could not drive them out.',
+      p: ['caleb'],
+    },
+    { // 16
+      s: 'Ephraim receives its territory.',
+      m: 'The descendants of Joseph receive land in the central hill country. The chapter traces the boundaries of Ephraim\'s territory. Ephraim fails to drive out the Canaanites in Gezer, who are forced to do labor instead.',
+      d: 'The lot for the people of Joseph runs from the Jordan at Jericho up through the hill country to Bethel, then west toward the sea. Ephraim, Joseph\'s younger son who received the greater blessing from Jacob, is given territory in the heart of the land with the boundary lines described in detail. Some of Ephraim\'s towns lie within Manasseh\'s territory. Yet the Ephraimites do not drive out the Canaanites living in Gezer, who remain among them as forced laborers, a pattern of partial obedience that will trouble Israel in Judges.',
+      p: ['joseph'],
+    },
+    { // 17
+      s: 'Manasseh\'s territory and Joseph\'s complaint.',
+      m: 'The western half-tribe of Manasseh receives its land, and the daughters of Zelophehad receive an inheritance as Moses promised. Manasseh fails to drive out some Canaanites. When Joseph\'s descendants complain about too little land, Joshua tells them to clear the forested hill country and drive out the Canaanites despite their iron chariots.',
+      d: 'Manasseh, Joseph\'s firstborn, receives land in two parts: Gilead and Bashan east of the Jordan for the clan of Machir and territory west of the Jordan for the rest. The daughters of Zelophehad remind Eleazar and Joshua of the LORD\'s command through Moses, and they receive an inheritance among their father\'s brothers. Manasseh cannot take several cities such as Beth-shean and Megiddo, and later only puts the Canaanites to forced labor. When the tribe of Joseph complains that they are numerous but have only one allotment, Joshua tells them to clear the forests of the hill country and assures them they will drive out the Canaanites even though they have chariots of iron.',
+      p: ['joshua', 'joseph'],
+    },
+    { // 18
+      s: 'The tabernacle is set up at Shiloh, and Benjamin receives land.',
+      m: 'Israel gathers at Shiloh and sets up the tent of meeting there. Joshua rebukes seven tribes for putting off taking their land and sends men to survey it. Benjamin\'s territory falls between Judah and Joseph and includes Jerusalem.',
+      d: 'The whole congregation assembles at Shiloh and sets up the tent of meeting, and the land lies subdued before them. Yet seven tribes have not received their inheritance, and Joshua asks, "How long will you put off going in to take possession of the land?" He sends three men from each tribe to write a description of the remaining land in seven divisions, and then casts lots before the LORD at Shiloh. The first lot goes to Benjamin, whose territory lies between Judah and Joseph and includes Jericho, Bethel, Gibeon and Jebus, that is, Jerusalem.',
+      p: ['joshua'],
+    },
+    { // 19
+      s: 'Land for the remaining tribes and Joshua\'s inheritance.',
+      m: 'The remaining six tribes, Simeon, Zebulun, Issachar, Asher, Naphtali and Dan, receive their territories. Simeon\'s land lies within Judah, and Dan has to move north to find enough land. Finally the people give Joshua the city he asks for, Timnath-serah.',
+      d: 'Simeon\'s inheritance lies within Judah\'s territory, because Judah\'s portion was too large for them. Zebulun, Issachar, Asher and Naphtali receive land in the north, around the valley of Jezreel and Galilee. Dan\'s territory near the coast proves too small, so the Danites capture Leshem in the far north and rename it Dan. When the allotment is finished, the people of Israel give Joshua the town he requests, Timnath-serah in the hill country of Ephraim, and he rebuilds it and settles there.',
+      p: ['joshua'],
+    },
+    { // 20
+      s: 'Six cities of refuge are set apart.',
+      m: 'God tells Joshua to set apart the cities of refuge Moses spoke about. A person who kills someone unintentionally can flee there and be protected from the avenger of blood until trial. Three cities are chosen on each side of the Jordan.',
+      d: 'The LORD reminds Joshua of the cities of refuge commanded through Moses, where anyone who kills a person without intent or knowledge may flee. The manslayer explains his case to the elders at the city gate, who take him in and will not hand him over to the avenger of blood. He stays there until he stands trial before the congregation and until the death of the high priest, then he may return home. Israel sets apart Kedesh, Shechem and Kiriath-arba (Hebron) west of the Jordan, and Bezer, Ramoth in Gilead and Golan in Bashan to the east.',
+      p: ['joshua', 'moses'],
+    },
+    { // 21
+      s: 'The Levites receive cities, and all God\'s promises are kept.',
+      m: 'The Levites receive forty-eight cities with pasturelands spread among all the tribes. The descendants of Aaron receive thirteen cities in Judah, Simeon and Benjamin. The chapter declares that the LORD gave Israel all the land He swore to give, and not one of His good promises failed.',
+      d: 'The heads of the Levite families remind Eleazar and Joshua of God\'s command to give them cities to live in, and Israel gives them towns from each tribe by lot. The priests, descendants of Aaron, receive thirteen cities from Judah, Simeon and Benjamin, near where the temple will be, while the other Kohathites, the Gershonites and the Merarites receive cities scattered across the land. In all there are forty-eight Levitical cities with pasturelands, so that God\'s servants and teachers live among every tribe. The section ends with a triumphant summary: the LORD gave Israel all the land, gave them rest, and "not one word of all the good promises that the LORD had made to the house of Israel had failed; all came to pass."',
+      p: ['joshua', 'aaron'],
+    },
+    { // 22
+      s: 'The eastern tribes\' altar nearly causes civil war.',
+      m: 'Joshua sends the eastern tribes home with his blessing for faithfully helping their brothers. They build a large altar by the Jordan, and the western tribes prepare for war, thinking it is rebellion. The eastern tribes explain it is a witness that they too worship the LORD, and war is avoided.',
+      d: 'Joshua commends Reuben, Gad and half of Manasseh for keeping their promise and sends them home with great wealth, urging them to love the LORD and serve Him with all their heart. On the way they build an imposing altar by the Jordan, and the rest of Israel gathers at Shiloh to go to war, fearing it is a rebel altar like the sin at Peor. Phinehas and ten chiefs confront them, but the eastern tribes explain that the altar is not for sacrifice but a witness, so that future generations west of the Jordan will not say they have no share in the LORD. Phinehas and the delegation are satisfied, the people bless God, and the altar is named Witness, "for it is a witness between us that the LORD is God."',
+      p: ['joshua'],
+    },
+    { // 23
+      s: 'Joshua\'s farewell: hold fast to the LORD.',
+      m: 'Now old, Joshua gathers Israel\'s leaders and reminds them that the LORD fought for them. He urges them to obey the law, love the LORD and not mix with the remaining nations or serve their gods. He warns that just as God kept His good promises, He will bring judgment if they break the covenant.',
+      d: 'Long after God gave Israel rest, the aged Joshua summons the elders, heads, judges and officers. He reminds them that the LORD fought for them and will drive out the nations that remain, so they must be very strong to keep all that is written in the Book of the Law of Moses. They must not associate with the remaining nations, mention their gods or intermarry, but cling to the LORD and love Him, for "one man of you puts to flight a thousand." Joshua says he is going the way of all the earth and warns that just as every good promise has come true, God will also bring every evil He threatened if they serve other gods, and they will perish from the good land.',
+      p: ['joshua'],
+    },
+    { // 24
+      s: 'Israel renews the covenant at Shechem, and Joshua dies.',
+      m: 'Joshua gathers all Israel at Shechem and retells their history from Abraham to the conquest, showing God\'s grace. He challenges them to choose whom they will serve, declaring, "As for me and my house, we will serve the LORD." The people renew the covenant, and Joshua dies at 110.',
+      d: 'At Shechem Joshua speaks for the LORD, recounting how God took Abraham from beyond the Euphrates where his fathers served other gods, gave him Isaac, Jacob and Esau, sent Moses and Aaron, brought Israel out of Egypt and through the sea, defeated the Amorites, turned Balaam\'s curse to blessing, and gave them a land they did not labor for. Joshua tells them to put away foreign gods and choose this day whom they will serve, declaring, "But as for me and my house, we will serve the LORD." The people insist they will serve the LORD, and when Joshua warns that God is holy and jealous, they repeat their pledge, so he makes a covenant, writes it in the Book of the Law and sets up a large stone as a witness. Joshua dies at 110 and is buried at Timnath-serah, Joseph\'s bones are buried at Shechem, and Israel serves the LORD throughout the days of Joshua and the elders who outlived him.',
+      p: ['joshua', 'abraham', 'moses', 'joseph'],
+    },
+  ],
+};

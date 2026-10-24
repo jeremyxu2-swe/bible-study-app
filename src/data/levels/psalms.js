@@ -1,0 +1,278 @@
+// Psalms at three reading levels. s = Simple, m = Moderate, d = Detailed, v = key verse, p = people.
+// Book key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+import book2 from './psalms.b.js';
+import book3 from './psalms.c.js';
+import book4 from './psalms.d.js';
+import book5 from './psalms.e.js';
+
+export default {
+  book: {
+    simple: 'Israel\'s songbook of praise, lament, thanks and trust in God.',
+    moderate: 'Psalms is a collection of 150 songs and prayers, many written by David, used in Israel\'s worship. They express every human emotion, from joy and thanksgiving to grief, fear, anger and confession, all brought honestly before God. Many psalms celebrate God as King and look forward to the Messiah, the anointed Son of David.',
+    detailed: 'The Psalms were written over about a thousand years, from Moses to after the exile, by David, Asaph, the sons of Korah, Solomon and others, and were gathered into five books, each ending with a doxology. They include hymns of praise, laments crying out in distress, songs of thanksgiving, wisdom psalms, royal psalms about the king, and songs of trust, teaching God\'s people how to pray in every circumstance. Psalm 1 introduces the blessed life of delighting in God\'s law, and Psalm 2 introduces God\'s anointed King, themes that run throughout; many psalms, such as 2, 16, 22 and 110, are quoted in the New Testament as fulfilled in Jesus. The collection moves overall from lament toward praise, ending with five "Hallelujah" psalms and the call, "Let everything that has breath praise the LORD!"',
+    verse: { ref: 'Psalm 23:1', text: 'The LORD is my shepherd; I shall not want.' },
+    themes: ['Honest prayer in every emotion', 'God\'s steadfast love and faithfulness', 'The LORD reigns as King', 'The coming Messiah'],
+    keyVerses: [
+      { ref: '1:2', text: 'But his delight is in the law of the LORD, and on his law he meditates day and night.' },
+      { ref: '46:10', text: 'Be still, and know that I am God.' },
+      { ref: '119:105', text: 'Your word is a lamp to my feet and a light to my path.' },
+      { ref: '150:6', text: 'Let everything that has breath praise the LORD! Praise the LORD!' },
+    ],
+  },
+  sections: {
+    1: { short: 'Mostly David\'s psalms of trust and lament, beginning with the blessed man and God\'s King.' },
+    42: { short: 'Psalms of the sons of Korah and David, including Psalm 51\'s confession.' },
+    73: { short: 'Psalms of Asaph and others wrestling with suffering and national disaster.' },
+    90: { short: 'The LORD reigns: psalms of God\'s eternal kingship, beginning with Moses.' },
+    107: { short: 'Thanksgiving, songs of ascent, and a closing crescendo of praise.' },
+  },
+  chapters: [
+    { // 1
+      s: 'The blessed person delights in God\'s law.',
+      m: 'Psalm 1 contrasts two ways of life. The blessed person avoids the counsel of the wicked and delights in meditating on God\'s law, growing like a fruitful tree by streams of water. The wicked are like chaff blown away, for the LORD knows the way of the righteous.',
+      d: 'This opening psalm introduces the whole book by describing the truly happy person. He does not walk, stand or sit with the wicked, scoffers and sinners, but delights in the law of the LORD and meditates on it day and night. He is like a tree planted by streams of water that bears fruit in season and whose leaf does not wither, while the wicked are like chaff that the wind drives away and will not stand in the judgment. "For the LORD knows the way of the righteous, but the way of the wicked will perish."',
+      p: [],
+    },
+    { // 2
+      s: 'God laughs at rebel nations and sets His King on Zion.',
+      m: 'The nations and kings plot against the LORD and His Anointed, but God laughs from heaven. He has installed His King on Zion and declares, "You are my Son." The psalm warns rulers to serve the LORD and kiss the Son, for all who take refuge in Him are blessed.',
+      d: 'The psalm opens with the nations raging and their rulers conspiring against the LORD and His Anointed, determined to throw off their rule. The One enthroned in heaven laughs and holds them in derision, then speaks in wrath: "I have set my King on Zion, my holy hill." The King tells the LORD\'s decree, "You are my Son; today I have begotten you," and God promises Him the nations as His inheritance and the power to break rebels with a rod of iron. The kings of the earth are warned to be wise, serve the LORD with fear, and kiss the Son, a psalm the apostles applied to Jesus\' resurrection and kingship (Acts 4:25–26; 13:33), ending, "Blessed are all who take refuge in him."',
+      p: ['jesus'],
+    },
+    { // 3
+      s: 'David trusts God while fleeing from Absalom.',
+      m: 'Written when David fled from his son Absalom, this psalm describes many enemies saying God will not save him. David calls the LORD his shield and the lifter of his head. He sleeps in peace and wakes again because the LORD sustains him, for salvation belongs to the LORD.',
+      d: 'David writes this morning prayer when fleeing from Absalom, lamenting how many foes rise against him and say, "There is no salvation for him in God." But he answers, "You, O LORD, are a shield about me, my glory, and the lifter of my head," and when he cries aloud, God answers from His holy hill. Remarkably, he lies down and sleeps and wakes again, for the LORD sustains him, and he will not fear ten thousands of people surrounding him. He asks God to arise and save him, declaring, "Salvation belongs to the LORD; your blessing be on your people!"',
+      p: ['david', 'absalom'],
+    },
+    { // 4
+      s: 'David finds peace and joy in God at night.',
+      m: 'David asks God to answer his prayer and rebukes people who love vain words and lies. He reminds them that the LORD has set apart the godly for Himself and hears when they call. God has given David more joy than abundant harvests, and he lies down in peace because the LORD makes him dwell in safety.',
+      d: 'David calls on the God of his righteousness, who has given him relief in distress, to be gracious and hear his prayer. He asks how long people will turn his honor into shame, love vain words and seek after lies, and tells them the LORD has set apart the godly for Himself. He counsels them to be angry and not sin, to ponder in their beds and be silent, and to put their trust in the LORD. While many ask who will show them good, David prays for the light of God\'s face, saying God has put more joy in his heart than others have when grain and wine abound, and ends, "In peace I will both lie down and sleep; for you alone, O LORD, make me dwell in safety."',
+      p: ['david'],
+    },
+    { // 5
+      s: 'A morning prayer for God to lead and protect the righteous.',
+      m: 'David prays to God in the morning and waits expectantly for His answer. He declares that God does not delight in wickedness, but by His steadfast love David enters His house to worship. He asks God to lead him in righteousness and to spread His protection over all who take refuge in Him.',
+      d: 'David asks the LORD, his King and God, to hear his groaning, saying, "O LORD, in the morning you hear my voice; in the morning I prepare a sacrifice for you and watch." God is not a God who delights in wickedness; the boastful cannot stand before Him, and He hates evildoers and abhors the bloodthirsty and deceitful. But through the abundance of God\'s steadfast love, David will enter His house and bow in reverence, asking Him to lead him in righteousness and make His way straight. He asks God to hold the treacherous guilty and prays that all who take refuge in Him will rejoice and sing for joy, for God blesses the righteous and covers him with favor as with a shield.',
+      p: ['david'],
+    },
+    { // 6
+      s: 'David begs God for mercy in deep distress.',
+      m: 'David pleads with God not to rebuke him in anger but to be gracious and heal him, for his bones and soul are troubled. He is weary with moaning and floods his bed with tears every night. Suddenly confident, he tells his enemies to depart, because the LORD has heard his weeping and accepts his prayer.',
+      d: 'This is the first of the penitential psalms, in which David asks the LORD not to rebuke him in anger or discipline him in wrath, but to be gracious because he is languishing and his bones are troubled. "But you, O LORD, how long?" he cries, asking God to turn and deliver his life for the sake of His steadfast love, since in death there is no remembrance of Him. He is weary with moaning, floods his bed with tears every night, and his eye wastes away because of grief and his foes. Then his tone changes completely: "Depart from me, all you workers of evil, for the LORD has heard the sound of my weeping," and he is certain his enemies will be ashamed.',
+      p: ['david'],
+    },
+    { // 7
+      s: 'David asks God, the righteous judge, to defend him.',
+      m: 'David takes refuge in God and asks Him to save him from pursuers who would tear him like a lion. He invites God to judge him if he has done wrong and to rise up in judgment against the wicked. God is a righteous judge, and the evil a person plans returns on his own head, so David thanks the LORD for His righteousness.',
+      d: 'David writes concerning the words of Cush, a Benjaminite, and asks God to save him from those who pursue him lest they tear his soul apart like a lion. He swears that if he has done wrong or repaid a friend with evil, then let the enemy trample him, but he calls on God to arise in anger, judge the peoples, and vindicate him according to his integrity. "God is a righteous judge, and a God who feels indignation every day," preparing His weapons against those who will not repent. The wicked conceive evil and give birth to lies, digging a pit and falling into it, their violence coming down on their own heads, so David gives thanks to the LORD for His righteousness and sings praise to His name.',
+      p: ['david'],
+    },
+    { // 8
+      s: 'God\'s majesty fills creation, yet He crowns humans with glory.',
+      m: 'David praises the majestic name of the LORD in all the earth. Looking at the moon and stars, he wonders why God cares for mere humans. Yet God has made people a little lower than the heavenly beings and crowned them with glory to rule over His creation.',
+      d: 'The psalm begins and ends, "O LORD, our Lord, how majestic is your name in all the earth!", praising God whose glory is set above the heavens and who uses the praise of infants to silence His foes. When David considers the heavens, the moon and stars that God set in place, he asks, "What is man that you are mindful of him, and the son of man that you care for him?" Yet God made man a little lower than the heavenly beings, crowned him with glory and honor, and gave him dominion over the works of His hands, sheep, oxen, beasts, birds and fish. Hebrews 2 applies this psalm to Jesus, the true man who fulfills humanity\'s calling and is crowned with glory after suffering.',
+      p: ['david', 'adam'],
+    },
+    { // 9
+      s: 'David praises God for justice and for being a stronghold for the oppressed.',
+      m: 'David gives thanks with his whole heart for God\'s wonderful deeds and victory over his enemies. The LORD reigns forever as a righteous judge and is a stronghold for the oppressed in times of trouble. Those who know His name trust in Him, for He does not forget the cry of the afflicted.',
+      d: 'David will give thanks to the LORD with his whole heart and recount all His wonderful deeds, because his enemies turned back and perished before God, who has upheld his just cause. The LORD sits enthroned forever, judging the world with righteousness, and He is "a stronghold for the oppressed, a stronghold in times of trouble." Those who know His name put their trust in Him, for He has not forsaken those who seek Him, and He remembers the blood of the afflicted and does not forget their cry. The nations sink in the pit they made, and David asks God to arise so that the nations will know they are but men, while the needy will not always be forgotten.',
+      p: ['david'],
+    },
+    { // 10
+      s: 'Why does God seem far away when the wicked oppress the poor?',
+      m: 'The psalmist asks why God stands far off in times of trouble while the proud wicked hunt down the poor. The wicked think God will never see or call them to account. But the psalmist trusts that God does see, is the helper of the fatherless, and will hear the desire of the afflicted.',
+      d: '"Why, O LORD, do you stand far away? Why do you hide yourself in times of trouble?" the psalmist asks, describing the arrogant wicked who hotly pursue the poor. The wicked man boasts of his desires, curses and renounces the LORD, and thinks, "There is no God," lurking in ambush to murder the innocent and seize the helpless like a lion. He tells himself that God has forgotten and will never see. But the psalmist calls God to arise, declaring that God does see trouble and grief, is the helper of the fatherless and King forever, and hears the desire of the afflicted, strengthening their heart to do justice so that man who is of the earth may strike terror no more.',
+      p: [],
+    },
+    { // 11
+      s: 'David refuses to flee because God is on His throne.',
+      m: 'When advisers urge David to flee like a bird to the mountains because the foundations are destroyed, he refuses. He trusts the LORD, who is in His holy temple and on His heavenly throne. God tests the righteous and hates violence, and the upright will see His face.',
+      d: 'David declares, "In the LORD I take refuge," and asks how others can tell him to flee like a bird to the mountains as the wicked bend their bows to shoot the upright in the dark. They ask, "If the foundations are destroyed, what can the righteous do?" David\'s answer is to look up: the LORD is in His holy temple, His throne is in heaven, and His eyes see and test the children of man. He will rain coals and sulfur on the wicked who love violence, "for the LORD is righteous; he loves righteous deeds; the upright shall behold his face."',
+      p: ['david'],
+    },
+    { // 12
+      s: 'In a world of lies, God\'s words are pure.',
+      m: 'David cries for help because the godly seem to have vanished and people speak lies and flattery. God promises to arise and protect the poor and needy. In contrast to human lies, the words of the LORD are pure, like silver refined seven times.',
+      d: 'David cries, "Save, O LORD, for the godly one is gone," lamenting that everyone utters lies to his neighbor with flattering lips and a double heart. He prays that God will cut off the boastful tongue of those who say, "With our tongue we will prevail, our lips are with us; who is master over us?" The LORD answers, "Because the poor are plundered, because the needy groan, I will now arise," and promises to place them in the safety they long for. "The words of the LORD are pure words, like silver refined in a furnace on the ground, purified seven times," and God will guard His people from this generation, even when vileness is exalted.',
+      p: ['david'],
+    },
+    { // 13
+      s: 'David cries "How long, O LORD?" but moves from despair to trust.',
+      m: 'David cries out four times, "How long, O LORD?", feeling forgotten by God and overwhelmed by sorrow. He asks God to answer him before he dies and his enemies rejoice. Then he chooses to trust in God\'s steadfast love and sings because God has dealt bountifully with him.',
+      d: 'This short lament begins with a fourfold cry: "How long, O LORD? Will you forget me forever? How long will you hide your face from me?" David feels sorrow in his heart all day and sees his enemy exalted over him. He asks God to consider and answer him and to light up his eyes, lest he sleep the sleep of death and his foes rejoice when he is shaken. Then, without any change in circumstances, he turns to faith: "But I have trusted in your steadfast love; my heart shall rejoice in your salvation. I will sing to the LORD, because he has dealt bountifully with me."',
+      p: ['david'],
+    },
+    { // 14
+      s: 'The fool says there is no God, but God is with the righteous.',
+      m: 'The fool says in his heart, "There is no God," and corruption fills humanity. When the LORD looks down, He finds no one who does good, not even one. Yet God is with the righteous generation, and David longs for salvation to come from Zion.',
+      d: 'David begins, "The fool says in his heart, \'There is no God,\'" and describes people as corrupt, doing abominable deeds, with none who does good. The LORD looks down from heaven to see if any understand or seek God, but they have all turned aside and become corrupt, a passage Paul quotes in Romans 3 to show that all have sinned. Evildoers who eat up God\'s people like bread will be in great terror, for God is with the generation of the righteous and is the refuge of the poor. David closes, "Oh, that salvation for Israel would come out of Zion!" looking ahead to the day God restores His people.',
+      p: ['david'],
+    },
+    { // 15
+      s: 'The one who may dwell with God is the one who lives with integrity.',
+      m: 'David asks who may live on God\'s holy hill. The answer is the person who walks blamelessly, speaks truth from the heart, and does not slander or harm a neighbor. Such a person keeps promises even when it hurts, refuses bribes, and will never be shaken.',
+      d: '"O LORD, who shall sojourn in your tent? Who shall dwell on your holy hill?" David asks, a question perhaps used by worshipers approaching the temple. The answer describes a person of integrity who walks blamelessly, does what is right and speaks truth in his heart. He does not slander with his tongue, do evil to his neighbor or take up a reproach against his friend, and he despises the vile but honors those who fear the LORD. He keeps his oath even when it hurts, does not lend at interest or take a bribe against the innocent, and "he who does these things shall never be moved."',
+      p: ['david'],
+    },
+    { // 16
+      s: 'God is David\'s portion, and He will not abandon him to the grave.',
+      m: 'David takes refuge in God and declares that he has no good apart from Him. The LORD is his portion and inheritance, and the boundary lines have fallen in pleasant places. He is confident God will not abandon his soul to the grave, a promise Peter applied to Jesus\' resurrection, and in God\'s presence is fullness of joy.',
+      d: 'David prays, "Preserve me, O God, for in you I take refuge," confessing, "You are my Lord; I have no good apart from you," and delighting in the saints while refusing the offerings of idol worshipers. "The LORD is my chosen portion and my cup," he says, and the lines have fallen for him in pleasant places, a beautiful inheritance. He blesses the LORD who counsels him, sets the LORD always before him, and is not shaken, so his heart is glad and his flesh dwells secure, "for you will not abandon my soul to Sheol, or let your holy one see corruption." Peter and Paul preached this as a prophecy of Christ\'s resurrection (Acts 2:25–31; 13:35), and the psalm ends, "In your presence there is fullness of joy; at your right hand are pleasures forevermore."',
+      p: ['david', 'jesus'],
+    },
+    { // 17
+      s: 'David asks God to hide him in the shadow of His wings.',
+      m: 'David asks God to hear his just cause, for he has kept from the ways of violence. He asks God to show His steadfast love, keep him as the apple of His eye, and hide him in the shadow of His wings from enemies like lions. Unlike worldly people whose portion is in this life, David will be satisfied when he awakes to see God\'s face.',
+      d: 'David asks the LORD to hear a just cause and his prayer from lips free of deceit, since God has tried his heart and found nothing evil. He has avoided the ways of the violent and held his steps to God\'s paths, and he calls on God to show His wondrous steadfast love, praying, "Keep me as the apple of your eye; hide me in the shadow of your wings." His enemies surround him like a lion eager to tear, so he asks God to arise, confront them and deliver his soul from men whose portion is in this life. In contrast, David says, "As for me, I shall behold your face in righteousness; when I awake, I shall be satisfied with your likeness."',
+      p: ['david'],
+    },
+    { // 18
+      s: 'David praises God his rock for rescuing him from all his enemies.',
+      m: 'Written after God delivered David from Saul and all his enemies, this long song praises the LORD as his rock, fortress and deliverer. David describes calling out in distress and God coming down in power to rescue him. He thanks God for giving him strength and victory and for His steadfast love to His anointed king.',
+      d: 'David sings this on the day the LORD delivered him from Saul and all his enemies, beginning, "I love you, O LORD, my strength," and calling Him his rock, fortress, deliverer, shield and horn of salvation. When the cords of death encompassed him, he cried to God, and God heard from His temple: the earth reeled, smoke rose from His nostrils, He rode on a cherub and drew David out of many waters, "because he delighted in me." David describes how God deals with people according to their ways, lights his lamp, makes his way blameless, trains his hands for war and gives him victory over nations. The psalm ends praising God who gives great salvation to His king and shows steadfast love to His anointed, to David and his offspring forever, and Paul quotes it about the Gentiles praising God (Romans 15:9).',
+      p: ['david', 'saul'],
+    },
+    { // 19
+      s: 'God speaks through creation and through His perfect word.',
+      m: 'The heavens declare the glory of God, speaking without words to the whole world, and the sun runs its course like a joyful champion. God\'s law is perfect, reviving the soul, and His commands are more desirable than gold and sweeter than honey. David prays that God will keep him from sin and that his words and thoughts will please Him.',
+      d: '"The heavens declare the glory of God, and the sky above proclaims his handiwork," David writes, describing how day and night pour out speech without words, their voice going out through all the earth, with the sun rising like a bridegroom and running its course like a strong man. Then he turns to God\'s other revelation, His word: the law of the LORD is perfect, reviving the soul; His testimony is sure, making wise the simple; His precepts are right, rejoicing the heart; and His rules are true and righteous altogether. They are more to be desired than much fine gold and sweeter than honey, and by them God\'s servant is warned and rewarded. David asks God to declare him innocent from hidden faults and keep him from presumptuous sins, closing, "Let the words of my mouth and the meditation of my heart be acceptable in your sight, O LORD, my rock and my redeemer."',
+      p: ['david'],
+    },
+    { // 20
+      s: 'A prayer for the king before battle: trust in God, not chariots.',
+      m: 'The people pray that the LORD will answer the king in the day of trouble and grant his heart\'s desire. They will shout for joy over his victory. Some trust in chariots and horses, but they trust in the name of the LORD their God.',
+      d: 'This royal psalm is a prayer for the king, likely sung before battle: "May the LORD answer you in the day of trouble! May the name of the God of Jacob protect you!" The people ask God to send help from the sanctuary, remember the king\'s offerings, and grant his heart\'s desire, promising to shout for joy over his salvation. A voice then declares confidence that the LORD saves His anointed and answers him from His holy heaven. "Some trust in chariots and some in horses, but we trust in the name of the LORD our God," they sing, for those who trust in military might collapse while God\'s people rise and stand upright.',
+      p: ['david'],
+    },
+    { // 21
+      s: 'The king rejoices in God\'s strength and blessings.',
+      m: 'The king rejoices in the LORD\'s strength and salvation, for God has given him his heart\'s desire and crowned him with gold. God has given him long life, glory and blessing forever because he trusts in the Most High. The people are confident God will defeat the king\'s enemies and they praise His power.',
+      d: 'This psalm is a thanksgiving after the king\'s victory, likely paired with Psalm 20: "O LORD, in your strength the king rejoices, and in your salvation how greatly he exults!" God has given him his heart\'s desire, met him with rich blessings, set a crown of fine gold on his head, and given him life forever and ever. His glory is great through God\'s salvation, and God makes him glad with the joy of His presence, for the king trusts in the LORD and through the steadfast love of the Most High he shall not be moved. The people declare that the king\'s hand will find all his enemies, and they close, "Be exalted, O LORD, in your strength! We will sing and praise your power."',
+      p: ['david'],
+    },
+    { // 22
+      s: 'David\'s cry, "My God, why have you forsaken me?", turns to praise.',
+      m: 'David cries, "My God, my God, why have you forsaken me?", describing being mocked, surrounded by enemies, his strength poured out, his hands and feet pierced, and his clothes divided by lot. Jesus quoted this psalm on the cross, and its details match His crucifixion. The psalm turns to praise as God answers, and it ends with all nations worshiping the LORD.',
+      d: 'David begins with the cry Jesus spoke on the cross, "My God, my God, why have you forsaken me?", groaning day and night without rest, though he remembers that God is holy and rescued his fathers who trusted Him. He describes being scorned as a worm, mocked by people who wag their heads and say, "He trusts in the LORD; let him deliver him," surrounded by bulls and dogs, poured out like water, bones out of joint, tongue stuck to his jaws, hands and feet pierced, and his garments divided by casting lots, details remarkably fulfilled at Jesus\' crucifixion (Matthew 27; John 19). He pleads, "But you, O LORD, do not be far off!" and then suddenly declares that God has answered, vowing to praise Him in the great congregation, because He has not despised the affliction of the afflicted. The psalm ends in worldwide worship: all the ends of the earth will turn to the LORD, the families of the nations will bow before Him, and future generations will proclaim "that he has done it."',
+      p: ['david', 'jesus'],
+    },
+    { // 23
+      s: 'The LORD is my shepherd.',
+      m: 'David pictures God as his shepherd who provides everything he needs, leading him to green pastures and still waters and restoring his soul. Even in the valley of the shadow of death, he will fear no evil because God is with him. God prepares a table before him, and goodness and mercy will follow him all his life as he dwells in the LORD\'s house forever.',
+      d: 'David, once a shepherd himself, writes, "The LORD is my shepherd; I shall not want," trusting God to provide rest in green pastures, refreshment beside still waters, and the restoration of his soul. God leads him in paths of righteousness for His name\'s sake, and even when he walks through the valley of the shadow of death, he fears no evil, because God is with him and His rod and staff comfort him. The image shifts to a generous host who prepares a table before him in the presence of his enemies, anoints his head with oil, and makes his cup overflow. "Surely goodness and mercy shall follow me all the days of my life, and I shall dwell in the house of the LORD forever," a hope Jesus fulfills as the Good Shepherd who lays down His life for the sheep (John 10:11).',
+      p: ['david', 'jesus'],
+    },
+    { // 24
+      s: 'The earth is the LORD\'s; let the King of glory come in.',
+      m: 'The whole earth and everyone in it belong to the LORD, who founded it. Only those with clean hands and a pure heart may stand in His holy place. The gates are called to lift up their heads so the King of glory, the LORD mighty in battle, may come in.',
+      d: '"The earth is the LORD\'s and the fullness thereof, the world and those who dwell therein," David declares, because God founded it on the seas. He asks who may ascend the hill of the LORD and stand in His holy place, answering, "He who has clean hands and a pure heart, who does not lift up his soul to what is false," and such a person will receive blessing from God. The psalm may have been sung as the ark entered Jerusalem: "Lift up your heads, O gates! And be lifted up, O ancient doors, that the King of glory may come in." The question "Who is this King of glory?" is answered twice: "The LORD, strong and mighty, the LORD, mighty in battle... The LORD of hosts, he is the King of glory!"',
+      p: ['david'],
+    },
+    { // 25
+      s: 'David asks God to teach him His ways and forgive his sins.',
+      m: 'David lifts up his soul to God and trusts that no one who waits for Him will be put to shame. He asks God to make known His ways, lead him in truth, and remember His mercy rather than the sins of his youth. The LORD teaches sinners and guides the humble, and David asks Him to guard his life and redeem Israel from all its troubles.',
+      d: 'This acrostic psalm begins, "To you, O LORD, I lift up my soul," as David trusts God not to let him be put to shame. "Make me to know your ways, O LORD; teach me your paths," he prays, asking God to remember His mercy and steadfast love and not the sins of his youth. He affirms that the LORD is good and upright, so He instructs sinners in the way, leads the humble in what is right, and makes His covenant known to those who fear Him. Lonely and afflicted, David asks God to pardon his great guilt for His name\'s sake, guard his soul, and redeem Israel out of all its troubles.',
+      p: ['david'],
+    },
+    { // 26
+      s: 'David asks God to vindicate him because he loves His house.',
+      m: 'David asks God to vindicate him, since he has walked in integrity and trusted the LORD without wavering. He invites God to test his heart and mind, saying he does not sit with deceivers or evildoers. He loves the place where God\'s glory dwells and will bless the LORD in the great assembly.',
+      d: 'David asks, "Vindicate me, O LORD, for I have walked in my integrity, and I have trusted in the LORD without wavering," and invites God to test his heart and mind. He keeps God\'s steadfast love before his eyes and walks in His faithfulness, refusing to sit with men of falsehood or consort with hypocrites. He washes his hands in innocence and goes around God\'s altar proclaiming thanksgiving and telling of His wondrous deeds. "O LORD, I love the habitation of your house and the place where your glory dwells," he says, asking not to be swept away with sinners, and he ends standing on level ground, blessing the LORD in the great assembly.',
+      p: ['david'],
+    },
+    { // 27
+      s: 'The LORD is my light and salvation; whom shall I fear?',
+      m: 'David declares that the LORD is his light, salvation and stronghold, so he will not fear even if an army attacks. The one thing he asks is to dwell in the LORD\'s house and gaze on His beauty. Even if his parents forsake him, the LORD will take him in, so he encourages himself to wait for the LORD.',
+      d: '"The LORD is my light and my salvation; whom shall I fear? The LORD is the stronghold of my life; of whom shall I be afraid?" David begins, confident even if an army encamps against him. "One thing have I asked of the LORD, that will I seek after: that I may dwell in the house of the LORD all the days of my life, to gaze upon the beauty of the LORD and to inquire in his temple," where God will hide him in the day of trouble. Then the psalm turns to pleading, as David asks God to hear him, not hide His face, and not forsake him, saying that even if his father and mother forsake him, the LORD will take him in. He believes he will look upon the goodness of the LORD in the land of the living, ending, "Wait for the LORD; be strong, and let your heart take courage; wait for the LORD!"',
+      p: ['david'],
+    },
+    { // 28
+      s: 'David cries to God, his rock, and praises Him for hearing.',
+      m: 'David calls to the LORD, his rock, not to be silent, lest he become like those who go down to the pit. He asks God not to drag him away with the wicked, who speak peace but plan evil. Then he blesses the LORD for hearing his plea, calling Him his strength and shield, and prays for God to shepherd His people forever.',
+      d: 'David cries, "To you, O LORD, I call; my rock, be not deaf to me," fearing that if God is silent, he will be like those who go down to the pit. He lifts his hands toward the most holy sanctuary and asks not to be dragged off with the wicked, who speak peace with neighbors while evil is in their hearts, and asks God to repay them according to their work because they do not regard His deeds. Then he exclaims, "Blessed be the LORD! For he has heard the voice of my pleas for mercy. The LORD is my strength and my shield; in him my heart trusts, and I am helped." He closes praying for the nation: "Oh, save your people and bless your heritage! Be their shepherd and carry them forever."',
+      p: ['david'],
+    },
+    { // 29
+      s: 'The voice of the LORD thunders in the storm.',
+      m: 'David calls the heavenly beings to ascribe glory and strength to the LORD and worship Him in holy splendor. He describes the voice of the LORD thundering over the waters, breaking cedars, shaking the wilderness and stripping forests bare. The LORD sits enthroned as King forever and gives strength and peace to His people.',
+      d: 'The psalm begins with a call to the heavenly beings: "Ascribe to the LORD glory and strength. Ascribe to the LORD the glory due his name; worship the LORD in the splendor of holiness." Then David describes a powerful thunderstorm sweeping from the Mediterranean over Lebanon and down to the wilderness of Kadesh, repeating "the voice of the LORD" seven times. The voice of the LORD is over the waters, powerful and full of majesty; it breaks the cedars of Lebanon, flashes forth flames of fire, shakes the wilderness, and strips the forests bare, while in His temple all cry, "Glory!" The LORD sits enthroned over the flood as King forever, a quiet contrast to the claims of Baal the storm god, and the psalm ends, "May the LORD give strength to his people! May the LORD bless his people with peace!"',
+      p: ['david'],
+    },
+    { // 30
+      s: 'Weeping lasts for the night, but joy comes in the morning.',
+      m: 'David praises God for lifting him up and healing him when he cried for help. God\'s anger is but for a moment and His favor is for a lifetime; weeping may last for the night, but joy comes with the morning. David confesses that in prosperity he had felt secure, but God turned his mourning into dancing.',
+      d: 'Written for the dedication of the temple, the psalm opens, "I will extol you, O LORD, for you have drawn me up and have not let my foes rejoice over me," because God healed him and brought him up from Sheol. He calls the saints to sing praises, "For his anger is but for a moment, and his favor is for a lifetime. Weeping may tarry for the night, but joy comes with the morning." David confesses that in his prosperity he said, "I shall never be moved," but when God hid His face he was dismayed, and he pleaded for mercy, asking what profit there would be in his death. God answered: "You have turned for me my mourning into dancing; you have loosed my sackcloth and clothed me with gladness," so that his glory may sing God\'s praise and not be silent.',
+      p: ['david'],
+    },
+    { // 31
+      s: 'Into your hand I commit my spirit.',
+      m: 'David takes refuge in the LORD as his rock and fortress and commits his spirit into God\'s hand, words Jesus prayed on the cross. Surrounded by enemies and scorned by neighbors, he trusts that his times are in God\'s hand. He praises God\'s abundant goodness stored up for those who fear Him and urges all the saints to be strong and take courage.',
+      d: 'David asks God to be his rock of refuge and strong fortress, declaring, "Into your hand I commit my spirit; you have redeemed me, O LORD, faithful God," words Jesus spoke as He died (Luke 23:46). He describes his eye and body wasting from grief, his strength failing because of iniquity, and how he has become a reproach to neighbors and forgotten like a broken vessel, with terror on every side and enemies scheming to take his life. "But I trust in you, O LORD; I say, \'You are my God.\' My times are in your hand," he prays, asking God to make His face shine on him. He praises the abundant goodness God has stored up for those who fear Him and His wondrous love, and ends calling all the saints to love the LORD: "Be strong, and let your heart take courage, all you who wait for the LORD!"',
+      p: ['david', 'jesus'],
+    },
+    { // 32
+      s: 'Blessed is the one whose sin is forgiven.',
+      m: 'David declares the blessing of the person whose transgression is forgiven and whose sin is covered. When he kept silent about his sin, he felt crushed, but when he confessed, God forgave him. God promises to instruct and guide those who trust Him, so the righteous should rejoice in the LORD.',
+      d: 'David begins, "Blessed is the one whose transgression is forgiven, whose sin is covered," a verse Paul quotes in Romans 4 to describe justification by faith. When he kept silent, his bones wasted away through his groaning all day long, for God\'s hand was heavy on him and his strength was dried up as by summer heat. "I acknowledged my sin to you... and you forgave the iniquity of my sin," he says, encouraging the godly to pray while God may be found and calling God his hiding place who surrounds him with shouts of deliverance. God then speaks, promising, "I will instruct you and teach you in the way you should go; I will counsel you with my eye upon you," and warning not to be like a stubborn horse or mule, while steadfast love surrounds the one who trusts in the LORD.',
+      p: ['david'],
+    },
+    { // 33
+      s: 'Sing a new song to the Creator who rules the nations.',
+      m: 'The righteous are called to shout for joy and sing a new song to the LORD, whose word is upright. By His word the heavens were made, and His plans stand forever while the plans of nations fail. No king is saved by a great army; instead, God\'s eye is on those who fear Him and hope in His steadfast love.',
+      d: 'The psalm calls the righteous to shout for joy, play skillfully and "sing to him a new song," because the word of the LORD is upright and the earth is full of His steadfast love. "By the word of the LORD the heavens were made," and all creation should stand in awe, for He spoke and it came to be. The LORD brings the counsel of the nations to nothing, but His own counsel stands forever, and blessed is the nation whose God is the LORD. No king is saved by a great army, and a war horse is a false hope, but the eye of the LORD is on those who fear Him and hope in His steadfast love, so the psalm ends, "Let your steadfast love, O LORD, be upon us, even as we hope in you."',
+      p: [],
+    },
+    { // 34
+      s: 'Taste and see that the LORD is good.',
+      m: 'Written when David escaped from King Achish by pretending to be insane, this psalm praises God for delivering him from all his fears. David invites others to taste and see that the LORD is good. The LORD is near the brokenhearted and rescues the righteous from all their troubles.',
+      d: 'David wrote this acrostic after he feigned madness before Abimelech (Achish of Gath) and escaped, and he begins, "I will bless the LORD at all times; his praise shall continually be in my mouth," inviting others to magnify the LORD with him. "I sought the LORD, and he answered me and delivered me from all my fears," he testifies, and "this poor man cried, and the LORD heard him." He urges, "Oh, taste and see that the LORD is good! Blessed is the man who takes refuge in him!" and teaches the fear of the LORD: keep your tongue from evil, turn from evil, do good, and seek peace. "The LORD is near to the brokenhearted and saves the crushed in spirit," and though the afflictions of the righteous are many, the LORD delivers him out of them all and keeps all his bones so that not one is broken, a detail John connects to Jesus on the cross (John 19:36).',
+      p: ['david', 'achish'],
+    },
+    { // 35
+      s: 'David asks God to fight against those who repay him evil for good.',
+      m: 'David asks the LORD to take up shield and spear against those who fight him without cause. His enemies repay his kindness with evil, rejoicing at his stumbling even though he once mourned for them when they were sick. He asks God not to stay silent but to vindicate him, so that he may praise God\'s righteousness all day long.',
+      d: '"Contend, O LORD, with those who contend with me; fight against those who fight against me!" David begins, asking God to say to his soul, "I am your salvation." He prays that those who seek his life will be like chaff before the wind with the angel of the LORD driving them away, for without cause they hid their net for him. Malicious witnesses accuse him, and they repay him evil for good, though when they were sick he wore sackcloth, fasted and grieved for them as for a friend or brother. Now at his stumbling they rejoice and gnash their teeth, and David asks, "How long, O Lord, will you look on?" pleading for God to wake up and vindicate him, so that those who delight in his righteousness may shout for joy and his tongue may tell of God\'s righteousness all day long.',
+      p: ['david'],
+    },
+    { // 36
+      s: 'Human wickedness contrasted with God\'s vast steadfast love.',
+      m: 'David describes the wicked, who have no fear of God and flatter themselves in their sin. In contrast, God\'s steadfast love reaches to the heavens and His faithfulness to the clouds. People take refuge in the shadow of His wings, for with Him is the fountain of life, and in His light they see light.',
+      d: 'David describes how transgression speaks to the wicked deep in his heart, so that there is no fear of God before his eyes; he flatters himself, speaks deceit, and plots trouble on his bed. Then the psalm lifts its gaze: "Your steadfast love, O LORD, extends to the heavens, your faithfulness to the clouds," with God\'s righteousness like the mighty mountains and His judgments like the great deep. "How precious is your steadfast love, O God! The children of mankind take refuge in the shadow of your wings," feasting on the abundance of His house and drinking from the river of His delights. "For with you is the fountain of life; in your light do we see light," David writes, asking God to continue His love to those who know Him and keep the arrogant from driving him away.',
+      p: ['david'],
+    },
+    { // 37
+      s: 'Do not fret over evildoers; trust the LORD and wait for Him.',
+      m: 'In this wisdom psalm, an older David tells readers not to fret because of evildoers, who will soon fade like grass. Instead, trust in the LORD, delight yourself in Him, commit your way to Him, and wait patiently for Him. The meek will inherit the land, and though the righteous may stumble, the LORD upholds them and is their stronghold.',
+      d: '"Fret not yourself because of evildoers," the acrostic begins, "for they will soon fade like the grass." David urges readers to trust in the LORD and do good, to "delight yourself in the LORD, and he will give you the desires of your heart," to commit their way to Him, and to be still and wait patiently for Him rather than fret over those who prosper in evil. "The meek shall inherit the land," words Jesus repeats in the Beatitudes, while the wicked plot but will soon be gone, and a little that the righteous has is better than the abundance of many wicked. The LORD establishes the steps of a man who delights in His way, and "though he fall, he shall not be cast headlong," and David says he has been young and now is old, yet has not seen the righteous forsaken, so he closes affirming that the salvation of the righteous is from the LORD, their stronghold in trouble.',
+      p: ['david', 'jesus'],
+    },
+    { // 38
+      s: 'David confesses that his sin has brought pain and isolation.',
+      m: 'David asks God not to rebuke him in anger, for his body is sick and his iniquities are like a heavy burden over his head. His friends stand far off, and his enemies plot against him, yet he waits for the LORD. He confesses his sin and pleads, "Do not forsake me, O LORD," calling God his salvation.',
+      d: 'David writes this penitential psalm "for the memorial offering," asking the LORD not to rebuke him in anger, for God\'s arrows have sunk into him and there is no soundness in his flesh because of his sin. "My iniquities have gone over my head; like a heavy burden, they are too heavy for me," he says, describing festering wounds, burning pain and a heart that throbs. His friends and companions stand aloof from his plague and his neighbors stand far off, while enemies seek his life and plot treachery, and he becomes like a deaf man who does not hear and a mute who does not open his mouth. "But for you, O LORD, do I wait," he says, confessing his iniquity and sorry for his sin, and he ends, "Do not forsake me, O LORD! O my God, be not far from me! Make haste to help me, O Lord, my salvation!"',
+      p: ['david'],
+    },
+    { // 39
+      s: 'Life is a breath, so David\'s hope is in God.',
+      m: 'David tries to keep silent before the wicked but his distress grows until he speaks. He asks God to show him how fleeting his life is, recognizing that every person is a mere breath. Realizing this, he says his hope is in God and asks to be delivered from his transgressions and given a little relief before he dies.',
+      d: 'David resolves to guard his ways and muzzle his mouth while the wicked are present, but his distress grows worse and his heart becomes hot until he speaks. "O LORD, make me know my end and what is the measure of my days; let me know how fleeting I am!" he prays, observing that his lifetime is as nothing before God and every man stands as a mere breath, busy heaping up wealth without knowing who will gather it. "And now, O Lord, for what do I wait? My hope is in you," he says, asking deliverance from his transgressions and relief from God\'s discipline, which consumes like a moth what is dear. He ends asking God to hear his prayer and tears, for he is a sojourner like his fathers, and pleads, "Look away from me, that I may smile again, before I depart and am no more!"',
+      p: ['david'],
+    },
+    { // 40
+      s: 'God lifts David from the pit and puts a new song in his mouth.',
+      m: 'David waits patiently for the LORD, who hears his cry, lifts him out of the miry pit, sets his feet on a rock, and puts a new song in his mouth. He declares that God desires not sacrifice but an obedient heart, saying, "I delight to do your will, O my God." Though troubles still surround him, he asks God to hurry to help him.',
+      d: '"I waited patiently for the LORD; he inclined to me and heard my cry," David begins, describing how God drew him up from the pit of destruction and the miry bog, set his feet on a rock, and put a new song of praise in his mouth so that many will see and trust. God\'s wondrous deeds and thoughts toward His people are more than can be told, and David says God has not desired sacrifice and offering, but has given him an open ear: "Behold, I have come; in the scroll of the book it is written of me: I delight to do your will, O my God; your law is within my heart," words Hebrews 10 applies to Christ\'s perfect obedience. He has told the glad news of deliverance in the great congregation and not hidden God\'s steadfast love and faithfulness. Yet evils without number surround him and his iniquities have overtaken him, so he asks God to make haste to help him, ending, "As for me, I am poor and needy, but the Lord takes thought for me."',
+      p: ['david', 'jesus'],
+    },
+    { // 41
+      s: 'God blesses those who care for the weak, even when a friend betrays.',
+      m: 'Blessed is the one who considers the poor, for the LORD delivers him in trouble and sustains him on his sickbed. David asks for healing and mercy while enemies wait for him to die and even a close friend turns against him. He trusts that God upholds him and sets him in His presence forever, and Book One ends with a doxology.',
+      d: '"Blessed is the one who considers the poor! In the day of trouble the LORD delivers him," David begins, describing God protecting him and sustaining him on his sickbed. He confesses, "O LORD, be gracious to me; heal me, for I have sinned against you!" while his enemies say in malice, "When will he die, and his name perish?" Even his close friend in whom he trusted, who ate his bread, has lifted his heel against him, a verse Jesus quotes about Judas\' betrayal (John 13:18). David asks God to raise him up, knowing God delights in him because his enemy has not triumphed, and Book One ends with a doxology: "Blessed be the LORD, the God of Israel, from everlasting to everlasting! Amen and Amen."',
+      p: ['david', 'jesus', 'judas'],
+    },
+    ...book2, ...book3, ...book4, ...book5,
+  ],
+};

@@ -1,0 +1,166 @@
+// "See more" details for Ephesians through Philemon, keyed by each section's first chapter.
+// Key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+const CX = 'Christ at the center';
+
+export default {
+  ephesians: {
+    1: {
+      what: 'Paul opens with a burst of praise: God has blessed believers "in Christ with every spiritual blessing." He chose them before the foundation of the world, adopted them, redeemed them through Christ\'s blood, and sealed them with the Holy Spirit. He prays that they will know the hope of their calling and the immense power God showed in raising Christ and seating Him above every rule and authority, as head over all things for the church.\n\nOnce they were dead in their trespasses, but God, rich in mercy, made them alive with Christ; they are saved by grace through faith, created for good works. Gentiles who were once far off, without hope, have been brought near by Christ\'s blood. He has broken down the dividing wall of hostility and made Jew and Gentile one new people, a holy temple where God dwells by His Spirit. Paul explains the mystery he was given to preach, and prays that they may know the love of Christ that surpasses knowledge, praising God who is able to do "far more abundantly than all that we ask or think."',
+      unfolds: [['1:1–14', 'Every spiritual blessing in Christ'], ['1:15–23', 'Prayer for wisdom and power'], ['2:1–10', 'Dead in sin, made alive by grace'], ['2:11–22', 'Jew and Gentile one in Christ'], ['3', 'The mystery revealed; prayer to know Christ\'s love']],
+      themes: ['Spiritual blessings', 'Salvation by grace', 'One new people', 'The love of Christ'],
+      verse: { ref: 'Ephesians 2:8–9', text: 'For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast.' },
+      christLabel: CX,
+      christ: 'God\'s plan is "to unite all things in him, things in heaven and things on earth." Christ "himself is our peace," preaching peace "to you who were far off and peace to those who were near" (Isaiah 57:19), and He is the cornerstone of God\'s new temple (Psalm 118:22).',
+    },
+    4: {
+      what: 'Because of all God has done, Paul urges believers to walk worthy of their calling, with humility and patience, keeping the unity of the Spirit: "one body and one Spirit... one Lord, one faith, one baptism, one God and Father of all." The ascended Christ gave apostles, prophets, evangelists, shepherds and teachers to equip the saints, so the church grows up, speaking the truth in love. They must put off the old self and put on the new: no more lying, stealing or bitter words, but kindness and forgiveness. They are to imitate God, walk in love, live as children of light, and be filled with the Spirit, singing and giving thanks.\n\nPaul applies this to the household: wives and husbands, children and parents, servants and masters, all serving as to the Lord. Husbands are to love their wives "as Christ loved the church and gave himself up for her." Finally, believers face spiritual enemies, so they must put on the whole armor of God: the belt of truth, the breastplate of righteousness, the gospel of peace, the shield of faith, the helmet of salvation and the sword of the Spirit, praying at all times.',
+      unfolds: [['4:1–16', 'Unity and gifts in the body'], ['4:17–32', 'Put off the old, put on the new'], ['5:1–21', 'Walk in love and light; filled with the Spirit'], ['5:22–6:9', 'Christ in the household'], ['6:10–24', 'The armor of God']],
+      themes: ['Unity', 'The new life', 'Love in the home', 'Spiritual battle'],
+      verse: { ref: 'Ephesians 4:32', text: 'Be kind to one another, tenderhearted, forgiving one another, as God in Christ forgave you.' },
+      christLabel: CX,
+      christ: 'Paul reads Psalm 68:18 of Christ\'s ascension: "When he ascended on high he led a host of captives, and he gave gifts to men." Genesis 2:24, "the two shall become one flesh," points to "Christ and the church." The armor of God is the armor the LORD Himself wears in Isaiah 59:17.',
+    },
+  },
+  philippians: {
+    1: {
+      what: 'Writing from prison, Paul thanks God for the Philippians\' partnership in the gospel from the first day, confident that "he who began a good work in you will bring it to completion at the day of Jesus Christ." He prays that their love will abound more and more with knowledge and discernment. His imprisonment has actually advanced the gospel: the whole imperial guard knows he is in chains for Christ, and other believers have become bolder.\n\nSome preach Christ out of rivalry, hoping to cause Paul trouble, but he rejoices that Christ is proclaimed either way. He is torn between longing to depart and be with Christ, which is far better, and staying on for their progress and joy in the faith. Whatever happens, they must live worthy of the gospel, standing firm in one spirit, striving side by side, and not frightened by opponents, for it has been granted to them not only to believe in Christ but also to suffer for His sake.',
+      unfolds: [['1:1–11', 'Thanks and prayer for the Philippians'], ['1:12–18', 'Imprisonment advances the gospel'], ['1:19–26', 'To live is Christ, to die is gain'], ['1:27–30', 'Live worthy of the gospel']],
+      themes: ['Joy in suffering', 'Partnership in the gospel', 'Living for Christ', 'Standing firm'],
+      verse: { ref: 'Philippians 1:21', text: 'For to me to live is Christ, and to die is gain.' },
+      christLabel: CX,
+      christ: 'Paul\'s chains are "for Christ," his deepest desire is that "Christ will be honored in my body, whether by life or by death," and he looks ahead to "the day of Jesus Christ," when God\'s good work in believers will be complete.',
+      power: 'rome',
+    },
+    2: {
+      what: 'Paul calls the Philippians to unity: be of the same mind, do nothing from selfish ambition or conceit, but in humility count others more significant than yourselves. The model is Christ Jesus, who, though He was in the form of God, emptied Himself, took the form of a servant, and became obedient to the point of death on a cross. Therefore God highly exalted Him and gave Him the name above every name.\n\nSo they are to work out their salvation with fear and trembling, "for it is God who works in you," doing everything without grumbling, shining as lights in the world and holding fast to the word of life. Paul hopes to send Timothy, who genuinely cares for their welfare and has served with him like a son with a father. He is also sending back Epaphroditus, who brought their gift and nearly died from illness while serving; they should honor men like him.',
+      unfolds: [['2:1–11', 'The humility of Christ'], ['2:12–18', 'Shine as lights'], ['2:19–30', 'Timothy and Epaphroditus']],
+      themes: ['Humility', 'Unity', 'Christ\'s example', 'Serving others'],
+      verse: { ref: 'Philippians 2:9–11', text: 'Therefore God has highly exalted him and bestowed on him the name that is above every name, so that at the name of Jesus every knee should bow, in heaven and on earth and under the earth, and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.' },
+      christLabel: CX,
+      christ: 'This great hymn traces Christ\'s path from glory, down to the cross, and up to exaltation, the path of the suffering Servant of Isaiah 52:13–53:12. Isaiah 45:23 says that to the LORD "every knee shall bow, every tongue shall swear allegiance"; Paul applies these words to Jesus.',
+    },
+    3: {
+      what: '"Rejoice in the Lord." Paul warns against those who insist on circumcision. If anyone could trust in the flesh, he could: circumcised on the eighth day, of the tribe of Benjamin, a Hebrew of Hebrews, a Pharisee, a zealous persecutor of the church, blameless under the Law. But he counts it all as loss "because of the surpassing worth of knowing Christ Jesus my Lord," and wants a righteousness that comes through faith, to know Christ and the power of His resurrection. He has not yet arrived, but presses on toward the goal, for believers\' citizenship is in heaven.\n\nPaul urges Euodia and Syntyche to agree in the Lord. "Rejoice in the Lord always," he writes; don\'t be anxious, but pray about everything, and God\'s peace will guard your hearts. Think about whatever is true, honorable, just, pure, lovely and commendable. He thanks them for their gift, though he has learned to be content in every situation: "I can do all things through him who strengthens me." God will supply every need of theirs. Even the saints of Caesar\'s household send greetings.',
+      unfolds: [['3:1–11', 'Counting all as loss to know Christ'], ['3:12–21', 'Pressing on; citizens of heaven'], ['4:1–9', 'Rejoice, pray, think on these things'], ['4:10–23', 'Contentment and thanks for their gift']],
+      themes: ['Knowing Christ', 'Pressing on', 'Peace and prayer', 'Contentment'],
+      verse: { ref: 'Philippians 4:6–7', text: 'Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.' },
+      christLabel: CX,
+      christ: 'Paul\'s goal is to "gain Christ and be found in him," sharing His sufferings and becoming like Him in His death. Believers await a Savior from heaven, "the Lord Jesus Christ, who will transform our lowly body to be like his glorious body."',
+      power: 'rome',
+    },
+  },
+  colossians: {
+    1: {
+      what: 'Paul thanks God for the Colossians\' faith, love and hope, which came from the gospel they learned from Epaphras, and prays that they will be filled with the knowledge of God\'s will. Then he exalts Christ: He is the image of the invisible God; all things were created through Him and for Him, and in Him all things hold together. He is the head of the church, the firstborn from the dead, and in Him all the fullness of God was pleased to dwell, reconciling all things by the blood of His cross. Paul labors to present everyone mature in Christ, proclaiming the mystery hidden for ages: "Christ in you, the hope of glory."\n\nPaul warns them not to be taken captive by philosophy and empty deceit. In Christ "the whole fullness of deity dwells bodily," and believers are complete in Him. They were buried and raised with Him in baptism, and God forgave their trespasses, canceling the record of debt and nailing it to the cross. So they should not let anyone judge them over food, festivals or Sabbaths, or impose the worship of angels and harsh rules, which have no value against the flesh.',
+      unfolds: [['1:1–14', 'Thanks and prayer'], ['1:15–23', 'The supremacy of Christ'], ['1:24–2:5', 'Paul\'s labor for the church'], ['2:6–15', 'Complete in Christ; the debt canceled'], ['2:16–23', 'Freedom from human rules']],
+      themes: ['Christ is supreme', 'Fullness in Christ', 'Forgiveness', 'Beware false teaching'],
+      verse: { ref: 'Colossians 1:15', text: 'He is the image of the invisible God, the firstborn of all creation.' },
+      christLabel: CX,
+      christ: 'Food laws, festivals, new moons and Sabbaths from the Law of Moses were "a shadow of the things to come, but the substance belongs to Christ." Through His cross God "disarmed the rulers and authorities" and triumphed over them.',
+    },
+    3: {
+      what: 'Since believers have been raised with Christ, they should seek the things that are above, where Christ is. Their life is hidden with Christ in God. So they must put to death what is earthly, such as sexual immorality, greed, anger, slander and lying, and put on the new self, which is renewed in the image of its Creator, where there is no longer Greek and Jew, barbarian, slave or free. As God\'s chosen ones they should put on compassion, kindness, humility, meekness and patience, forgive as the Lord forgave them, and above all put on love. The peace of Christ should rule in their hearts and the word of Christ dwell in them richly.\n\nPaul gives instructions for the household: wives and husbands, children and fathers, bondservants and masters, working heartily as for the Lord. He asks them to keep praying, including for an open door for the gospel, to walk wisely toward outsiders, and to let their speech always be gracious. Tychicus and Onesimus will bring news, and Aristarchus, Mark, Epaphras, Luke and Demas send greetings. The letter is to be read in Laodicea too.',
+      unfolds: [['3:1–4', 'Raised with Christ'], ['3:5–17', 'Put off the old, put on the new'], ['3:18–4:1', 'Christ in the household'], ['4:2–18', 'Prayer, wisdom and greetings']],
+      themes: ['New life in Christ', 'Love and forgiveness', 'The word of Christ', 'Prayer and witness'],
+      verse: { ref: 'Colossians 3:17', text: 'And whatever you do, in word or deed, do everything in the name of the Lord Jesus, giving thanks to God the Father through him.' },
+      christLabel: CX,
+      christ: 'Christ is seated "at the right hand of God" (Psalm 110:1), and "when Christ who is your life appears, then you also will appear with him in glory." In the new humanity, "Christ is all, and in all."',
+    },
+  },
+  '1thessalonians': {
+    1: {
+      what: 'Paul, Silas and Timothy thank God for the Thessalonians\' "work of faith and labor of love and steadfastness of hope." The gospel came to them in power, and they turned "to God from idols to serve the living and true God, and to wait for his Son from heaven." The news of their faith has spread everywhere. Paul recalls how he lived among them: not flattering or seeking glory, but gentle "like a nursing mother," working night and day so as not to be a burden, and urging them like a father to walk worthy of God.\n\nThey received the message as the word of God, even though they suffered persecution from their own countrymen, just as the churches in Judea did. Forced to leave Thessalonica, Paul longed to see them again and, when he could bear it no longer, sent Timothy from Athens to strengthen them. Timothy has now brought back good news of their faith and love, and Paul is overjoyed. He prays to see them again and that the Lord will make them increase in love and be blameless when Jesus comes.',
+      unfolds: [['1', 'Thanksgiving for their faith'], ['2:1–16', 'Paul\'s conduct among them; the word received'], ['2:17–3:13', 'Paul\'s longing; Timothy\'s good report']],
+      themes: ['Faith, love and hope', 'Genuine ministry', 'Perseverance under persecution', 'Love for the church'],
+      verse: { ref: '1 Thessalonians 2:8', text: 'So, being affectionately desirous of you, we were ready to share with you not only the gospel of God but also our own selves, because you had become very dear to us.' },
+      christLabel: CX,
+      christ: 'They wait for God\'s Son from heaven, "Jesus who delivers us from the wrath to come." Paul prays that they will be blameless "at the coming of our Lord Jesus with all his saints," echoing Zechariah 14:5, "the LORD my God will come, and all the holy ones with him."',
+    },
+    4: {
+      what: 'Paul tells them how to please God: abstain from sexual immorality and control their bodies in holiness, love one another more and more, live quietly, mind their own affairs and work with their hands. Some believers have died, and the church is grieving. Paul says they need not grieve as those who have no hope: the Lord Himself will descend from heaven with a cry of command and the sound of God\'s trumpet; the dead in Christ will rise first, then those still alive will be caught up together with them to meet the Lord, "and so we will always be with the Lord."\n\nThe day of the Lord will come like a thief in the night, but believers are children of light, so they should stay awake and sober, wearing faith and love as a breastplate and the hope of salvation as a helmet. Paul closes with many short commands: respect leaders, encourage the fainthearted, help the weak, be patient with all, rejoice always, pray without ceasing, give thanks in all circumstances, do not quench the Spirit, test everything and hold fast to what is good. The God of peace will sanctify them completely.',
+      unfolds: [['4:1–12', 'A life that pleases God'], ['4:13–18', 'The coming of the Lord'], ['5:1–11', 'Children of light, ready for the day'], ['5:12–28', 'Final instructions and blessing']],
+      themes: ['Holiness', 'Hope for those who have died', 'Readiness for Christ\'s return', 'Joy and prayer'],
+      verse: { ref: '1 Thessalonians 5:16–18', text: 'Rejoice always, pray without ceasing, give thanks in all circumstances; for this is the will of God in Christ Jesus for you.' },
+      christLabel: CX,
+      christ: '"Since we believe that Jesus died and rose again," God will bring with Him those who have fallen asleep. Christ "died for us so that whether we are awake or asleep we might live with him." The "day of the Lord" announced by the prophets (Joel 2; Amos 5) is the day of Christ\'s coming.',
+    },
+  },
+  '2thessalonians': {
+    1: {
+      what: 'Paul thanks God that the Thessalonians\' faith is growing and their love increasing, even under persecution. God is just and will bring relief to the afflicted and judgment on those who afflict them when the Lord Jesus is revealed from heaven with His mighty angels in flaming fire. Some had been unsettled by claims that the day of the Lord had already come. Paul says it will not come until the rebellion occurs and "the man of lawlessness" is revealed, who exalts himself against every so-called god and takes his seat in the temple of God. For now something restrains him, but the Lord Jesus will destroy him by His coming.\n\nPaul thanks God for choosing them and urges them to stand firm and hold to the teaching they received. He asks for prayer that the word of the Lord may spread quickly, and assures them, "the Lord is faithful." Some in the church are idle, busybodies who will not work, so Paul repeats his rule: "If anyone is not willing to work, let him not eat." They should not grow weary in doing good. Paul signs the greeting with his own hand.',
+      unfolds: [['1', 'Encouragement under persecution; God\'s just judgment'], ['2:1–12', 'The day of the Lord and the man of lawlessness'], ['2:13–17', 'Chosen and called; stand firm'], ['3', 'Prayer, work and the idle']],
+      themes: ['Perseverance', 'God\'s justice', 'Truth about the end', 'Faithful work'],
+      verse: { ref: '2 Thessalonians 3:3', text: 'But the Lord is faithful. He will establish you and guard you against the evil one.' },
+      christLabel: CX,
+      christ: 'Jesus will be revealed "in flaming fire" (Isaiah 66:15) and will slay the lawless one "with the breath of his mouth," as Isaiah 11:4 said of the Messiah, "with the breath of his lips he shall kill the wicked." He comes "to be glorified in his saints."',
+    },
+  },
+  '1timothy': {
+    1: {
+      what: 'Paul writes to Timothy, his "true child in the faith," whom he left in Ephesus to stop certain people from teaching different doctrine and devoting themselves to myths and endless genealogies. The aim of Paul\'s charge is "love that issues from a pure heart and a good conscience and a sincere faith." The Law is good if used properly, to expose sin, in keeping with the gospel.\n\nPaul thanks Christ Jesus for appointing him to service, though he was formerly a blasphemer, persecutor and insolent opponent. He received mercy so that Christ might show His perfect patience in him as an example to those who would believe. This leads him into praise: "To the King of the ages, immortal, invisible, the only God, be honor and glory forever and ever." He charges Timothy to wage the good warfare, holding faith and a good conscience, unlike Hymenaeus and Alexander, who have made shipwreck of their faith.',
+      unfolds: [['1:1–11', 'Warning against false teachers; the right use of the Law'], ['1:12–17', 'Mercy for the foremost of sinners'], ['1:18–20', 'Wage the good warfare']],
+      themes: ['Sound teaching', 'Mercy for sinners', 'A good conscience', 'Faithfulness'],
+      verse: { ref: '1 Timothy 1:15', text: 'The saying is trustworthy and deserving of full acceptance, that Christ Jesus came into the world to save sinners, of whom I am the foremost.' },
+      christLabel: CX,
+      christ: 'Paul himself is the proof of Christ\'s mercy: "the grace of our Lord overflowed for me with the faith and love that are in Christ Jesus." If He saved the foremost of sinners, He can save anyone.',
+    },
+    2: {
+      what: 'Paul gives instructions for the church\'s life together. Prayers should be made for all people, including kings and all in authority, so that believers may live peaceful and godly lives, because God "desires all people to be saved and to come to the knowledge of the truth." Men should pray without anger or quarreling, and women should adorn themselves with good works rather than outward display. Paul also gives instructions about the roles of men and women in teaching, a passage Christians interpret in different ways.\n\nHe lists the qualifications for overseers: above reproach, faithful in marriage, sober-minded, hospitable, able to teach, not a drunkard or violent or a lover of money, managing his household well, not a recent convert, and well thought of by outsiders. Deacons, too, must be dignified, honest and tested. Paul writes so that Timothy will know how people ought to behave in the household of God, "the church of the living God, a pillar and buttress of the truth," and he quotes an early hymn about the mystery of godliness.',
+      unfolds: [['2:1–7', 'Pray for all people'], ['2:8–15', 'Men and women in worship'], ['3:1–7', 'Qualifications for overseers'], ['3:8–13', 'Qualifications for deacons'], ['3:14–16', 'The household of God; the mystery of godliness']],
+      themes: ['Prayer', 'Godly leadership', 'Character', 'The church and the truth'],
+      verse: { ref: '1 Timothy 3:16', text: 'Great indeed, we confess, is the mystery of godliness: He was manifested in the flesh, vindicated by the Spirit, seen by angels, proclaimed among the nations, believed on in the world, taken up in glory.' },
+      christLabel: CX,
+      christ: '"There is one God, and there is one mediator between God and men, the man Christ Jesus, who gave himself as a ransom for all." The hymn of 3:16 traces His whole story, from incarnation to ascension.',
+      power: 'rome',
+    },
+    4: {
+      what: 'Paul warns that some will depart from the faith, forbidding marriage and certain foods, though everything God created is good when received with thanksgiving. Timothy must train himself for godliness, which has value for this life and the next. "Let no one despise you for your youth," Paul says; instead Timothy should set an example, devote himself to the public reading of Scripture, exhortation and teaching, and not neglect his gift.\n\nPaul gives guidance for different groups in the church: treat older men as fathers and younger women as sisters, care for widows who are truly in need, honor elders who rule well, and deal fairly with accusations. False teachers imagine that godliness is a way to get rich, but "godliness with contentment is great gain," and "the love of money is a root of all kinds of evils." Timothy must flee these things, pursue righteousness, faith, love and gentleness, and "fight the good fight of the faith." The rich must be generous and set their hopes on God. Timothy must guard what has been entrusted to him.',
+      unfolds: [['4', 'False asceticism; train for godliness; set an example'], ['5', 'Widows, elders and the household of faith'], ['6:1–10', 'Slaves and masters; contentment and the love of money'], ['6:11–21', 'Fight the good fight; a charge to the rich']],
+      themes: ['Godliness', 'Being an example', 'Caring for the church', 'Contentment'],
+      verse: { ref: '1 Timothy 4:12', text: 'Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity.' },
+      christLabel: CX,
+      christ: 'Timothy is charged before "Christ Jesus, who in his testimony before Pontius Pilate made the good confession," to keep the commandment until the appearing of the Lord Jesus Christ, "the King of kings and Lord of lords." Paul supports paying elders with Deuteronomy 25:4 and with Jesus\' own words, "The laborer deserves his wages" (Luke 10:7).',
+    },
+  },
+  '2timothy': {
+    1: {
+      what: 'This is Paul\'s last letter, written from prison near the end of his life. He remembers Timothy\'s tears and his sincere faith, which lived first in his grandmother Lois and his mother Eunice, and urges him to fan into flame the gift of God, for God gave "a spirit not of fear but of power and love and self-control." Timothy must not be ashamed of the gospel or of Paul, but share in suffering, and guard the good deposit entrusted to him. Many in Asia have turned away, but Onesiphorus searched for Paul in Rome and refreshed him.\n\nTimothy is to be strong in grace and entrust the teaching to faithful men who will teach others also. He should endure hardship like a soldier, compete by the rules like an athlete, and work hard like a farmer. "Remember Jesus Christ, risen from the dead." Paul is bound in chains, "But the word of God is not bound!" Timothy must rightly handle the word of truth, avoid foolish quarrels and youthful passions, and as the Lord\'s servant be kind to everyone, patiently correcting opponents.',
+      unfolds: [['1', 'Not ashamed of the gospel; guard the deposit'], ['2:1–13', 'Soldier, athlete, farmer; remember Jesus Christ'], ['2:14–26', 'A worker approved by God']],
+      themes: ['Courage', 'Passing on the faith', 'Endurance', 'Handling the word rightly'],
+      verse: { ref: '2 Timothy 1:7', text: 'For God gave us a spirit not of fear but of power and love and self-control.' },
+      christLabel: CX,
+      christ: 'Christ Jesus "abolished death and brought life and immortality to light through the gospel." Paul points Timothy to "Jesus Christ, risen from the dead, the offspring of David," and a trustworthy saying: "If we have died with him, we will also live with him... if we are faithless, he remains faithful."',
+      power: 'rome',
+    },
+    3: {
+      what: 'Paul warns that the last days will bring difficult times: people will be lovers of self and money, proud, ungrateful and "lovers of pleasure rather than lovers of God," having the appearance of godliness but denying its power. Timothy has followed Paul\'s teaching and seen his persecutions, and "all who desire to live a godly life in Christ Jesus will be persecuted." Timothy must continue in what he has learned, knowing the sacred writings from childhood, for all Scripture is breathed out by God.\n\nPaul solemnly charges him: "preach the word; be ready in season and out of season," because a time is coming when people will not endure sound teaching. Paul\'s own life is already being poured out as a drink offering: "I have fought the good fight, I have finished the race, I have kept the faith," and a crown of righteousness awaits him. Demas has deserted him, and only Luke is with him, so he asks Timothy to come soon, bringing Mark, his cloak and the parchments. At his first defense no one stood by him, "But the Lord stood by me and strengthened me."',
+      unfolds: [['3:1–9', 'Godlessness in the last days'], ['3:10–17', 'Continue in the Scriptures'], ['4:1–8', 'Preach the word; Paul\'s finished race'], ['4:9–22', 'Final requests and greetings']],
+      themes: ['The authority of Scripture', 'Faithful preaching', 'Finishing well', 'The Lord\'s faithfulness'],
+      verse: { ref: '2 Timothy 3:16–17', text: 'All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work.' },
+      christLabel: CX,
+      christ: 'The Scriptures Timothy learned as a child "are able to make you wise for salvation through faith in Christ Jesus." Paul charges him "in the presence of God and of Christ Jesus, who is to judge the living and the dead," and looks to "the Lord, the righteous judge," who will "bring me safely into his heavenly kingdom."',
+      power: 'rome',
+    },
+  },
+  titus: {
+    1: {
+      what: 'Paul left Titus in Crete to put the churches in order and appoint elders in every town. Elders must be above reproach, faithful in marriage, not arrogant or quick-tempered, hospitable, self-controlled and holding firmly to the trustworthy word, able to teach sound doctrine and correct those who contradict it. There are many deceivers, especially of the circumcision party, who must be silenced; even one of the Cretans\' own prophets said, "Cretans are always liars, evil beasts, lazy gluttons."\n\nTitus must teach what fits sound doctrine to every group: older men and older women, younger women and younger men, and servants, and he must be a model of good works himself. The grace of God has appeared, training believers to renounce ungodliness and live upright lives while they wait for Christ\'s appearing. They should be submissive to rulers, ready for every good work, and gentle toward all. Once they too were foolish and enslaved, but God saved them "not because of works done by us in righteousness, but according to his own mercy." Titus should avoid foolish controversies and warn divisive people.',
+      unfolds: [['1:1–9', 'Appointing elders in Crete'], ['1:10–16', 'Silencing false teachers'], ['2', 'Sound teaching for every age; the grace of God'], ['3', 'Saved by mercy, ready for good works']],
+      themes: ['Godly leadership', 'Sound doctrine', 'Grace that trains', 'Good works'],
+      verse: { ref: 'Titus 2:13–14', text: 'Waiting for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ, who gave himself for us to redeem us from all lawlessness and to purify for himself a people for his own possession who are zealous for good works.' },
+      christLabel: CX,
+      christ: 'Christ purifies "a people for his own possession," the very words God used for Israel at Sinai (Exodus 19:5; Deuteronomy 14:2). Through Him God poured out the Holy Spirit richly, "so that being justified by his grace we might become heirs according to the hope of eternal life."',
+      power: 'rome',
+    },
+  },
+  philemon: {
+    1: {
+      what: 'Paul writes from prison to Philemon, a believer in Colossae whose house hosts a church. He thanks God for Philemon\'s love and faith, which have refreshed the hearts of the saints. Then he makes a personal appeal. Philemon\'s slave Onesimus had run away and came to Paul, who led him to Christ. Paul could command Philemon, but instead he appeals to him for love\'s sake on behalf of "my child, Onesimus, whose father I became in my imprisonment."\n\nOnesimus, whose name means "useful," was once useless to Philemon but is now useful to both of them. Paul is sending him back, "sending my very heart," and asks Philemon to receive him "no longer as a bondservant but more than a bondservant, as a beloved brother." If Onesimus owes anything, Paul writes with his own hand, "charge that to my account... I will repay it." Confident that Philemon will do even more than he asks, Paul asks him to prepare a guest room, hoping to be released, and sends greetings from Epaphras, Mark, Aristarchus, Demas and Luke.',
+      unfolds: [['1:1–7', 'Thanks for Philemon\'s love and faith'], ['1:8–16', 'An appeal for Onesimus'], ['1:17–25', '"Charge that to my account"; greetings']],
+      themes: ['Reconciliation', 'Brotherhood in Christ', 'Love over command', 'Forgiveness'],
+      verse: { ref: 'Philemon 1:15–16', text: 'For this perhaps is why he was parted from you for a while, that you might have him back forever, no longer as a bondservant but more than a bondservant, as a beloved brother—especially to me, but how much more to you, both in the flesh and in the Lord.' },
+      christLabel: CX,
+      christ: 'Paul stands between Onesimus and Philemon, offering to pay the debt himself: "If he has wronged you at all, or owes you anything, charge that to my account." It is a living picture of what Christ has done, taking our debt so that we can be welcomed into God\'s family as brothers and sisters.',
+    },
+  },
+};

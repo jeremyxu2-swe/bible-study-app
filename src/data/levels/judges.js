@@ -1,0 +1,152 @@
+// Judges at three reading levels. s = Simple, m = Moderate, d = Detailed, v = key verse, p = people.
+// Book key verses are quoted from the ESV® Bible (English Standard Version®), © 2001 by Crossway. Used by permission. All rights reserved.
+export default {
+  book: {
+    simple: 'Israel keeps turning from God, and He keeps sending judges to rescue them.',
+    moderate: 'After Joshua dies, Israel fails to drive out the Canaanites and begins worshiping their gods. A cycle repeats: Israel sins, God hands them to oppressors, they cry out, and God raises up a judge such as Deborah, Gideon or Samson to deliver them. Each cycle grows worse, ending in moral chaos when "everyone did what was right in his own eyes."',
+    detailed: 'Judges covers the turbulent centuries between Joshua\'s death and the rise of the monarchy. It opens with Israel\'s incomplete conquest and a generation that does not know the LORD, then traces a downward spiral: Israel does evil, God gives them into the hands of enemies, they cry out, and God mercifully raises up a deliverer. The major judges, Othniel, Ehud, Deborah with Barak, Gideon, Jephthah and Samson, are increasingly flawed, showing that the people need more than temporary rescuers. The final chapters, with Micah\'s idol, the migration of Dan, and the atrocity at Gibeah that leads to civil war, show a nation without a faithful king where everyone did what was right in his own eyes.',
+    verse: { ref: 'Judges 21:25', text: 'In those days there was no king in Israel. Everyone did what was right in his own eyes.' },
+    themes: ['The cycle of sin, judgment, crying out and rescue', 'God\'s patience and mercy', 'The danger of compromise with idolatry', 'The need for a righteous king'],
+    keyVerses: [
+      { ref: '2:16', text: 'Then the LORD raised up judges, who saved them out of the hand of those who plundered them.' },
+      { ref: '6:12', text: 'The LORD is with you, O mighty man of valor.' },
+      { ref: '16:28', text: 'O Lord GOD, please remember me and please strengthen me only this once, O God.' },
+    ],
+  },
+  sections: {
+    1: { short: 'Israel fails to finish the conquest, and a new generation forgets God.' },
+    3: { short: 'Othniel, Ehud, Shamgar, and Deborah with Barak deliver Israel.' },
+    6: { short: 'Gideon defeats Midian with 300 men; Abimelech seizes power.' },
+    10: { short: 'Jephthah\'s rash vow and the minor judges.' },
+    13: { short: 'Samson\'s strength, weakness and final victory over the Philistines.' },
+    17: { short: 'Idolatry, the crime at Gibeah, and civil war.' },
+  },
+  chapters: [
+    { // 1
+      s: 'The tribes fail to drive out the Canaanites.',
+      m: 'After Joshua\'s death, Judah leads the fight against the Canaanites and wins several victories. Caleb\'s nephew Othniel captures Debir. But tribe after tribe fails to drive out the people of the land, choosing to live alongside them or use them as forced labor.',
+      d: 'Israel asks the LORD who should go up first against the Canaanites, and Judah, with Simeon, defeats the Canaanites and Perizzites at Bezek, cutting off the thumbs and big toes of Adoni-bezek. Judah captures Hebron and other cities, and Othniel takes Debir and marries Caleb\'s daughter Achsah. Yet the record turns sad: Judah cannot drive out the inhabitants of the plain with their iron chariots, Benjamin does not drive the Jebusites out of Jerusalem, and Manasseh, Ephraim, Zebulun, Asher, Naphtali and Dan all leave Canaanites in the land. Where Israel grows strong, they put them to forced labor rather than obey God completely.',
+      p: ['caleb', 'joshua'],
+    },
+    { // 2
+      s: 'A new generation forgets the LORD, and the cycle of judges begins.',
+      m: 'The angel of the LORD rebukes Israel for making covenants with the Canaanites. After Joshua\'s generation dies, a new generation arises that does not know the LORD and serves the Baals. God hands them over to enemies, then raises up judges to save them, but each time the judge dies they turn back to idols.',
+      d: 'The angel of the LORD comes to Bochim and says that because Israel has not obeyed, God will not drive out the nations; they will be thorns in Israel\'s sides and their gods a snare, and the people weep. The narrator recalls Joshua\'s death and explains that "there arose another generation after them who did not know the LORD." They abandon the God who brought them out of Egypt and serve the Baals and Ashtaroth, so God gives them over to plunderers, yet when they groan under oppression He raises up judges who save them. But whenever the judge dies, they turn back and behave worse than their fathers, so God leaves the nations in the land to test whether Israel will walk in His ways.',
+      p: ['joshua'],
+    },
+    { // 3
+      s: 'Othniel, Ehud and Shamgar deliver Israel.',
+      m: 'God leaves some nations in the land to test Israel, and the people intermarry and serve other gods. When they are oppressed and cry out, God raises up Othniel, who frees them from a Mesopotamian king. Later, left-handed Ehud kills Eglon, king of Moab, and Shamgar strikes down six hundred Philistines.',
+      d: 'The Philistines, Canaanites, Sidonians and Hivites remain to teach war to a new generation and to test Israel\'s obedience, but Israel intermarries with them and serves their gods. God sells Israel to Cushan-rishathaim of Mesopotamia for eight years, then the Spirit of the LORD comes on Othniel, Caleb\'s nephew, who delivers them, and the land has rest forty years. When Israel sins again, Eglon, a very fat king of Moab, oppresses them eighteen years until the left-handed Benjaminite Ehud brings tribute, says he has a secret message, and drives a hidden sword into Eglon, then rallies Israel to kill ten thousand Moabites. After Ehud, Shamgar kills six hundred Philistines with an oxgoad.',
+      p: ['caleb'],
+    },
+    { // 4
+      s: 'Deborah and Barak defeat Sisera, and Jael kills him.',
+      m: 'Israel is oppressed by Jabin, a Canaanite king, and his commander Sisera with nine hundred iron chariots. The prophetess Deborah, who judges Israel, calls Barak to lead the army, and he insists she go with him. God routs Sisera\'s army, and Sisera flees to the tent of Jael, who kills him with a tent peg.',
+      d: 'After Ehud\'s death, Israel does evil again, and God sells them to Jabin king of Canaan, whose commander Sisera cruelly oppresses them for twenty years with nine hundred iron chariots. Deborah, a prophetess who judges Israel under a palm tree, summons Barak and tells him God commands him to take ten thousand men to Mount Tabor. Barak will go only if she goes with him, so she agrees but says the glory will go to a woman. The LORD routs Sisera\'s army before Barak, and Sisera flees on foot to the tent of Jael, who gives him milk, covers him, and while he sleeps drives a tent peg through his temple, and God subdues Jabin.',
+      p: ['deborah'],
+    },
+    { // 5
+      s: 'The Song of Deborah celebrates God\'s victory.',
+      m: 'Deborah and Barak sing a song of praise for God\'s victory over Sisera. The song describes the LORD marching out like a storm and the stars fighting from heaven. It praises the tribes who volunteered, rebukes those who stayed home, and honors Jael.',
+      d: 'Deborah and Barak praise the LORD because leaders took the lead and the people offered themselves willingly. The song recalls God marching from Seir with earthquake and storm and describes how Israel\'s roads were deserted until Deborah arose "as a mother in Israel." It names the tribes who came to fight and shames Reuben, Gilead, Dan and Asher for staying away, while the stars fought from heaven and the river Kishon swept away the enemy. Jael is called "most blessed of women" for killing Sisera, and the song ends with Sisera\'s mother waiting in vain, praying that God\'s enemies perish but His friends be like the rising sun, and the land has rest forty years.',
+      p: ['deborah'],
+    },
+    { // 6
+      s: 'God calls fearful Gideon to save Israel from Midian.',
+      m: 'Because of Israel\'s idolatry, the Midianites invade every harvest and leave them starving. The angel of the LORD calls Gideon, who is hiding as he threshes wheat, a "mighty man of valor." Gideon tears down his father\'s altar to Baal, then asks God for signs with a fleece before going to battle.',
+      d: 'For seven years Midianites and other eastern peoples swarm over Israel like locusts, destroying crops and livestock, and Israel hides in caves and cries to the LORD. God sends a prophet to remind them of their unfaithfulness, then the angel of the LORD appears to Gideon, who is threshing wheat in a winepress to hide it, and greets him, "The LORD is with you, O mighty man of valor." Gideon protests that his clan is the weakest and he is the least, but God promises to be with him and confirms it with fire that consumes his offering; that night Gideon tears down his father\'s altar to Baal and builds an altar to the LORD, earning the name Jerubbaal. When the enemy gathers, the Spirit clothes Gideon and he summons the tribes, but he asks God for proof twice with a fleece, first wet on dry ground and then dry on wet ground, and God graciously answers.',
+      p: ['gideon'],
+    },
+    { // 7
+      s: 'Gideon\'s 300 men defeat Midian with trumpets and torches.',
+      m: 'God tells Gideon his army of 32,000 is too large, so Israel will not boast that they saved themselves. He reduces it to just three hundred men. At night they blow trumpets, smash jars and shout, and the terrified Midianites turn on each other and flee.',
+      d: 'God tells Gideon he has too many men, lest Israel boast, "My own hand has saved me," so the fearful are sent home, leaving ten thousand. At the water, God chooses only the three hundred who lap like dogs. To encourage Gideon, God sends him to the enemy camp, where he hears a Midianite describe a dream of a barley loaf flattening a tent and interpret it as Gideon\'s victory, and Gideon worships. At night the three hundred surround the camp with trumpets and torches hidden in jars, then break the jars and shout, "A sword for the LORD and for Gideon!", and the LORD sets every Midianite\'s sword against his comrade as their army flees, while Ephraim captures the princes Oreb and Zeeb.',
+      p: ['gideon'],
+    },
+    { // 8
+      s: 'Gideon pursues Midian but later makes an idol.',
+      m: 'Gideon calms the tribe of Ephraim, then pursues and captures the Midianite kings. The people ask him to rule as king, but he says the LORD will rule over them. Yet he makes a golden ephod from the plunder, and it becomes an idol that traps Israel, who turn back to Baal after his death.',
+      d: 'Gideon soothes the angry Ephraimites with gracious words and pursues the Midianite kings Zebah and Zalmunna across the Jordan, punishing the towns of Succoth and Penuel for refusing to help his exhausted men. He captures and kills the two kings, avenging his brothers. When Israel asks him to rule over them, he replies, "I will not rule over you... the LORD will rule over you," yet he asks for gold earrings from the plunder and makes an ephod that all Israel whores after, becoming a snare to his family. The land has rest forty years, Gideon has many wives and seventy sons and one by a concubine named Abimelech, and as soon as he dies Israel turns again to the Baals and forgets the LORD.',
+      p: ['gideon'],
+    },
+    { // 9
+      s: 'Abimelech kills his brothers and seizes power.',
+      m: 'Gideon\'s son Abimelech persuades the people of Shechem to make him king and murders his seventy brothers. Only Jotham escapes and tells a parable warning that Abimelech will bring destruction. After three years, conflict breaks out, and Abimelech dies when a woman drops a millstone on his head.',
+      d: 'Abimelech convinces his mother\'s relatives in Shechem that it is better to be ruled by one man than by seventy, and with money from the temple of Baal-berith he hires reckless men and kills his seventy brothers on one stone, except the youngest, Jotham, who hides. Jotham shouts a parable from Mount Gerizim about trees asking a worthless bramble to be their king, warning that fire will come out from Abimelech and Shechem to devour each other. After three years God sends an evil spirit between them, Gaal leads a revolt, and Abimelech destroys Shechem and burns its tower with about a thousand people inside. While attacking Thebez, a woman drops an upper millstone on his head, and he has his armor-bearer kill him, so God repays the evil of Abimelech and Shechem.',
+      p: ['gideon'],
+    },
+    { // 10
+      s: 'Minor judges serve, and Israel cries out under the Ammonites.',
+      m: 'Tola and Jair each judge Israel for over twenty years. Then Israel serves the gods of many nations, and God gives them to the Philistines and Ammonites. When they cry out, God first refuses, but when they put away their idols and serve Him, He can bear their misery no longer.',
+      d: 'After Abimelech, Tola of Issachar judges Israel twenty-three years, and Jair of Gilead judges twenty-two years and has thirty sons who ride thirty donkeys. Israel again does evil, serving the Baals and the gods of Syria, Sidon, Moab, Ammon and the Philistines, so God sells them to the Philistines and Ammonites, who crush them for eighteen years. When Israel cries out, the LORD reminds them how often He saved them and says, "Go and cry out to the gods whom you have chosen." The people confess and put away their foreign gods, and God "became impatient over the misery of Israel," while the Ammonites gather in Gilead and the leaders look for someone to fight.',
+      p: [],
+    },
+    { // 11
+      s: 'Jephthah defeats Ammon but makes a tragic vow.',
+      m: 'Jephthah, a rejected son of a prostitute, is asked by Gilead\'s elders to lead them against Ammon. He argues that Israel has a right to the land, but Ammon\'s king will not listen. Jephthah rashly vows to sacrifice whatever comes out of his house if God gives him victory, and after winning, his only daughter comes out to meet him.',
+      d: 'Jephthah, a mighty warrior and son of a prostitute, is driven out by his half-brothers, but when Ammon attacks, Gilead\'s elders ask him to be their leader, and he agrees on condition he becomes their head. He sends messages to the king of Ammon recounting how Israel took the land from the Amorites three hundred years earlier and appealing to the LORD as judge. The Spirit of the LORD comes upon him, but he makes a rash vow to offer as a burnt offering whatever first comes out of his house to meet him if God gives him victory. God gives him a great victory, but his only child, his daughter, comes out dancing with tambourines, and after two months of mourning her virginity, he does to her as he vowed, a tragic sign of how far Israel has drifted from God\'s ways.',
+      p: [],
+    },
+    { // 12
+      s: 'Jephthah fights Ephraim, and three minor judges follow.',
+      m: 'The tribe of Ephraim angrily complains that Jephthah did not call them to fight Ammon, and civil war breaks out. Jephthah\'s men identify Ephraimites at the Jordan by their pronunciation of "Shibboleth" and kill 42,000. After Jephthah, Ibzan, Elon and Abdon judge Israel.',
+      d: 'The men of Ephraim cross the Jordan and threaten to burn Jephthah\'s house because he did not call them to battle. Jephthah says he did call and they did not come, and the conflict turns into war between Gilead and Ephraim. The Gileadites seize the fords of the Jordan, and anyone who says "Sibboleth" instead of "Shibboleth" is exposed as an Ephraimite and killed, 42,000 in all. Jephthah judges six years, and he is followed by Ibzan of Bethlehem, Elon of Zebulun and Abdon of Pirathon, judges known mostly for their large families.',
+      p: [],
+    },
+    { // 13
+      s: 'An angel announces the birth of Samson.',
+      m: 'Israel is under Philistine rule for forty years. The angel of the LORD appears to the barren wife of Manoah and says she will bear a son who will be a Nazirite from birth and begin to save Israel. Samson is born, and the Spirit of the LORD begins to stir him.',
+      d: 'Because Israel does evil again, God gives them into the hand of the Philistines for forty years. The angel of the LORD appears to Manoah\'s wife, who is barren, and tells her she will have a son who must be a Nazirite from the womb, never cutting his hair, and he will begin to save Israel. Manoah prays for the man of God to return and teach them, and the angel comes again but refuses to give his name, saying it is "wonderful," then ascends in the flame of their offering. Manoah fears they will die for seeing God, but his wife reasons that God would not have accepted their offering if He meant to kill them; Samson is born, grows, and the LORD blesses him as His Spirit begins to stir him.',
+      p: ['samson'],
+    },
+    { // 14
+      s: 'Samson kills a lion and poses a riddle at his wedding.',
+      m: 'Samson wants to marry a Philistine woman, and God uses this to stir conflict with the Philistines. He tears apart a lion with his bare hands and later finds honey in its carcass, which becomes the basis of a riddle at his wedding feast. When his wife pressures him into revealing the answer, Samson kills thirty Philistines to pay the wager.',
+      d: 'Samson sees a Philistine woman in Timnah and insists his parents get her for him, not knowing it is from the LORD, who is seeking an opportunity against the Philistines. On the way, the Spirit rushes on him, and he tears apart a young lion with his bare hands, later scooping honey out of its carcass and breaking his Nazirite separation from the dead. At the wedding feast he poses a riddle to thirty Philistine companions with a wager of thirty garments, and after seven days of weeping and pressure, his wife tells them the answer. Samson says, "If you had not plowed with my heifer, you would not have found out my riddle," kills thirty men of Ashkelon to pay the debt, and goes home in anger while his wife is given to his best man.',
+      p: ['samson'],
+    },
+    { // 15
+      s: 'Samson burns Philistine fields and kills a thousand with a jawbone.',
+      m: 'Finding his wife given to another man, Samson ties torches to foxes\' tails and burns the Philistines\' crops. The Philistines retaliate, and the men of Judah hand Samson over bound. The Spirit of the LORD comes upon him, the ropes melt away, and he kills a thousand Philistines with a donkey\'s jawbone.',
+      d: 'When Samson returns to visit his wife and learns she has been given to his companion, he catches three hundred foxes, ties torches between their tails, and sets the Philistine grain fields, vineyards and olive orchards on fire. The Philistines burn his wife and her father, and Samson strikes them down in revenge, then hides in the rock of Etam. Three thousand men of Judah, more afraid of the Philistines than eager for freedom, bind Samson and hand him over, but the Spirit of the LORD rushes on him, the ropes melt like burnt flax, and he kills a thousand men with a fresh jawbone of a donkey. Afterward he is desperately thirsty, cries to the LORD, and God splits open a hollow place so water comes out, and Samson judges Israel twenty years.',
+      p: ['samson'],
+    },
+    { // 16
+      s: 'Delilah betrays Samson, and he dies destroying the Philistine temple.',
+      m: 'Samson falls in love with Delilah, who is paid by the Philistines to discover the secret of his strength. After repeated nagging, he tells her about his uncut hair, and she has it shaved while he sleeps. The Philistines blind and imprison him, but as his hair grows back, he prays for strength one last time and pulls down their temple, killing more in his death than in his life.',
+      d: 'After escaping a trap in Gaza by carrying off the city gates, Samson loves Delilah in the Valley of Sorek, and the Philistine lords offer her a fortune to discover the secret of his strength. Three times he deceives her with false answers and breaks free, but she presses him day after day until he tells her the truth: no razor has touched his head because he is a Nazirite. She lulls him to sleep and has his hair shaved, and when he wakes, he does not know that the LORD has left him; the Philistines gouge out his eyes and make him grind grain in prison. At a great feast to their god Dagon, they bring Samson out to entertain them, and he prays, "O Lord GOD, please remember me and please strengthen me only this once," pushes the two central pillars, and the temple falls, killing more Philistines at his death than in his life.',
+      p: ['samson'],
+    },
+    { // 17
+      s: 'Micah sets up his own shrine and hires a Levite.',
+      m: 'A man named Micah steals silver from his mother, returns it, and she uses it to make an idol. Micah sets up a household shrine with an ephod and gods and makes his son a priest. When a wandering Levite arrives, Micah hires him as his priest, believing God will now bless him.',
+      d: 'Micah of Ephraim confesses to taking eleven hundred pieces of silver from his mother, who had cursed the thief, and she blesses him and dedicates some of it to the LORD by making a carved and metal image. Micah has a shrine, makes an ephod and household gods, and ordains one of his sons as priest. The narrator explains that there was no king in Israel and "everyone did what was right in his own eyes." A young Levite from Bethlehem, looking for a place to live, stops at Micah\'s house, and Micah hires him as his personal priest for ten pieces of silver a year, saying, "Now I know that the LORD will prosper me," mixing God\'s name with idolatry.',
+      p: [],
+    },
+    { // 18
+      s: 'The tribe of Dan steals Micah\'s idol and priest.',
+      m: 'The tribe of Dan, still looking for land, sends spies north who stop at Micah\'s house. Later six hundred Danite warriors take Micah\'s idols and persuade his priest to come with them. They conquer the peaceful city of Laish, rename it Dan, and set up the idol there.',
+      d: 'Because Dan has not secured its inheritance, the tribe sends five spies, who recognize the Levite at Micah\'s house and ask him to inquire of God, receiving a favorable answer. They find Laish in the far north, a quiet and unsuspecting people far from any help. Six hundred armed Danites return, take Micah\'s carved image, ephod and household gods, and invite the Levite to be priest to a whole tribe, which pleases him; when Micah protests, they threaten him. They strike Laish with the sword, burn it, rebuild it as Dan, and set up the image with Jonathan, a grandson of Moses, and his sons as priests until the captivity, while the house of God remains at Shiloh.',
+      p: ['moses'],
+    },
+    { // 19
+      s: 'A Levite\'s concubine is abused and killed in Gibeah.',
+      m: 'A Levite travels with his concubine and stops for the night in Gibeah of Benjamin. Men of the city surround the house demanding to abuse him, and he pushes his concubine out to them; they abuse her all night and she dies. The Levite cuts her body into twelve pieces and sends them throughout Israel, and the nation is horrified.',
+      d: 'A Levite from Ephraim retrieves his concubine from her father\'s house in Bethlehem, and after days of delay they set out late and avoid Jebus because it is a foreign city, stopping instead at Gibeah of Benjamin. Only an old man from Ephraim offers them shelter, and that night worthless men of the city surround the house demanding to know the Levite, echoing Sodom in Genesis 19. The Levite seizes his concubine and puts her out to them, and they abuse her all night until she collapses dead at the door by morning. The Levite carries her home, cuts her body into twelve pieces, and sends them through all Israel, and everyone says nothing like this has happened since Israel came out of Egypt.',
+      p: [],
+    },
+    { // 20
+      s: 'Israel goes to war against Benjamin.',
+      m: 'Israel gathers at Mizpah, hears the Levite\'s account, and demands that Benjamin hand over the guilty men of Gibeah. Benjamin refuses and goes to war against the other tribes. After two terrible defeats, Israel wins on the third day, nearly wiping out the tribe of Benjamin.',
+      d: 'Four hundred thousand men assemble before the LORD at Mizpah, hear the Levite\'s story, and vow to punish Gibeah. Benjamin refuses to hand over the guilty men and musters twenty-six thousand soldiers, including seven hundred left-handed slingers who never miss. Israel asks God who should go first, and Judah leads, but they are defeated two days in a row, losing forty thousand men, and they weep and fast before the ark, where Phinehas still serves. On the third day God promises victory, and an ambush sets Gibeah on fire, so Benjamin loses twenty-five thousand men, and Israel burns its towns, leaving only six hundred survivors who flee to the rock of Rimmon.',
+      p: [],
+    },
+    { // 21
+      s: 'Israel finds wives for Benjamin\'s survivors.',
+      m: 'Israel mourns that one tribe is nearly lost, but they have sworn not to give their daughters to Benjamin. They destroy Jabesh-gilead for not joining the war and give its young women to the survivors. The rest are allowed to seize wives at a festival in Shiloh, and the book ends: "Everyone did what was right in his own eyes."',
+      d: 'Israel had sworn at Mizpah that no one would give his daughter to a Benjaminite, and now they weep before God at Bethel, asking why a tribe should be missing in Israel. Since the town of Jabesh-gilead did not join the assembly, they send twelve thousand soldiers to destroy it, sparing four hundred young virgins, whom they give to the Benjaminite survivors. For the remaining two hundred men, the elders devise a loophole: they may hide in the vineyards during a yearly feast at Shiloh and each seize one of the dancing girls, so no father technically breaks his vow. The Benjaminites rebuild their towns, and the book closes with its verdict on the whole period: there was no king in Israel, and "everyone did what was right in his own eyes."',
+      p: [],
+    },
+  ],
+};

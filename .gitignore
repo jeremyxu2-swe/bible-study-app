@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-single
+.env
+
+# Local-only files (not part of the app's source)
+_update/
+sync-update.css
+sync-update.tgz
+Bible Study App.html
+*.log
+.DS_Store
+Thumbs.db

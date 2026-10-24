@@ -1,0 +1,86 @@
+// Deeper "background" for book summaries at the Detailed level (job #18), books 48–57.
+// Same schema as bg1.js (documented in bookBackground/index.js).
+const p = (label, book, ch, note) => ({ label, book, ch, note });
+
+export default {
+  galatians: {
+    authorship: 'Written by Paul and accepted by virtually all scholars. Its date depends on who the "Galatians" were: churches in southern Galatia founded on the first journey (letter about AD 48–49, before the Jerusalem council, making it perhaps Paul\'s earliest letter) or ethnic Galatians in the north (about AD 53–57).',
+    setting: 'Written to churches Paul had founded, where teachers were insisting that Gentile believers must be circumcised and keep the Law of Moses to belong fully to God\'s people.',
+    context: 'Jewish identity was marked by circumcision, Sabbath and food laws. Some Jewish believers felt Gentiles must adopt these. Paul argues that this would turn the gospel into a different message, since people are justified by faith in Christ, not by works of the law.',
+    structure: [['1–2', 'Paul\'s gospel came from Christ'], ['3–4', 'Justified by faith: Abraham, the Law and sonship'], ['5–6', 'Freedom in Christ and life in the Spirit']],
+    passages: [p('Galatians 1', 'galatians', 1, 'No other gospel'), p('Galatians 2', 'galatians', 2, 'Crucified with Christ'), p('Galatians 3', 'galatians', 3, 'Abraham\'s faith; all one in Christ'), p('Galatians 5', 'galatians', 5, 'Freedom and the fruit of the Spirit')],
+    christ: '"I have been crucified with Christ. It is no longer I who live, but Christ who lives in me" (2:20). Christ redeemed us from the curse of the law by becoming a curse for us (3:13), and in Him "there is neither Jew nor Greek... for you are all one in Christ Jesus" (3:28).',
+  },
+  ephesians: {
+    authorship: 'The letter names Paul as author, writing from prison, and the early church accepted it. Many modern scholars think a follower of Paul wrote it after his death because of its style and developed ideas about the church; others defend Paul\'s authorship about AD 60–62, during his Roman imprisonment.',
+    setting: 'Some early manuscripts lack "in Ephesus" (1:1), so it may have been a circular letter for several churches in the province of Asia. It is general rather than answering a specific crisis.',
+    context: 'Ephesus was a major city with the great temple of Artemis and a strong interest in magic and spiritual powers (Acts 19). Paul assures believers that Christ is seated far above every power, and that God has united Jews and Gentiles in one new body.',
+    structure: [['1–3', 'What God has done: blessings in Christ, saved by grace, one new people'], ['4–6', 'How to live: unity, holiness, households and spiritual armor']],
+    passages: [p('Ephesians 1', 'ephesians', 1, 'Every spiritual blessing in Christ'), p('Ephesians 2', 'ephesians', 2, 'By grace through faith; the wall broken down'), p('Ephesians 4', 'ephesians', 4, 'One body; growing up into Christ'), p('Ephesians 5', 'ephesians', 5, 'Christ and the church'), p('Ephesians 6', 'ephesians', 6, 'The armor of God')],
+    christ: 'God\'s plan is "to unite all things in him, things in heaven and things on earth" (1:10). Christ is the head of the church, which is His body and His bride, for which He gave Himself (5:25), and "he himself is our peace," breaking down the wall between Jew and Gentile (2:14).',
+  },
+  philippians: {
+    authorship: 'Written by Paul, with Timothy, and accepted by virtually all scholars. Written from imprisonment, most likely in Rome about AD 61–62, though some suggest Ephesus or Caesarea.',
+    setting: 'Written to the church in Philippi, the first church Paul founded in Europe (Acts 16), which had supported him generously. Paul thanks them for a gift brought by Epaphroditus.',
+    context: 'Philippi was a Roman colony proud of its citizenship and Roman ways. Paul tells the believers that their "citizenship is in heaven" (3:20). There were tensions in the church and threats from teachers insisting on circumcision.',
+    structure: [['1', 'Joy in chains: to live is Christ'], ['2', 'The mind of Christ: humility and service'], ['3', 'Knowing Christ above all'], ['4', 'Rejoice; peace; contentment and thanks']],
+    passages: [p('Philippians 1', 'philippians', 1, 'To live is Christ, to die is gain'), p('Philippians 2', 'philippians', 2, 'Christ humbled Himself'), p('Philippians 3', 'philippians', 3, 'Pressing on toward the goal'), p('Philippians 4', 'philippians', 4, '"I can do all things through him"')],
+    christ: 'Philippians 2:5–11, possibly an early Christian hymn, describes Christ, who was in the form of God, emptying Himself, taking the form of a servant, becoming obedient to death on a cross, and being highly exalted so that every knee will bow and every tongue confess that "Jesus Christ is Lord."',
+  },
+  colossians: {
+    authorship: 'The letter names Paul and Timothy, and the early church accepted it. Some scholars think a follower wrote it because of differences in style and theology from Paul\'s undisputed letters; many others accept Paul writing from prison about AD 60–62, sent with Philemon by Tychicus and Onesimus.',
+    setting: 'Written to the church in Colossae, a small town in the Lycus Valley (modern Turkey), founded by Epaphras, not by Paul.',
+    context: 'A mix of ideas was troubling the church: Jewish rules about food and festivals, worship of angels, visions and harsh treatment of the body. Paul answers that Christ is supreme over all powers and that believers already have fullness in Him.',
+    structure: [['1–2', 'The supremacy and sufficiency of Christ'], ['3–4', 'New life in Christ: put off, put on; households']],
+    passages: [p('Colossians 1', 'colossians', 1, 'Christ, the image of the invisible God'), p('Colossians 2', 'colossians', 2, 'Fullness in Christ; the cross disarmed the powers'), p('Colossians 3', 'colossians', 3, 'Set your minds on things above')],
+    christ: 'Colossians 1:15–20 is one of the Bible\'s highest descriptions of Christ: "the image of the invisible God," through whom and for whom all things were created, in whom "all things hold together," and through whom God reconciled all things, "making peace by the blood of his cross." In Him "the whole fullness of deity dwells bodily" (2:9).',
+  },
+  '1thessalonians': {
+    authorship: 'Written by Paul, with Silvanus (Silas) and Timothy, about AD 50–51 from Corinth. It is accepted as Paul\'s by virtually all scholars and may be his earliest surviving letter (unless Galatians is earlier).',
+    setting: 'Paul had founded the church in Thessalonica on his second journey but was forced to leave after only a few weeks (Acts 17). He sent Timothy back, and this letter responds to Timothy\'s encouraging report.',
+    context: 'Thessalonica was the capital of Macedonia, on the Via Egnatia. The new believers, mostly Gentiles who had "turned to God from idols," faced persecution from their neighbors. Some were grieving believers who had died, unsure what would happen to them when Christ returned.',
+    structure: [['1–3', 'Thanks for their faith; Paul\'s ministry among them'], ['4', 'Holy living; the hope of the dead in Christ'], ['5', 'The day of the Lord; final instructions']],
+    passages: [p('1 Thessalonians 1', '1thessalonians', 1, 'Turned from idols to serve God'), p('1 Thessalonians 4', '1thessalonians', 4, 'The coming of the Lord'), p('1 Thessalonians 5', '1thessalonians', 5, 'Rejoice always, pray without ceasing')],
+    christ: 'Every chapter of 1 Thessalonians ends with the return of Christ. Believers wait for "his Son from heaven... Jesus who delivers us from the wrath to come" (1:10), and because "Jesus died and rose again," God will bring with Him those who have died, so that "we will always be with the Lord" (4:14, 17).',
+  },
+  '2thessalonians': {
+    authorship: 'The letter names Paul, Silvanus and Timothy and claims to be signed by Paul (3:17). Many scholars accept it as written soon after 1 Thessalonians (about AD 51); some think a later follower wrote it because its teaching on the end differs in tone.',
+    setting: 'Written to the same church, still under persecution, after some were alarmed by a claim that "the day of the Lord has come," and some had stopped working.',
+    context: 'Persecution continued, and false reports (perhaps even a forged letter) were confusing the believers. Paul explains that certain events, including the revealing of "the man of lawlessness," must come first, and that everyone should keep working.',
+    structure: [['1', 'Encouragement in persecution; God\'s justice'], ['2', 'The day of the Lord and the man of lawlessness'], ['3', 'Prayer, work and discipline']],
+    passages: [p('2 Thessalonians 1', '2thessalonians', 1, 'When the Lord Jesus is revealed'), p('2 Thessalonians 2', '2thessalonians', 2, 'The man of lawlessness'), p('2 Thessalonians 3', '2thessalonians', 3, 'Do not grow weary in doing good')],
+    christ: 'The Lord Jesus will be revealed from heaven "with his mighty angels in flaming fire" to bring justice and relief, "to be glorified in his saints" (1:7–10), and He will destroy lawlessness "with the breath of his mouth" (2:8). Paul prays that "the Lord of peace himself" will give peace at all times.',
+  },
+  '1timothy': {
+    authorship: 'The letter names Paul. 1 and 2 Timothy and Titus (the "Pastoral Letters") were accepted by the early church, but many modern scholars think a follower wrote them after Paul\'s death because of their style, vocabulary and church organization. Defenders of Paul\'s authorship date it about AD 62–64, after a release from his first Roman imprisonment.',
+    setting: 'Paul had left Timothy in Ephesus to stop false teaching and order the church\'s life and leadership.',
+    context: 'False teachers in Ephesus were obsessed with myths and genealogies, forbade marriage and certain foods, and used religion for profit. Paul gives Timothy instructions on prayer, worship, qualifications for overseers and deacons, care for widows and handling wealth.',
+    structure: [['1', 'Charge against false teaching'], ['2–3', 'Prayer, worship and church leaders'], ['4', 'Train yourself for godliness'], ['5–6', 'Widows, elders, slaves and the danger of riches']],
+    passages: [p('1 Timothy 1', '1timothy', 1, 'Christ came to save sinners'), p('1 Timothy 2', '1timothy', 2, 'One mediator between God and men'), p('1 Timothy 3', '1timothy', 3, 'Overseers and deacons; the mystery of godliness'), p('1 Timothy 6', '1timothy', 6, 'Godliness with contentment')],
+    christ: '"Christ Jesus came into the world to save sinners, of whom I am the foremost" (1:15). There is "one mediator between God and men, the man Christ Jesus, who gave himself as a ransom for all" (2:5–6). An early hymn (3:16) summarizes the mystery of godliness: He was manifested in the flesh and taken up in glory.',
+  },
+  '2timothy': {
+    authorship: 'The letter names Paul, writing from prison in Rome shortly before his death (4:6–8), about AD 66–67. As with the other Pastoral Letters, many scholars think a follower wrote it; others note its very personal details as signs of Paul\'s own hand.',
+    setting: 'Paul is in chains, abandoned by many, and expects execution. He writes to Timothy, still in Ephesus, urging him to come before winter and to keep preaching the gospel faithfully.',
+    context: 'Under Nero, Christians were blamed for the great fire of Rome (AD 64) and persecuted. Tradition says Paul was beheaded in Rome about AD 67.',
+    structure: [['1–2', 'Do not be ashamed; suffer as a good soldier'], ['3', 'Difficult times; all Scripture is God-breathed'], ['4', 'Preach the word; Paul\'s farewell']],
+    passages: [p('2 Timothy 1', '2timothy', 1, 'A spirit of power, love and self-control'), p('2 Timothy 2', '2timothy', 2, 'A good soldier of Christ Jesus'), p('2 Timothy 3', '2timothy', 3, 'All Scripture is breathed out by God'), p('2 Timothy 4', '2timothy', 4, 'I have fought the good fight')],
+    christ: '"Remember Jesus Christ, risen from the dead, the offspring of David, as preached in my gospel" (2:8). Christ "abolished death and brought life and immortality to light" (1:10), and Paul faces death confident that "the Lord, the righteous judge" will give him the crown of righteousness.',
+  },
+  titus: {
+    authorship: 'The letter names Paul. Like 1 and 2 Timothy, it was accepted by the early church, but many modern scholars think a follower wrote it. Those who accept Paul\'s authorship date it about AD 62–64, between his two Roman imprisonments.',
+    setting: 'Paul had left Titus on the island of Crete to appoint elders in every town and to set the young churches in order.',
+    context: 'Cretans had a reputation for dishonesty, and Paul quotes one of their own poets: "Cretans are always liars, evil beasts, lazy gluttons" (1:12). False teachers, some insisting on Jewish rules, were upsetting households for money.',
+    structure: [['1', 'Elders and false teachers'], ['2', 'Sound teaching for every group; grace that trains'], ['3', 'Good works in the world; saved by mercy']],
+    passages: [p('Titus 1', 'titus', 1, 'Qualifications for elders'), p('Titus 2', 'titus', 2, 'The grace of God has appeared'), p('Titus 3', 'titus', 3, 'Saved by His mercy')],
+    christ: 'Titus calls Jesus "our great God and Savior Jesus Christ, who gave himself for us to redeem us from all lawlessness" (2:13–14). God saved us "not because of works done by us in righteousness, but according to his own mercy," through the Holy Spirit poured out "through Jesus Christ our Savior" (3:5–6).',
+  },
+  philemon: {
+    authorship: 'Written by Paul, with Timothy, from prison about AD 60–62, and accepted by virtually all scholars. It was carried with Colossians.',
+    setting: 'A personal letter to Philemon, a believer in Colossae whose house hosted a church. His slave Onesimus had run away (and possibly stolen from him), met Paul, and become a Christian. Paul sends him back with this letter.',
+    context: 'Slavery was everywhere in the Roman world, and a runaway slave could be severely punished. Paul does not command Philemon but appeals to him in love to receive Onesimus "no longer as a bondservant but more than a bondservant, as a beloved brother" (v. 16).',
+    structure: [['1–7', 'Greeting and thanks for Philemon\'s love'], ['8–22', 'Paul\'s appeal for Onesimus'], ['23–25', 'Greetings']],
+    passages: [p('Philemon 1', 'philemon', 1, 'The whole letter: receive him as you would receive me')],
+    christ: 'Paul offers to pay Onesimus\'s debt: "If he has wronged you at all, or owes you anything, charge that to my account" (v. 18). It is a small picture of what Christ did, taking our debt and presenting us to the Father as beloved, and of how the gospel turns masters and slaves into brothers.',
+  },
+};
