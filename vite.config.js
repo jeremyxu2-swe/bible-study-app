@@ -13,6 +13,8 @@ export default defineConfig(({ mode }) => {
     };
   }
   return {
+    // On GitHub Pages the site lives at /bible-study-app/; everywhere else (Netlify, local) at /
+    base: process.env.GITHUB_PAGES ? '/bible-study-app/' : '/',
     plugins: [
       react(),
       VitePWA({
