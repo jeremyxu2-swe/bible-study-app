@@ -133,9 +133,6 @@ h1, h2, h3 { font-family: var(--serif); margin: 0; }
 .search-results a:hover, .search-results a.hl { background: var(--surface-2); }
 .search-results .kind { font-size: calc(12px * var(--ts)); color: var(--muted); }
 
-/* Bottom nav for phones */
-.bottomnav { display: none; }
-
 /* Band / timeline */
 .band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--band); }
 .band .wrap { padding-top: 18px; padding-bottom: 18px; display: flex; flex-direction: column; gap: 10px; }
@@ -293,9 +290,6 @@ a.empire:hover { border-color: var(--accent); color: var(--ink); }
   .tl-scale { display: none; }
   .tl-row { overflow-x: auto; }
   .tl-seg { flex: 1 0 auto !important; }
-  .bottomnav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); position: fixed; left: 0; right: 0; bottom: 0; background: var(--band); border-top: 1px solid var(--line); padding: 6px 8px calc(10px + env(safe-area-inset-bottom)); z-index: 40; }
-  .bottomnav a { text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0; font-size: calc(12px * var(--ts)); color: var(--muted); }
-  .bottomnav a.active { color: var(--accent-ink); font-weight: 600; }
   .mobile-search { display: flex !important; }
 }
 .mobile-search { display: none; }
@@ -430,7 +424,6 @@ a.empire:hover { border-color: var(--accent); color: var(--ink); }
   .subcard { flex-direction: row; align-items: center; min-height: 0; padding: 13px 14px; gap: 12px; }
   .subcard .muted { margin-left: auto; }
   .title-input { font-size: calc(32px * var(--ts)); }
-  body.is-editing .bottomnav { display: none; }
   body.is-editing .page { padding-bottom: 90px; }
   .suggest { max-width: none; }
 }
@@ -762,14 +755,6 @@ a.nation-tag:hover { border-color: var(--nat-flag); color: var(--nat-ink-hi); ba
 .sec-more .kv { margin: 0; }
 @media (max-width: 760px) { .sec-more { padding: 14px 15px; } .sm-grp b { flex-basis: 52px; } }
 
-/* Floating pill bottom nav (phones) */
-@media (max-width: 760px) {
-  .bottomnav { left: 12px; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); padding: 5px; gap: 2px; border: 1px solid rgb(var(--tint) / .10); border-radius: 999px; background: var(--glass-nav); -webkit-backdrop-filter: blur(18px) saturate(160%); backdrop-filter: blur(18px) saturate(160%); box-shadow: 0 10px 30px rgb(0 0 0 / calc(.45 * var(--sh))), inset 0 1px 0 rgb(var(--tint) / .06); }
-  .bottomnav a { padding: 7px 0 6px; gap: 3px; font-size: calc(11.5px * var(--ts)); font-weight: 500; color: var(--ink); border-radius: 999px; transition: background .15s, color .15s; }
-  .bottomnav a svg { width: 23px; height: 23px; }
-  .bottomnav a.active { background: var(--glass-on); color: var(--accent-ink); font-weight: 600; box-shadow: inset 0 0 0 1px rgb(var(--tint) / .05); }
-  .site-foot { padding-bottom: 110px; }
-}
 
 /* Era and empire rows: scrollable without a visible scrollbar */
 .eras, .empires { scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; }
@@ -1090,7 +1075,6 @@ body.dragging-list .note-list .drag-item { touch-action: none; }
 .sel-link { background: none; border: 0; padding: 0; color: var(--accent-ink); font: inherit; font-size: calc(14px * var(--ts)); cursor: pointer; white-space: nowrap; }
 .sel-n { flex: 1; text-align: center; font-size: calc(13.5px * var(--ts)); color: var(--ink-2); white-space: nowrap; }
 @media (max-width: 760px) {
-  body.selecting .bottomnav { display: none; }
   .sel-bar { position: fixed; left: 12px; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); border-radius: 22px; }
   body.selecting .notes-page { padding-bottom: 96px; }
 }
@@ -1303,7 +1287,6 @@ body.drawer-open { overflow: hidden; }
 
 /* ═══════════════ Light-mode touch-ups for existing pages ═══════════════ */
 :root[data-theme="light"] .tl-lname { color: color-mix(in srgb, var(--c, #8F6514) 62%, #221F1A) !important; }
-:root[data-theme="light"] .bottomnav { box-shadow: 0 8px 24px rgba(60, 45, 20, .14); border-color: rgba(0, 0, 0, .08); }
 .palette .search.big { flex-wrap: wrap; }
 .palette .search.big input { flex: 1 1 0; }
 .palette .search-results { flex: 0 0 calc(100% + 28px); margin: 0 -14px; border: 0; border-top: 1px solid var(--line-2); border-radius: 0 0 12px 12px; }
@@ -1713,9 +1696,6 @@ a.chip.kp-rel:hover { border-color: var(--accent); color: var(--ink); }
   .kg-page .h1-sm { font-size: calc(32px * var(--ts)); }
 }
 
-.bottomnav.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.bottomnav.six a { font-size: calc(10.5px * min(var(--ts), 1.15)); min-width: 0; white-space: nowrap; overflow: hidden; }
-.bottomnav.six a svg { width: 21px; height: 21px; }
 .kg-stats.compact .kg-stat { width: 220px; padding: 9px 12px; }
 .kg-stats.compact .kg-stat > div:first-child small { display: block; }
 .kg-stats.compact .kg-stat b { font-size: calc(15.5px * var(--ts)); }
@@ -1837,19 +1817,15 @@ a.chip.kp-rel:hover { border-color: var(--accent); color: var(--ink); }
   .sec-sum { font-size: calc(16px * var(--ts)); line-height: 1.45; }
 }
 
-/* ───────── Phone: bottom bar hides on scroll down, returns on scroll up (job #13) ───────── */
+/* ───────── Phone: room at the end of the page (no bottom bar) ───────── */
 @media (max-width: 760px) {
-  .bottomnav { transition: transform .28s cubic-bezier(.2, .7, .2, 1), opacity .2s ease; will-change: transform; }
-  .bottomnav.bn-hidden { transform: translateY(calc(100% + 16px + env(safe-area-inset-bottom))); opacity: 0; pointer-events: none; }
-  /* Room under the last thing on every page, sized from the bar's real (measured) height plus the
-     iOS home-indicator area, so the end of the page is never hidden behind the bar. */
-  .site-foot { padding-bottom: calc(var(--bnav-h, 66px) + 30px + env(safe-area-inset-bottom)) !important; }
-  html { scroll-padding-bottom: calc(var(--bnav-h, 66px) + 24px + env(safe-area-inset-bottom)); }
+  /* Room under the last thing on every page for the iOS home-indicator area. */
+  .site-foot { padding-bottom: calc(30px + env(safe-area-inset-bottom)) !important; }
+  html { scroll-padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
   /* Sheets and menus: use the visible screen height (iOS 100vh is taller than what you can see). */
   .sheet { max-height: calc(80vh / var(--z)); max-height: calc(80dvh / var(--z)); }
   .menu-pop { max-height: calc(70vh / var(--z)); max-height: calc(70dvh / var(--z)); }
 }
-@media (prefers-reduced-motion: reduce) { .bottomnav { transition: none; } }
 
 /* ───────── Phone: character page, one size smaller again (job #13, on top of job #10) ───────── */
 @media (max-width: 760px) {

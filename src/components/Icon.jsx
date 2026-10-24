@@ -1,4 +1,4 @@
-// Line icons used in the sidebar, drawer and bottom bar. All draw with currentColor.
+// Line icons used in the sidebar and drawer. All draw with currentColor.
 const P = {
   book: <path d="M4 5h6a2 2 0 012 2v12a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v12a2 2 0 012-2h6z" />,
   books: <path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z" />,
