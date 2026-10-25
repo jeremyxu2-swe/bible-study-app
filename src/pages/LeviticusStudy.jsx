@@ -186,7 +186,7 @@ export default function LeviticusStudy() {
 
   return (
     <main className={`wrap page lvs lv-${level}`}>
-      <div className="crumbs2"><Link to="/">Books &amp; Timeline</Link> › <Link to="/book/leviticus">Leviticus</Link> › <b>Study</b></div>
+      <div className="crumbs2">Bible Summaries › <Link to="/book/leviticus">Leviticus</Link> › <b>Study</b></div>
       <h1 className="h1-sm lvs-h1">Leviticus: drawing near to a holy God</h1>
       <p className="tagline lvs-tag">The offerings, priests, feasts and symbols of Israel’s worship, and how each one points ahead to Jesus.</p>
       <div className="lvs-tools"><LevelToggle small /><span className="muted">Reading level</span></div>
