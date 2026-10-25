@@ -80,6 +80,8 @@ export default function App() {
         <div className="wrap">
           Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), © 2001 by Crossway,
           a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
+          You may not copy or download more than 500 consecutive verses of the ESV Bible or more than one half of any book of the ESV Bible.
+          Chapter text comes from the <a href="https://www.esv.org" target="_blank" rel="noopener">ESV API</a>.
         </div>
       </footer>
       <BookPeek />

@@ -3404,3 +3404,50 @@ html.jr-noscroll, html.jr-noscroll body { overflow: hidden; }
   .jr-card { bottom: 46px; right: 54px; }
   .lm-name { font-size: 12px; }
 }
+
+/* ───────── ESV chapter text (tap a chapter summary) ───────── */
+.ch-sum-btn { all: unset; display: block; cursor: pointer; color: inherit; font: inherit; text-align: left; border-radius: 8px; -webkit-tap-highlight-color: transparent; }
+.ch-sum-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.chlist .ch-body .ch-sum-btn { color: var(--ink); }
+.chlist .ch-body .ch-sum-btn:hover { color: var(--accent-hover); }
+.chapter-summary.ch-sum-btn { color: var(--ink-soft); font-family: var(--serif); }
+.chapter-summary.ch-sum-btn:hover .esv-cue, .ch-sum-btn:hover .esv-cue { text-decoration: underline; }
+.esv-cue { font-family: var(--sans); font-style: normal; font-size: calc(12px * var(--ts)); font-weight: 600; color: var(--accent-ink); white-space: nowrap; letter-spacing: .2px; }
+.chapter-summary .esv-cue { font-size: calc(13px * var(--ts)); }
+
+.esv { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; padding: 14px 18px 12px; display: flex; flex-direction: column; gap: 8px; }
+.esv-compact { padding: 12px 14px 10px; }
+.esv-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.esv-title { font-family: var(--serif); font-weight: 600; font-size: calc(17px * var(--ts)); color: var(--ink); }
+.esv-badge { font-size: calc(11.5px * var(--ts)); font-weight: 600; color: var(--accent-ink); text-decoration: none; letter-spacing: .3px; }
+.chlist .ch-row a.esv-badge { display: inline; }
+.esv-badge:hover { text-decoration: underline; }
+.esv-text { font-size: calc(16.5px * var(--ts)); line-height: 1.75; color: var(--ink); max-height: 70dvh; overflow: auto; overscroll-behavior: contain; }
+.esv:not(.esv-compact) .esv-text { max-height: none; overflow: visible; }
+@media (min-width: 761px) { .esv-compact .esv-text { max-height: calc(70dvh / var(--z)); } }
+.esv-text p { margin: 0 0 .8em; }
+.esv-text h2, .esv-text h3, .esv-text h4 { font-family: var(--sans); font-size: calc(12.5px * var(--ts)); font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); margin: 1.1em 0 .4em; line-height: 1.4; }
+.esv-text h3:first-child, .esv-text h2:first-child { margin-top: 0; }
+.esv-text .chapter-num { font-family: var(--serif); font-size: 1.6em; line-height: 1; color: var(--accent-ink); margin-right: 4px; }
+.esv-text .verse-num { font-family: var(--sans); font-size: .62em; font-weight: 600; color: var(--accent-ink); vertical-align: .55em; margin: 0 1px 0 2px; }
+.esv-text .line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
+.esv-text .line + br, .esv-text .begin-line-group + br { display: none; }
+.esv-text .indent { padding-left: 2.6em; }
+.esv-text .indent-2 { padding-left: 3.8em; }
+.esv-text .block-indent { margin-left: .4em; }
+.esv-text .woc, .esv-text .woc * { color: inherit; }
+.esv-text a { color: var(--muted); font-family: var(--sans); font-size: .75em; text-decoration: none; }
+.esv-text .selah { font-style: italic; color: var(--muted); }
+.esv-copy { margin: 4px 0 0; font-size: calc(11px * var(--ts)); line-height: 1.45; color: var(--muted); }
+.esv-loading { display: flex; flex-direction: column; gap: 9px; padding: 6px 0; }
+.esv-sk { display: block; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--line) 0%, var(--line-2) 50%, var(--line) 100%); background-size: 200% 100%; animation: esv-sk 1.2s ease-in-out infinite; }
+.esv-sk.short { width: 60%; }
+@keyframes esv-sk { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@media (prefers-reduced-motion: reduce) { .esv-sk { animation: none; } }
+.esv-error { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; font-size: calc(14px * var(--ts)); color: var(--ink-2); }
+.esv-error p { margin: 0; }
+.esv-error a { font-size: calc(13px * var(--ts)); color: var(--accent-ink); }
+@media (max-width: 760px) {
+  .esv { padding: 12px 13px 10px; }
+  .esv-text { font-size: calc(16px * var(--ts)); line-height: 1.7; }
+}

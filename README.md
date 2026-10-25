@@ -68,3 +68,16 @@ Key verses are quoted from the ESV® Bible (The Holy Bible, English Standard Ver
 - `npm run dev`: live development server
 - `npm run build`: installable web app (PWA) in `dist/`
 - `npm run build:single`: one self-contained HTML file in `dist-single/`
+
+## Chapter text from the ESV API
+
+Tap a chapter summary (on a book page or a chapter page) to load that chapter's full ESV text below it. The request goes through a Supabase Edge Function, so the ESV API key never ships in the app.
+
+One-time setup:
+1. Create a free ESV API application at https://api.esv.org/account/create-application/ (personal, non-commercial use) and copy its key.
+2. Install the Supabase CLI and link this project: `npx supabase login`, then `npx supabase link --project-ref hdrpuqhfkmmylmojqsas`.
+3. Store the key: `npx supabase secrets set ESV_API_KEY=<your key>`.
+   Optional: `npx supabase secrets set ALLOWED_ORIGINS=https://jeremyxu2-swe.github.io,http://localhost:5173` so only your site can use it.
+4. Deploy: `npx supabase functions deploy esv-passage --no-verify-jwt` (the app uses a publishable key, which isn't a JWT; `supabase/config.toml` says the same).
+
+Recently read chapters are saved on the device (IndexedDB) for offline reading, within the ESV terms: no more than 500 verses in total and never more than half of a book; the oldest chapters are removed first. Apocrypha books keep their old behavior (the ESV API doesn't serve them).
