@@ -13,6 +13,7 @@ import { BOOK_PURPOSE } from '../data/bookPurpose.js';
 import { APOCRYPHA, APOC_PURPOSE, APOC_BG } from '../data/apocrypha.js';
 import { ApocryphaCards } from './Apocrypha.jsx';
 import NoteEditor from '../components/NoteEditor.jsx';
+import EsvText from '../components/EsvText.jsx';
 import LevelToggle, { KeyVerse } from '../components/LevelToggle.jsx';
 import { useNotes, noteKey } from '../store/notes.js';
 import { useLevel } from '../store/prefs.js';
@@ -338,17 +339,30 @@ export default function Book() {
 }
 
 function ChapterRows({ book, chapters, level, notes }) {
+  // Tapping a summary opens that chapter's ESV text below it (the number still opens the chapter page).
+  const [open, setOpen] = useState(() => new Set());
+  const toggle = (n) => setOpen((o) => { const s = new Set(o); if (s.has(n)) s.delete(n); else s.add(n); return s; });
+  const canRead = !book.apocrypha;
   return (
     <ol className={'chlist level-' + level}>
       {chapters.map((n) => {
         const c = chapterAtLevel(book.id, n, level);
         const has = notes[noteKey('chapter', book.id, n)];
+        const isOpen = open.has(n);
+        const summary = c.text || <span className="muted">Summary coming soon</span>;
         return (
           <li key={n}>
             <div className="ch-row">
               <Link to={`/book/${book.id}/${n}`} className="num" aria-label={`${book.name} chapter ${n}`}>{n}</Link>
               <div className="ch-body">
-                <Link to={`/book/${book.id}/${n}`} className="txt">{c.text || <span className="muted">Summary coming soon</span>}</Link>
+                {canRead ? (
+                  <button type="button" className={'txt ch-sum-btn' + (isOpen ? ' open' : '')} aria-expanded={isOpen} onClick={() => toggle(n)}>
+                    {summary} <span className="esv-cue">{isOpen ? 'Hide text' : 'Read ESV'}<span aria-hidden="true"> {isOpen ? '▴' : '▾'}</span></span>
+                  </button>
+                ) : (
+                  <Link to={`/book/${book.id}/${n}`} className="txt">{summary}</Link>
+                )}
+                {isOpen && <EsvText book={book} n={n} compact />}
                 {c.verse && <KeyVerse verse={c.verse} book={book.name} short />}
                 {level !== 'simple' && <ChipLines people={c.people} nations={nationsForChapter(book.id, n)} small />}
               </div>

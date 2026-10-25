@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getBook, sectionIndexOf, propheciesForChapter, chapterAtLevel, sectionShort, hasLevels, nationsForChapter } from '../data/index.js';
 import NoteEditor from '../components/NoteEditor.jsx';
+import EsvText from '../components/EsvText.jsx';
 import LevelToggle, { KeyVerse } from '../components/LevelToggle.jsx';
 import { noteKey } from '../store/notes.js';
 import { useLevel } from '../store/prefs.js';
@@ -45,9 +47,7 @@ export default function Chapter() {
               <div className="muted" style={{ fontSize: 'calc(14px * var(--ts))' }}>Chapter {n} of {book.chapters}</div>
             </div>
 
-            <p className="serif chapter-summary" style={{ fontSize: level === 'detailed' ? 17 : 18, lineHeight: 1.6 }}>
-              {c.text || <span className="muted">Summary coming soon.</span>}
-            </p>
+            <ChapterSummary key={`${book.id}-${n}`} book={book} n={n} level={level} text={c.text} />
             {c.verse && <KeyVerse verse={c.verse} book={book.name} />}
             {level === 'detailed' && c.people && (
               <div className="stack" style={{ gap: 6 }}>
@@ -94,6 +94,22 @@ export default function Chapter() {
           </aside>
         </div>
       </main>
+    </>
+  );
+}
+
+// The chapter summary. Tapping it loads the full ESV text of the chapter just below.
+function ChapterSummary({ book, n, level, text }) {
+  const [open, setOpen] = useState(false);
+  const style = { fontSize: level === 'detailed' ? 17 : 18, lineHeight: 1.6 };
+  const body = text || <span className="muted">Summary coming soon.</span>;
+  if (book.apocrypha) return <p className="serif chapter-summary" style={style}>{body}</p>;
+  return (
+    <>
+      <button type="button" className={'serif chapter-summary ch-sum-btn' + (open ? ' open' : '')} style={style} aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        {body} <span className="esv-cue">{open ? 'Hide chapter text' : 'Read the chapter (ESV)'}<span aria-hidden="true"> {open ? '▴' : '▾'}</span></span>
+      </button>
+      {open && <EsvText book={book} n={n} />}
     </>
   );
 }

@@ -1,0 +1,4 @@
+# The app uses a publishable key (sb_publishable_…), which isn't a JWT,
+# so the ESV function must accept requests without JWT verification.
+[functions.esv-passage]
+verify_jwt = false
