@@ -3451,3 +3451,21 @@ html.jr-noscroll, html.jr-noscroll body { overflow: hidden; }
   .esv { padding: 12px 13px 10px; }
   .esv-text { font-size: calc(16px * var(--ts)); line-height: 1.7; }
 }
+
+/* At a glance › List: rows follow the reading level (Simple: one line, no author; Detailed: tagline, summary, outline, author and date). */
+.gl-row.lv-simple { grid-template-columns: 170px 54px minmax(0, 1fr); }
+.gl-row.lv-simple .gl-t { color: var(--ink); }
+.gl-row.lv-detailed { align-items: start; padding: 12px 14px; }
+.gl-row.lv-detailed > b, .gl-row.lv-detailed .gl-c { padding-top: 1px; }
+.gl-row.lv-detailed .gl-t { display: flex; flex-direction: column; gap: 4px; }
+.gl-rtg { color: var(--ink); line-height: 1.45; }
+.gl-rsm { font-size: calc(13.5px * var(--ts)); line-height: 1.55; color: var(--ink-2); }
+.gl-roll { font-size: calc(11.5px * var(--ts)); line-height: 1.45; color: var(--muted); }
+.gl-row.lv-detailed .gl-w { white-space: normal; line-height: 1.45; padding-top: 2px; }
+.gl-wd { color: var(--muted); opacity: .85; }
+@media (max-width: 760px) {
+  .gl-row.lv-simple { grid-template-columns: minmax(0, 1fr) auto; }
+  .gl-row.lv-detailed .gl-w { display: block; grid-column: 1 / -1; text-align: left; padding-top: 0; }
+  .gl-row.lv-detailed .gl-w br { display: none; }
+  .gl-row.lv-detailed .gl-wd::before { content: ' · '; }
+}
