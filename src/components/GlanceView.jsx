@@ -9,6 +9,7 @@ import { useLevel } from '../store/prefs.js';
 //   Simple   — the book's Simple summary.
 //   Moderate — the tagline and the Moderate summary.
 //   Detailed — the same, plus author and date, an outline bar to scale and "Christ in this book".
+// The List layout follows the level too (see `row`).
 // Filter by text or by testament / section; switch between Cards and a compact List. Tap a book for its outline.
 
 const CATS = [
@@ -111,11 +112,30 @@ export default function GlanceView({ withNotes }) {
       </button>
     );
   };
-  const row = (b) => (
-    <button key={b.id} type="button" className="gl-row" onClick={() => setOpen(b.id)}>
-      <b><i />{b.name}</b><span className="gl-c">{b.chapters} ch.</span><span className="gl-t">{b.tagline}</span><span className="gl-w">{b.author.replace(' (traditional)', '')}</span>
-    </button>
-  );
+  // List rows follow the reading level too, staying compact:
+  //   Simple   — the book's Simple summary in one plain line, no author column.
+  //   Moderate — the tagline and the author.
+  //   Detailed — the tagline, the Moderate summary and the outline, with author and date.
+  const row = (b) => {
+    const author = b.author.replace(' (traditional)', '');
+    return (
+      <button key={b.id} type="button" className={'gl-row lv-' + level} onClick={() => setOpen(b.id)}>
+        <b><i />{b.name}</b><span className="gl-c">{b.chapters} ch.</span>
+        {level === 'simple' && <span className="gl-t">{bookAtLevel(b, 'simple').text}</span>}
+        {level === 'moderate' && <span className="gl-t">{b.tagline}</span>}
+        {level === 'detailed' && (
+          <span className="gl-t">
+            <span className="gl-rtg">{b.tagline}</span>
+            <span className="gl-rsm">{bookAtLevel(b, 'moderate').text}</span>
+            {b.sections?.length > 0 && <span className="gl-roll">{sectionsText(b)}</span>}
+          </span>
+        )}
+        {level !== 'simple' && (
+          <span className="gl-w">{author}{level === 'detailed' && <><br /><span className="gl-wd">{b.written}</span></>}</span>
+        )}
+      </button>
+    );
+  };
 
   let lastT = '';
   const groups = [];
