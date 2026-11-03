@@ -35,6 +35,21 @@ export const SECTIONS = [
     ],
   },
   {
+    id: 'religions',
+    name: 'World Religions',
+    icon: 'globe',
+    color: '#4FB39A',
+    pages: [
+      { id: 'religions-overview', label: 'Overview', icon: 'globe', to: '/religions', match: ['/religions'] },
+      { id: 'buddhism', label: 'Buddhism', icon: 'diamond', to: '/religions/buddhism' },
+      { id: 'islam', label: 'Islam', icon: 'diamond', to: '/religions/islam' },
+      { id: 'hinduism', label: 'Hinduism', icon: 'diamond', to: '/religions/hinduism' },
+      { id: 'judaism', label: 'Judaism', icon: 'diamond', to: '/religions/judaism' },
+      { id: 'sikhism', label: 'Sikhism', icon: 'diamond', to: '/religions/sikhism' },
+      { id: 'mormonism', label: 'Mormonism', icon: 'diamond', to: '/religions/mormonism' },
+    ],
+  },
+  {
     id: 'theology',
     name: 'Theology',
     icon: 'shield',

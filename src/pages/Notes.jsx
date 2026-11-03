@@ -17,6 +17,7 @@ import { isPhone } from '../store/ui.js';
 import { useSync } from '../store/sync.js';
 import { topicById as theoTopic } from '../data/theologyCompare.js';
 import { V as ET_V } from '../data/endTimes.js';
+import { religionById } from '../data/religions/index.js';
 
 export function describe(key, note) {
   const [type, id, extra] = key.split(':');
@@ -38,6 +39,7 @@ export function describe(key, note) {
   if (type === 'theology' && id === 'system') return { label: extra === 'covenant' ? 'Covenant Theology' : 'Dispensationalism', kind: 'Theology', to: `/theology/compare/${extra}` };
   if (type === 'theology' && id === 'compare') { const t = theoTopic[extra]; return { label: `Dispensational vs Covenant · ${t ? t.name : 'notes'}`, kind: 'Theology', to: `/theology/compare${t ? '?t=' + t.id : ''}` }; }
   if (type === 'theology') return { label: 'The end times: four views', kind: 'Theology', to: '/theology/last-things' };
+  if (type === 'religion') { const r = religionById[id]; return { label: r ? r.name : 'World religions', kind: 'Religion', to: r ? `/religions/${r.id}` : '/religions' }; }
   if (type === 'study') return { label: 'Leviticus study', kind: 'Study', to: '/study/leviticus' };
   if (type === 'journey') { const names = { all: 'Paul’s journeys', j1: 'Paul’s 1st journey', j2: 'Paul’s 2nd journey', j3: 'Paul’s 3rd journey', j4: 'Paul’s voyage to Rome' }; return { label: names[id] || 'Paul’s journeys', kind: 'Study', to: id && id !== 'all' ? `/journeys?j=${id}` : '/journeys' }; }
   if (type === 'daniel' && id === 'background') return { label: 'The wars behind Daniel', kind: 'Prophecy', to: '/daniel/background' };

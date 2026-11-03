@@ -54,6 +54,7 @@ All content lives in `src/data/`:
 | `characters.js` | People: bio, story, related people |
 | `prophecies.js` | Old Testament promise → New Testament fulfillment |
 | `eras.js` | Timeline eras and empires |
+| `religions/*.js` | World Religions: Buddhism, Islam, Hinduism, Judaism, Sikhism and Mormonism (origins, key figures, branches, beliefs, practices, texts), plus the side-by-side table |
 
 After editing, run `npm run build:single` and copy `dist-single/index.html` over `Bible Study App.html`.
 

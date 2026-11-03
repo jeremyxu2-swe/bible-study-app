@@ -28,6 +28,7 @@ import EndTimesView from './pages/EndTimesView.jsx';
 import TheologyCompare from './pages/TheologyCompare.jsx';
 import TheologySystem from './pages/TheologySystem.jsx';
 import Denominations from './pages/Denominations.jsx';
+import { ReligionsOverview, ReligionPage } from './pages/WorldReligions.jsx';
 import { KeyPeopleList, KeyPerson } from './pages/KeyPeople.jsx';
 import BookPeek from './components/BookPeek.jsx';
 
@@ -69,6 +70,8 @@ export default function App() {
         <Route path="/nation/:id" element={<Nation />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/religions" element={<ReligionsOverview />} />
+        <Route path="/religions/:id" element={<ReligionPage />} />
         <Route path="/history/denominations" element={<Denominations />} />
         <Route path="/history/compare" element={<Compare />} />
         <Route path="/history/people" element={<KeyPeopleList />} />
