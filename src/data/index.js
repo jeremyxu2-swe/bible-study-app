@@ -20,6 +20,7 @@ import { NATION_DETAILS as NATIONS } from './nations.js';
 import { KING_CHARS } from './kingProfiles/index.js';
 import { MORE_CHARS, GROUP_ORDER } from './moreProfiles/index.js';
 import { APOCRYPHA, APOC_CHAPTERS, APOC_LEVELS } from './apocrypha.js';
+import { RELIGIONS, RELIGION_WORDS } from './religions/index.js';
 
 // The kings of Israel and Judah join the People list, in reign order, after the other Kings & Kingdom characters.
 {
@@ -193,6 +194,13 @@ export function search(query) {
     out.push({ kind: 'Theology', label: 'Dispensational vs Covenant Theology', sub: 'Two ways to read the whole Bible', to: '/theology/compare' });
     if (/dispens/.test(q)) out.push({ kind: 'Theology', label: 'Dispensationalism', sub: 'In depth', to: '/theology/compare/dispensational' });
     if (/covenant/.test(q)) out.push({ kind: 'Theology', label: 'Covenant Theology', sub: 'In depth', to: '/theology/compare/covenant' });
+  }
+  if (q.length >= 4 && ['world religions', 'religions', 'other religions', 'comparative religion', 'other faiths', 'world faiths'].some((w) => w.includes(q) || q.includes(w))) {
+    out.push({ kind: 'Religion', label: 'World Religions', sub: 'Six faiths side by side', to: '/religions' });
+  }
+  for (const r of RELIGIONS) {
+    const words = RELIGION_WORDS[r.id] || [];
+    if (words.some((w) => w === q || (q.length >= 4 && w.includes(q)) || (w.length >= 5 && q.includes(w)))) out.push({ kind: 'Religion', label: r.name, sub: r.tagline, to: `/religions/${r.id}` });
   }
   for (const [id, label, words] of [
     ['disp', 'Dispensational premillennialism', ['dispensational premillennialism', 'pretribulation', 'pre-tribulation', 'left behind', 'premillennial']],
